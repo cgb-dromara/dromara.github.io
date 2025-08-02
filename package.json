@@ -27,6 +27,7 @@
     ]
   },
   "dependencies": {
+    "@vuepress/helper": "2.0.0-rc.112",
     "swiper": "^11.2.10"
   }
 }

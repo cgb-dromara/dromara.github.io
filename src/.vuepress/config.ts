@@ -56,7 +56,23 @@ export default defineUserConfig({
       darkmode: "disable",
       editLink: false,
 
-      iconAssets: "fontawesome-with-brands",
+      // 修复：将 icon 改为 plugins.icon.assets
+      plugins: {
+        icon: {
+          assets: "fontawesome-with-brands" // 原 icon 配置迁移到这里
+        },
+        // 修复：移除 mdEnhance.figure，迁移到顶层 markdown.figure
+        mdEnhance: {
+          // 保留其他可能的 mdEnhance 配置（如果有）
+          // 例如：mermaid: true, chart: true 等
+        },
+        photoSwipe: false
+      },
+
+      // 新增：将 figure 配置迁移到顶层 markdown
+      markdown: {
+        figure: true // 原 mdEnhance.figure 迁移到这里
+      },
 
       navbarLayout: {
         start: ["Brand"],
@@ -67,29 +83,13 @@ export default defineUserConfig({
 
       locales: {
         "/": {
-          // navbar
           navbar: enNavbar,
-          // sidebar
           sidebar: false
         },
-
-        /**
-         * Chinese locale config
-         */
         "/zh/": {
-          // navbar
           navbar: zhNavbar,
-          // sidebar
           sidebar: false
         }
-      },
-
-      plugins: {
-        // All features are enabled for demo, only preserve features you need here
-        mdEnhance: {
-          figure: true
-        },
-        photoSwipe: false
       }
     },
     { custom: true }
@@ -98,14 +98,12 @@ export default defineUserConfig({
   plugins: [
     // Search
     // searchProPlugin({
-    //   // index all content
     //   indexContent: true
     // }),
     getAllFrontmatter
   ],
 
   alias: {
-    // 你可以在这里将别名定向到自己的组件
     "@theme-hope/components/HomePage": path.resolve(
       __dirname,
       "./components/HomePage.vue"
