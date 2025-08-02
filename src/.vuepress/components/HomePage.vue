@@ -832,4 +832,3 @@ function jumpTo (url: string): void {
   }
 }
 </style>
-../composables/index.js

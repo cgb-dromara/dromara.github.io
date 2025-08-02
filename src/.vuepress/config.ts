@@ -95,14 +95,14 @@ export default defineUserConfig({
     { custom: true }
   ),
 
-  // plugins: [
-  //   // Search
-  //   searchProPlugin({
-  //     // index all content
-  //     indexContent: true
-  //   }),
-  //   getAllFrontmatter
-  // ],
+  plugins: [
+    // Search
+    // searchProPlugin({
+    //   // index all content
+    //   indexContent: true
+    // }),
+    getAllFrontmatter
+  ],
 
   alias: {
     // 你可以在这里将别名定向到自己的组件
