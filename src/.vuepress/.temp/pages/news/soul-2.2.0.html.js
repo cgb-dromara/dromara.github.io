@@ -1,0 +1,16 @@
+import comp from "E:/code/newstudy/new/dromara.github.io/src/.vuepress/.temp/pages/news/soul-2.2.0.html.vue"
+const data = JSON.parse("{\"path\":\"/news/soul-2.2.0.html\",\"title\":\"【Soul gateway version2.2.0 release】Make high-performance gateways so easy!\",\"lang\":\"en-US\",\"frontmatter\":{\"title\":\"【Soul gateway version2.2.0 release】Make high-performance gateways so easy!\",\"author\":\"xiaoyu\",\"tag\":[\"Soul\"],\"date\":\"2020-06-17T00:00:00.000Z\",\"cover\":\"/assets/img/architecture/soul-framework.png\",\"head\":[[\"script\",{\"type\":\"application/ld+json\"},\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"Article\\\",\\\"headline\\\":\\\"【Soul gateway version2.2.0 release】Make high-performance gateways so easy!\\\",\\\"image\\\":[\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/architecture/soul-admin.png\\\",\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/architecture/soul-framework.png\\\"],\\\"datePublished\\\":\\\"2020-06-17T00:00:00.000Z\\\",\\\"dateModified\\\":null,\\\"author\\\":[{\\\"@type\\\":\\\"Person\\\",\\\"name\\\":\\\"xiaoyu\\\"}]}\"],[\"meta\",{\"property\":\"og:url\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/news/soul-2.2.0.html\"}],[\"meta\",{\"property\":\"og:title\",\"content\":\"【Soul gateway version2.2.0 release】Make high-performance gateways so easy!\"}],[\"meta\",{\"property\":\"og:description\",\"content\":\"Let's take a look at the new features first, and then I would like to share my story. Completely pluggable architecture design, plug-in hot swap. Fully supports all versions of ...\"}],[\"meta\",{\"property\":\"og:type\",\"content\":\"article\"}],[\"meta\",{\"property\":\"og:image\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/architecture/soul-framework.png\"}],[\"meta\",{\"property\":\"og:locale\",\"content\":\"en-US\"}],[\"meta\",{\"property\":\"og:locale:alternate\",\"content\":\"zh-CN\"}],[\"meta\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"meta\",{\"name\":\"twitter:image:src\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/architecture/soul-framework.png\"}],[\"meta\",{\"name\":\"twitter:image:alt\",\"content\":\"【Soul gateway version2.2.0 release】Make high-performance gateways so easy!\"}],[\"meta\",{\"property\":\"article:author\",\"content\":\"xiaoyu\"}],[\"meta\",{\"property\":\"article:tag\",\"content\":\"Soul\"}],[\"meta\",{\"property\":\"article:published_time\",\"content\":\"2020-06-17T00:00:00.000Z\"}],[\"link\",{\"rel\":\"alternate\",\"hreflang\":\"zh-cn\",\"href\":\"https://vuepress-theme-hope-docs-demo.netlify.app/zh/news/soul-2.2.0.html\"}],[\"meta\",{\"name\":\"News\"}]],\"description\":\"Let's take a look at the new features first, and then I would like to share my story. Completely pluggable architecture design, plug-in hot swap. Fully supports all versions of ...\"},\"readingTime\":{\"minutes\":5.64,\"words\":1692},\"filePathRelative\":\"news/soul-2.2.0.md\",\"autoDesc\":true}")
+export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}

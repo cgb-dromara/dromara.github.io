@@ -1,0 +1,16 @@
+import comp from "E:/code/newstudy/new/dromara.github.io/src/.vuepress/.temp/pages/zh/news/Northstar-6.0.html.vue"
+const data = JSON.parse("{\"path\":\"/zh/news/Northstar-6.0.html\",\"title\":\"AI量化平台前传——Northstar盈富量化平台v6.0.Final发布\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"AI量化平台前传——Northstar盈富量化平台v6.0.Final发布\",\"author\":\"Kevin黄伟亮\",\"date\":\"2023-06-28T00:00:00.000Z\",\"cover\":\"/assets/img/news/Northstar-6.0-7.png\",\"head\":[[\"script\",{\"type\":\"application/ld+json\"},\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"Article\\\",\\\"headline\\\":\\\"AI量化平台前传——Northstar盈富量化平台v6.0.Final发布\\\",\\\"image\\\":[\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/Northstar-6.0-1.png\\\",\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/Northstar-6.0-2.gif\\\",\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/Northstar-6.0-3.jpg\\\",\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/Northstar-6.0-4.png\\\",\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/Northstar-6.0-5.png\\\",\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/Northstar-6.0-6.png\\\",\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/Northstar-6.0-7.png\\\"],\\\"datePublished\\\":\\\"2023-06-28T00:00:00.000Z\\\",\\\"dateModified\\\":null,\\\"author\\\":[{\\\"@type\\\":\\\"Person\\\",\\\"name\\\":\\\"Kevin黄伟亮\\\"}]}\"],[\"meta\",{\"property\":\"og:url\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/zh/news/Northstar-6.0.html\"}],[\"meta\",{\"property\":\"og:title\",\"content\":\"AI量化平台前传——Northstar盈富量化平台v6.0.Final发布\"}],[\"meta\",{\"property\":\"og:description\",\"content\":\"【导读】自从 AlphaGo 问世以来，我一直在思考打造一个可以集成 AI 计算能力的量化交易平台。但交易智能化的前提，是交易的程序化与自动化。只有实现了交易的程序化与自动化，才有可能谈智能化。Northstar 盈富量化平台从 v1.0 至今 v6.0，前前后后摸索了两三年时间，一直在做架构迭代。务求把基础架构打牢，才有可能在智能化应用中得到快速发展...\"}],[\"meta\",{\"property\":\"og:type\",\"content\":\"article\"}],[\"meta\",{\"property\":\"og:image\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/Northstar-6.0-7.png\"}],[\"meta\",{\"property\":\"og:locale\",\"content\":\"zh-CN\"}],[\"meta\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"meta\",{\"name\":\"twitter:image:src\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/Northstar-6.0-7.png\"}],[\"meta\",{\"name\":\"twitter:image:alt\",\"content\":\"AI量化平台前传——Northstar盈富量化平台v6.0.Final发布\"}],[\"meta\",{\"property\":\"article:author\",\"content\":\"Kevin黄伟亮\"}],[\"meta\",{\"property\":\"article:published_time\",\"content\":\"2023-06-28T00:00:00.000Z\"}],[\"meta\",{\"name\":\"新闻\"}]],\"description\":\"【导读】自从 AlphaGo 问世以来，我一直在思考打造一个可以集成 AI 计算能力的量化交易平台。但交易智能化的前提，是交易的程序化与自动化。只有实现了交易的程序化与自动化，才有可能谈智能化。Northstar 盈富量化平台从 v1.0 至今 v6.0，前前后后摸索了两三年时间，一直在做架构迭代。务求把基础架构打牢，才有可能在智能化应用中得到快速发展...\"},\"readingTime\":{\"minutes\":2.86,\"words\":857},\"filePathRelative\":\"zh/news/Northstar-6.0.md\",\"autoDesc\":true}")
+export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}

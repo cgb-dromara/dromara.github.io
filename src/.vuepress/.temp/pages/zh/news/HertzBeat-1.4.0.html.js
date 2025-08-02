@@ -1,0 +1,16 @@
+import comp from "E:/code/newstudy/new/dromara.github.io/src/.vuepress/.temp/pages/zh/news/HertzBeat-1.4.0.html.vue"
+const data = JSON.parse("{\"path\":\"/zh/news/HertzBeat-1.4.0.html\",\"title\":\"重磅，集群版 HertzBeat 发布，易用友好的开源实时监控系统!\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"重磅，集群版 HertzBeat 发布，易用友好的开源实时监控系统!\",\"author\":\"tom\",\"tag\":[\"HertzBeat\"],\"date\":\"2023-08-15T00:00:00.000Z\",\"cover\":\"/assets/img/news/HertzBeat-1.4.0-1.png\",\"head\":[[\"script\",{\"type\":\"application/ld+json\"},\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"Article\\\",\\\"headline\\\":\\\"重磅，集群版 HertzBeat 发布，易用友好的开源实时监控系统!\\\",\\\"image\\\":[\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/HertzBeat-1.4.1-7.png\\\",\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/HertzBeat-1.4.0-2.png\\\",\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/HertzBeat-1.4.0-2.png\\\",\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/HertzBeat-1.4.0-3.png\\\",\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/HertzBeat-1.4.1-8.jpg\\\"],\\\"datePublished\\\":\\\"2023-08-15T00:00:00.000Z\\\",\\\"dateModified\\\":null,\\\"author\\\":[{\\\"@type\\\":\\\"Person\\\",\\\"name\\\":\\\"tom\\\"}]}\"],[\"meta\",{\"property\":\"og:url\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/zh/news/HertzBeat-1.4.0.html\"}],[\"meta\",{\"property\":\"og:title\",\"content\":\"重磅，集群版 HertzBeat 发布，易用友好的开源实时监控系统!\"}],[\"meta\",{\"property\":\"og:description\",\"content\":\"什么是 HertzBeat? HertzBeat 赫兹跳动 是一个拥有强大自定义监控能力，高性能集群，无需 Agent 的开源实时监控告警系统。 特点 集 监控+告警+通知 为一体，支持对应用服务，数据库，操作系统，中间件，云原生，网络等监控阈值告警通知一步到位。 易用友好，无需 Agent，全 WEB 页面操作，鼠标点一点就能监控告警，零上手学习成本...\"}],[\"meta\",{\"property\":\"og:type\",\"content\":\"article\"}],[\"meta\",{\"property\":\"og:image\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/HertzBeat-1.4.0-1.png\"}],[\"meta\",{\"property\":\"og:locale\",\"content\":\"zh-CN\"}],[\"meta\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"meta\",{\"name\":\"twitter:image:src\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/HertzBeat-1.4.0-1.png\"}],[\"meta\",{\"name\":\"twitter:image:alt\",\"content\":\"重磅，集群版 HertzBeat 发布，易用友好的开源实时监控系统!\"}],[\"meta\",{\"property\":\"article:author\",\"content\":\"tom\"}],[\"meta\",{\"property\":\"article:tag\",\"content\":\"HertzBeat\"}],[\"meta\",{\"property\":\"article:published_time\",\"content\":\"2023-08-15T00:00:00.000Z\"}],[\"meta\",{\"name\":\"新闻\"}]],\"description\":\"什么是 HertzBeat? HertzBeat 赫兹跳动 是一个拥有强大自定义监控能力，高性能集群，无需 Agent 的开源实时监控告警系统。 特点 集 监控+告警+通知 为一体，支持对应用服务，数据库，操作系统，中间件，云原生，网络等监控阈值告警通知一步到位。 易用友好，无需 Agent，全 WEB 页面操作，鼠标点一点就能监控告警，零上手学习成本...\"},\"readingTime\":{\"minutes\":9.93,\"words\":2980},\"filePathRelative\":\"zh/news/HertzBeat-1.4.0.md\",\"autoDesc\":true}")
+export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}

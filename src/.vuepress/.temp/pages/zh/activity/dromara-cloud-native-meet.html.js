@@ -1,0 +1,16 @@
+import comp from "E:/code/newstudy/new/dromara.github.io/src/.vuepress/.temp/pages/zh/activity/dromara-cloud-native-meet.html.vue"
+const data = JSON.parse("{\"path\":\"/zh/activity/dromara-cloud-native-meet.html\",\"title\":\"Dromara Soul源码01期阅读分享会01\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"Dromara Soul源码01期阅读分享会01\",\"author\":\"xiaoyu\",\"date\":\"2021-01-21T00:00:00.000Z\",\"tag\":[\"Soul\",\"Dromara\",\"Reactor\"],\"cover\":\"/assets/img/activity/dromara-open-soul-02.jpg\",\"head\":[[\"script\",{\"type\":\"application/ld+json\"},\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"Article\\\",\\\"headline\\\":\\\"Dromara Soul源码01期阅读分享会01\\\",\\\"image\\\":[\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/activite/soul-xmind.png\\\"],\\\"datePublished\\\":\\\"2021-01-21T00:00:00.000Z\\\",\\\"dateModified\\\":null,\\\"author\\\":[{\\\"@type\\\":\\\"Person\\\",\\\"name\\\":\\\"xiaoyu\\\"}]}\"],[\"meta\",{\"property\":\"og:url\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/zh/activity/dromara-cloud-native-meet.html\"}],[\"meta\",{\"property\":\"og:title\",\"content\":\"Dromara Soul源码01期阅读分享会01\"}],[\"meta\",{\"property\":\"og:description\",\"content\":\"Dromara 线上活动Dromara 线上活动 Dromara 源码阅读（Soul 2021 首次活动） 日期：2021 年 1 月 24 日，星期日 时间：15:00 – 17:00 地点：线上腾讯会议室 活动详情 15:00 - 15:10 开场介绍梦码分享流程 by kimming & 崔 15:10 - 15:25 Soul 数据同步之 we...\"}],[\"meta\",{\"property\":\"og:type\",\"content\":\"article\"}],[\"meta\",{\"property\":\"og:image\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/activity/dromara-open-soul-02.jpg\"}],[\"meta\",{\"property\":\"og:locale\",\"content\":\"zh-CN\"}],[\"meta\",{\"property\":\"og:locale:alternate\",\"content\":\"en-US\"}],[\"meta\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"meta\",{\"name\":\"twitter:image:src\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/activity/dromara-open-soul-02.jpg\"}],[\"meta\",{\"name\":\"twitter:image:alt\",\"content\":\"Dromara Soul源码01期阅读分享会01\"}],[\"meta\",{\"property\":\"article:author\",\"content\":\"xiaoyu\"}],[\"meta\",{\"property\":\"article:tag\",\"content\":\"Reactor\"}],[\"meta\",{\"property\":\"article:tag\",\"content\":\"Dromara\"}],[\"meta\",{\"property\":\"article:tag\",\"content\":\"Soul\"}],[\"meta\",{\"property\":\"article:published_time\",\"content\":\"2021-01-21T00:00:00.000Z\"}],[\"link\",{\"rel\":\"alternate\",\"hreflang\":\"en-us\",\"href\":\"https://vuepress-theme-hope-docs-demo.netlify.app/activity/dromara-cloud-native-meet.html\"}],[\"meta\",{\"name\":\"活动\"}]],\"description\":\"Dromara 线上活动Dromara 线上活动 Dromara 源码阅读（Soul 2021 首次活动） 日期：2021 年 1 月 24 日，星期日 时间：15:00 – 17:00 地点：线上腾讯会议室 活动详情 15:00 - 15:10 开场介绍梦码分享流程 by kimming & 崔 15:10 - 15:25 Soul 数据同步之 we...\"},\"readingTime\":{\"minutes\":0.8,\"words\":241},\"filePathRelative\":\"zh/activity/dromara-cloud-native-meet.md\",\"autoDesc\":true}")
+export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}

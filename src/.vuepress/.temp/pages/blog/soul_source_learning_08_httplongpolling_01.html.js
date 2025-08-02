@@ -1,0 +1,16 @@
+import comp from "E:/code/newstudy/new/dromara.github.io/src/.vuepress/.temp/pages/blog/soul_source_learning_08_httplongpolling_01.html.vue"
+const data = JSON.parse("{\"path\":\"/blog/soul_source_learning_08_httplongpolling_01.html\",\"title\":\"Soul Gateway Learns Http Long Polling Analysis 01\",\"lang\":\"en-US\",\"frontmatter\":{\"title\":\"Soul Gateway Learns Http Long Polling Analysis 01\",\"author\":\"zhuming\",\"date\":\"2021-01-25T00:00:00.000Z\",\"tag\":[\"Soul\"],\"cover\":\"/assets/img/architecture/soul-framework.png\",\"head\":[[\"script\",{\"type\":\"application/ld+json\"},\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"Article\\\",\\\"headline\\\":\\\"Soul Gateway Learns Http Long Polling Analysis 01\\\",\\\"image\\\":[\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/architecture/soul-framework.png\\\"],\\\"datePublished\\\":\\\"2021-01-25T00:00:00.000Z\\\",\\\"dateModified\\\":null,\\\"author\\\":[{\\\"@type\\\":\\\"Person\\\",\\\"name\\\":\\\"zhuming\\\"}]}\"],[\"meta\",{\"property\":\"og:url\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/blog/soul_source_learning_08_httplongpolling_01.html\"}],[\"meta\",{\"property\":\"og:title\",\"content\":\"Soul Gateway Learns Http Long Polling Analysis 01\"}],[\"meta\",{\"property\":\"og:description\",\"content\":\"Data synchronization between background and gateway (Http long polling) Configuration ** Background information mode switching ** In the previous analysis of Zookeeper synchroni...\"}],[\"meta\",{\"property\":\"og:type\",\"content\":\"article\"}],[\"meta\",{\"property\":\"og:image\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/architecture/soul-framework.png\"}],[\"meta\",{\"property\":\"og:locale\",\"content\":\"en-US\"}],[\"meta\",{\"property\":\"og:locale:alternate\",\"content\":\"zh-CN\"}],[\"meta\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"meta\",{\"name\":\"twitter:image:src\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/architecture/soul-framework.png\"}],[\"meta\",{\"name\":\"twitter:image:alt\",\"content\":\"Soul Gateway Learns Http Long Polling Analysis 01\"}],[\"meta\",{\"property\":\"article:author\",\"content\":\"zhuming\"}],[\"meta\",{\"property\":\"article:tag\",\"content\":\"Soul\"}],[\"meta\",{\"property\":\"article:published_time\",\"content\":\"2021-01-25T00:00:00.000Z\"}],[\"link\",{\"rel\":\"alternate\",\"hreflang\":\"zh-cn\",\"href\":\"https://vuepress-theme-hope-docs-demo.netlify.app/zh/blog/soul_source_learning_08_httplongpolling_01.html\"}],[\"meta\",{\"name\":\"Blog\"}]],\"description\":\"Data synchronization between background and gateway (Http long polling) Configuration ** Background information mode switching ** In the previous analysis of Zookeeper synchroni...\"},\"readingTime\":{\"minutes\":6.69,\"words\":2006},\"filePathRelative\":\"blog/soul_source_learning_08_httplongpolling_01.md\",\"autoDesc\":true}")
+export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}

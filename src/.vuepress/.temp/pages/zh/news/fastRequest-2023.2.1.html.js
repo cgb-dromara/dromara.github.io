@@ -1,0 +1,16 @@
+import comp from "E:/code/newstudy/new/dromara.github.io/src/.vuepress/.temp/pages/zh/news/fastRequest-2023.2.1.html.vue"
+const data = JSON.parse("{\"path\":\"/zh/news/fastRequest-2023.2.1.html\",\"title\":\"Fast Request 2023.2.1-Release\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"Fast Request 2023.2.1-Release\",\"author\":\"Kings\",\"tag\":[\"fastRequest\"],\"date\":\"2023-10-17T00:00:00.000Z\",\"cover\":\"https://api-buddy.cn/img/rfr.svg\",\"head\":[[\"script\",{\"type\":\"application/ld+json\"},\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"Article\\\",\\\"headline\\\":\\\"Fast Request 2023.2.1-Release\\\",\\\"image\\\":[\\\"https://oscimg.oschina.net/oscnet/up-2c30405e687d4f8e9163f8973fe3126c029.gif\\\",\\\"https://api-buddy.cn/img/2023.2.1/urlInputWithMethod.png\\\",\\\"https://api-buddy.cn/img/2023.2.1/openDoc.png\\\",\\\"https://oscimg.oschina.net/oscnet/up-c949787f3df0d747357f01318c6ab5350a8.png\\\",\\\"https://dromara.gitee.io/fast-request/img/2023.1.9/showApis.gif\\\",\\\"https://api-buddy.cn/img/2023.2.1/pluginVersion.png\\\"],\\\"datePublished\\\":\\\"2023-10-17T00:00:00.000Z\\\",\\\"dateModified\\\":null,\\\"author\\\":[{\\\"@type\\\":\\\"Person\\\",\\\"name\\\":\\\"Kings\\\"}]}\"],[\"meta\",{\"property\":\"og:url\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/zh/news/fastRequest-2023.2.1.html\"}],[\"meta\",{\"property\":\"og:title\",\"content\":\"Fast Request 2023.2.1-Release\"}],[\"meta\",{\"property\":\"og:description\",\"content\":\"简介 Restful Fast Request是一个类似于 Postman 的 IDEA 插件。它是一个强大的 restful api 工具包插件，可以根据已有的方法帮助您快速、自动生成 url 和 params。 Restful Fast Request = API 调试工具 + API 管理工具 + API 搜索工具。 它有一个漂亮的界面来完成请求...\"}],[\"meta\",{\"property\":\"og:type\",\"content\":\"article\"}],[\"meta\",{\"property\":\"og:image\",\"content\":\"https://api-buddy.cn/img/rfr.svg\"}],[\"meta\",{\"property\":\"og:locale\",\"content\":\"zh-CN\"}],[\"meta\",{\"property\":\"og:locale:alternate\",\"content\":\"en-US\"}],[\"meta\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"meta\",{\"name\":\"twitter:image:src\",\"content\":\"https://api-buddy.cn/img/rfr.svg\"}],[\"meta\",{\"name\":\"twitter:image:alt\",\"content\":\"Fast Request 2023.2.1-Release\"}],[\"meta\",{\"property\":\"article:author\",\"content\":\"Kings\"}],[\"meta\",{\"property\":\"article:tag\",\"content\":\"fastRequest\"}],[\"meta\",{\"property\":\"article:published_time\",\"content\":\"2023-10-17T00:00:00.000Z\"}],[\"link\",{\"rel\":\"alternate\",\"hreflang\":\"en-us\",\"href\":\"https://vuepress-theme-hope-docs-demo.netlify.app/news/fastRequest-2023.2.1.html\"}],[\"meta\",{\"name\":\"新闻\"}]],\"description\":\"简介 Restful Fast Request是一个类似于 Postman 的 IDEA 插件。它是一个强大的 restful api 工具包插件，可以根据已有的方法帮助您快速、自动生成 url 和 params。 Restful Fast Request = API 调试工具 + API 管理工具 + API 搜索工具。 它有一个漂亮的界面来完成请求...\"},\"readingTime\":{\"minutes\":1.86,\"words\":558},\"filePathRelative\":\"zh/news/fastRequest-2023.2.1.md\",\"autoDesc\":true}")
+export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}

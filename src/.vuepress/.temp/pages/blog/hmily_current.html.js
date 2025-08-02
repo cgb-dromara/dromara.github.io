@@ -1,0 +1,16 @@
+import comp from "E:/code/newstudy/new/dromara.github.io/src/.vuepress/.temp/pages/blog/hmily_current.html.vue"
+const data = JSON.parse("{\"path\":\"/blog/hmily_current.html\",\"title\":\"Hmily:Easy Handle Highly Concurrent Distributed Transactions\",\"lang\":\"en-US\",\"frontmatter\":{\"title\":\"Hmily:Easy Handle Highly Concurrent Distributed Transactions\",\"author\":\"xiaoyu\",\"date\":\"2018-11-14T00:00:00.000Z\",\"tag\":[\"hmily\"],\"cover\":\"/assets/img/architecture/hmily-framework.png\",\"head\":[[\"script\",{\"type\":\"application/ld+json\"},\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"Article\\\",\\\"headline\\\":\\\"Hmily:Easy Handle Highly Concurrent Distributed Transactions\\\",\\\"image\\\":[\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/architecture/hmily-framework.png\\\"],\\\"datePublished\\\":\\\"2018-11-14T00:00:00.000Z\\\",\\\"dateModified\\\":null,\\\"author\\\":[{\\\"@type\\\":\\\"Person\\\",\\\"name\\\":\\\"xiaoyu\\\"}]}\"],[\"meta\",{\"property\":\"og:url\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/blog/hmily_current.html\"}],[\"meta\",{\"property\":\"og:title\",\"content\":\"Hmily:Easy Handle Highly Concurrent Distributed Transactions\"}],[\"meta\",{\"property\":\"og:description\",\"content\":\"Handling Highly Concurrent Transactions with Hmily Let's start with a quick advertisement. Hmily is participating in the Open Source China Annual Popularity Poll at this link. C...\"}],[\"meta\",{\"property\":\"og:type\",\"content\":\"article\"}],[\"meta\",{\"property\":\"og:image\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/architecture/hmily-framework.png\"}],[\"meta\",{\"property\":\"og:locale\",\"content\":\"en-US\"}],[\"meta\",{\"property\":\"og:locale:alternate\",\"content\":\"zh-CN\"}],[\"meta\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"meta\",{\"name\":\"twitter:image:src\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/architecture/hmily-framework.png\"}],[\"meta\",{\"name\":\"twitter:image:alt\",\"content\":\"Hmily:Easy Handle Highly Concurrent Distributed Transactions\"}],[\"meta\",{\"property\":\"article:author\",\"content\":\"xiaoyu\"}],[\"meta\",{\"property\":\"article:tag\",\"content\":\"hmily\"}],[\"meta\",{\"property\":\"article:published_time\",\"content\":\"2018-11-14T00:00:00.000Z\"}],[\"link\",{\"rel\":\"alternate\",\"hreflang\":\"zh-cn\",\"href\":\"https://vuepress-theme-hope-docs-demo.netlify.app/zh/blog/hmily_current.html\"}],[\"meta\",{\"name\":\"Blog\"}]],\"description\":\"Handling Highly Concurrent Transactions with Hmily Let's start with a quick advertisement. Hmily is participating in the Open Source China Annual Popularity Poll at this link. C...\"},\"readingTime\":{\"minutes\":4.47,\"words\":1341},\"filePathRelative\":\"blog/hmily_current.md\",\"autoDesc\":true}")
+export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}

@@ -1,0 +1,16 @@
+import comp from "E:/code/newstudy/new/dromara.github.io/src/.vuepress/.temp/pages/blog/RuoYi-Vue-Plus-5.2.0.html.vue"
+const data = JSON.parse("{\"path\":\"/blog/RuoYi-Vue-Plus-5.2.0.html\",\"title\":\"RuoYi-Vue-Plus Releases 5.2.0-BETA Public Test Version Workflow!\",\"lang\":\"en-US\",\"frontmatter\":{\"title\":\"RuoYi-Vue-Plus Releases 5.2.0-BETA Public Test Version Workflow!\",\"author\":\"RuoYi\",\"date\":\"2024-05-22T00:00:00.000Z\",\"cover\":\"/assets/img/blog/RuoYi-Vue-Plus-5.2.0-0.png\",\"head\":[[\"script\",{\"type\":\"application/ld+json\"},\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"Article\\\",\\\"headline\\\":\\\"RuoYi-Vue-Plus Releases 5.2.0-BETA Public Test Version Workflow!\\\",\\\"image\\\":[\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/blog/RuoYi-Vue-Plus-5.2.0-0.png\\\",\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/qrcode_zsxq.webp\\\"],\\\"datePublished\\\":\\\"2024-05-22T00:00:00.000Z\\\",\\\"dateModified\\\":null,\\\"author\\\":[{\\\"@type\\\":\\\"Person\\\",\\\"name\\\":\\\"RuoYi\\\"}]}\"],[\"meta\",{\"property\":\"og:url\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/blog/RuoYi-Vue-Plus-5.2.0.html\"}],[\"meta\",{\"property\":\"og:title\",\"content\":\"RuoYi-Vue-Plus Releases 5.2.0-BETA Public Test Version Workflow!\"}],[\"meta\",{\"property\":\"og:description\",\"content\":\"Update log Major changes Integration flowable adds workflow related functions (thanks May) Integrated snailjob removal powerjob (too many complaints are too expensive to use) (t...\"}],[\"meta\",{\"property\":\"og:type\",\"content\":\"article\"}],[\"meta\",{\"property\":\"og:image\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/blog/RuoYi-Vue-Plus-5.2.0-0.png\"}],[\"meta\",{\"property\":\"og:locale\",\"content\":\"en-US\"}],[\"meta\",{\"property\":\"og:locale:alternate\",\"content\":\"zh-CN\"}],[\"meta\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"meta\",{\"name\":\"twitter:image:src\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/blog/RuoYi-Vue-Plus-5.2.0-0.png\"}],[\"meta\",{\"name\":\"twitter:image:alt\",\"content\":\"RuoYi-Vue-Plus Releases 5.2.0-BETA Public Test Version Workflow!\"}],[\"meta\",{\"property\":\"article:author\",\"content\":\"RuoYi\"}],[\"meta\",{\"property\":\"article:published_time\",\"content\":\"2024-05-22T00:00:00.000Z\"}],[\"link\",{\"rel\":\"alternate\",\"hreflang\":\"zh-cn\",\"href\":\"https://vuepress-theme-hope-docs-demo.netlify.app/zh/blog/RuoYi-Vue-Plus-5.2.0.html\"}],[\"meta\",{\"name\":\"Blog\"}]],\"description\":\"Update log Major changes Integration flowable adds workflow related functions (thanks May) Integrated snailjob removal powerjob (too many complaints are too expensive to use) (t...\"},\"readingTime\":{\"minutes\":8.48,\"words\":2543},\"filePathRelative\":\"blog/RuoYi-Vue-Plus-5.2.0.md\",\"autoDesc\":true}")
+export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}

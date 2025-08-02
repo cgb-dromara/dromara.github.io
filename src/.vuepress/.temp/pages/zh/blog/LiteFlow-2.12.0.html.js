@@ -1,0 +1,16 @@
+import comp from "E:/code/newstudy/new/dromara.github.io/src/.vuepress/.temp/pages/zh/blog/LiteFlow-2.12.0.html.vue"
+const data = JSON.parse("{\"path\":\"/zh/blog/LiteFlow-2.12.0.html\",\"title\":\"决策路由特性来袭，LiteFlow大版本2.12.0发布，Make your code amaing！\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"决策路由特性来袭，LiteFlow大版本2.12.0发布，Make your code amaing！\",\"author\":\"铂赛东\",\"date\":\"2024-04-16T00:00:00.000Z\",\"cover\":\"/assets/img/blog/LiteFlow-2.12.0-0.png\",\"head\":[[\"script\",{\"type\":\"application/ld+json\"},\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"Article\\\",\\\"headline\\\":\\\"决策路由特性来袭，LiteFlow大版本2.12.0发布，Make your code amaing！\\\",\\\"image\\\":[\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/blog/LiteFlow-2.12.0-0.png\\\",\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/blog/LiteFlow-2.12.0-1.png\\\",\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/blog/LiteFlow-2.12.0-2.png\\\",\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/blog/LiteFlow-2.12.0-3.png\\\"],\\\"datePublished\\\":\\\"2024-04-16T00:00:00.000Z\\\",\\\"dateModified\\\":null,\\\"author\\\":[{\\\"@type\\\":\\\"Person\\\",\\\"name\\\":\\\"铂赛东\\\"}]}\"],[\"meta\",{\"property\":\"og:url\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/zh/blog/LiteFlow-2.12.0.html\"}],[\"meta\",{\"property\":\"og:title\",\"content\":\"决策路由特性来袭，LiteFlow大版本2.12.0发布，Make your code amaing！\"}],[\"meta\",{\"property\":\"og:description\",\"content\":\"LiteFlow是一个开源编排式规则引擎，能够让你的系统逻辑任意编排，可选用脚本书写逻辑，支持多达7种脚本语言，支持丰富的第三方存储的支持，所有的逻辑和规则均可热变更。设计系统和重构系统的神器。 LiteFlow是Gitee的高star项目，截止到发此文章的时候，Gitee star接近6k大关，Github则拥有2.6Kstar。 同时LiteFlo...\"}],[\"meta\",{\"property\":\"og:type\",\"content\":\"article\"}],[\"meta\",{\"property\":\"og:image\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/blog/LiteFlow-2.12.0-0.png\"}],[\"meta\",{\"property\":\"og:locale\",\"content\":\"zh-CN\"}],[\"meta\",{\"property\":\"og:locale:alternate\",\"content\":\"en-US\"}],[\"meta\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"meta\",{\"name\":\"twitter:image:src\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/blog/LiteFlow-2.12.0-0.png\"}],[\"meta\",{\"name\":\"twitter:image:alt\",\"content\":\"决策路由特性来袭，LiteFlow大版本2.12.0发布，Make your code amaing！\"}],[\"meta\",{\"property\":\"article:author\",\"content\":\"铂赛东\"}],[\"meta\",{\"property\":\"article:published_time\",\"content\":\"2024-04-16T00:00:00.000Z\"}],[\"link\",{\"rel\":\"alternate\",\"hreflang\":\"en-us\",\"href\":\"https://vuepress-theme-hope-docs-demo.netlify.app/blog/LiteFlow-2.12.0.html\"}],[\"meta\",{\"name\":\"博客\"}]],\"description\":\"LiteFlow是一个开源编排式规则引擎，能够让你的系统逻辑任意编排，可选用脚本书写逻辑，支持多达7种脚本语言，支持丰富的第三方存储的支持，所有的逻辑和规则均可热变更。设计系统和重构系统的神器。 LiteFlow是Gitee的高star项目，截止到发此文章的时候，Gitee star接近6k大关，Github则拥有2.6Kstar。 同时LiteFlo...\"},\"readingTime\":{\"minutes\":10.14,\"words\":3041},\"filePathRelative\":\"zh/blog/LiteFlow-2.12.0.md\",\"autoDesc\":true}")
+export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}

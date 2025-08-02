@@ -1,0 +1,16 @@
+import comp from "E:/code/newstudy/new/dromara.github.io/src/.vuepress/.temp/pages/news/warm-flow-1.2.0.html.vue"
+const data = JSON.parse("{\"path\":\"/news/warm-flow-1.2.0.html\",\"title\":\"Open source workflow engine warm-flow 1.2.0 major update\",\"lang\":\"en-US\",\"frontmatter\":{\"title\":\"Open source workflow engine warm-flow 1.2.0 major update\",\"author\":\"warm-flow\",\"date\":\"2024-06-13T00:00:00.000Z\",\"cover\":\"/assets/img/news/warm-flow-1.2.0-0.png\",\"head\":[[\"script\",{\"type\":\"application/ld+json\"},\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"Article\\\",\\\"headline\\\":\\\"Open source workflow engine warm-flow 1.2.0 major update\\\",\\\"image\\\":[\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/warm-flow-1.2.0-0.png\\\",\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/warm-flow-1.2.0-1.png\\\",\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/qrcode_zsxq.webp\\\"],\\\"datePublished\\\":\\\"2024-06-13T00:00:00.000Z\\\",\\\"dateModified\\\":null,\\\"author\\\":[{\\\"@type\\\":\\\"Person\\\",\\\"name\\\":\\\"warm-flow\\\"}]}\"],[\"meta\",{\"property\":\"og:url\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/news/warm-flow-1.2.0.html\"}],[\"meta\",{\"property\":\"og:title\",\"content\":\"Open source workflow engine warm-flow 1.2.0 major update\"}],[\"meta\",{\"property\":\"og:description\",\"content\":\"warm-flow1.2.0 major updates This version has been greatly changed, bringing the long-awaited countersign, ticket signing, transfer, oracle and pg database adaptation, etc., and...\"}],[\"meta\",{\"property\":\"og:type\",\"content\":\"article\"}],[\"meta\",{\"property\":\"og:image\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/warm-flow-1.2.0-0.png\"}],[\"meta\",{\"property\":\"og:locale\",\"content\":\"en-US\"}],[\"meta\",{\"property\":\"og:locale:alternate\",\"content\":\"zh-CN\"}],[\"meta\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"meta\",{\"name\":\"twitter:image:src\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/warm-flow-1.2.0-0.png\"}],[\"meta\",{\"name\":\"twitter:image:alt\",\"content\":\"Open source workflow engine warm-flow 1.2.0 major update\"}],[\"meta\",{\"property\":\"article:author\",\"content\":\"warm-flow\"}],[\"meta\",{\"property\":\"article:published_time\",\"content\":\"2024-06-13T00:00:00.000Z\"}],[\"link\",{\"rel\":\"alternate\",\"hreflang\":\"zh-cn\",\"href\":\"https://vuepress-theme-hope-docs-demo.netlify.app/zh/news/warm-flow-1.2.0.html\"}],[\"meta\",{\"name\":\"News\"}]],\"description\":\"warm-flow1.2.0 major updates This version has been greatly changed, bringing the long-awaited countersign, ticket signing, transfer, oracle and pg database adaptation, etc., and...\"},\"readingTime\":{\"minutes\":2.84,\"words\":851},\"filePathRelative\":\"news/warm-flow-1.2.0.md\",\"autoDesc\":true}")
+export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}

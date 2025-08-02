@@ -1,0 +1,16 @@
+import comp from "E:/code/newstudy/new/dromara.github.io/src/.vuepress/.temp/pages/zh/news/x-file-storage-2.2.0.html.vue"
+const data = JSON.parse("{\"path\":\"/zh/news/x-file-storage-2.2.0.html\",\"title\":\"一站式文件存储 X File Storage 发布 2.2.0 版本，更新大量内容，新增 Solon 插件\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"一站式文件存储 X File Storage 发布 2.2.0 版本，更新大量内容，新增 Solon 插件\",\"author\":\"X File Storage\",\"date\":\"2024-07-03T00:00:00.000Z\",\"cover\":\"/assets/img/news/x-file-storage-2.2.0-0.svg\",\"head\":[[\"script\",{\"type\":\"application/ld+json\"},\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"Article\\\",\\\"headline\\\":\\\"一站式文件存储 X File Storage 发布 2.2.0 版本，更新大量内容，新增 Solon 插件\\\",\\\"image\\\":[\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/x-file-storage-2.2.0-0.svg\\\",\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/x-file-storage-2.2.0-1.webp\\\"],\\\"datePublished\\\":\\\"2024-07-03T00:00:00.000Z\\\",\\\"dateModified\\\":null,\\\"author\\\":[{\\\"@type\\\":\\\"Person\\\",\\\"name\\\":\\\"X File Storage\\\"}]}\"],[\"meta\",{\"property\":\"og:url\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/zh/news/x-file-storage-2.2.0.html\"}],[\"meta\",{\"property\":\"og:title\",\"content\":\"一站式文件存储 X File Storage 发布 2.2.0 版本，更新大量内容，新增 Solon 插件\"}],[\"meta\",{\"property\":\"og:description\",\"content\":\"原名 X Spring File Storage 现已捐赠至 dromara 开源组织 x-file-storage.dromara.org | x-file-storage.xuyanwu.cn | spring-file-storage.xuyanwu.cn 📚简介 一行代码将文件存储到本地、FTP、SFTP、WebDAV、阿里云 OSS、华为云...\"}],[\"meta\",{\"property\":\"og:type\",\"content\":\"article\"}],[\"meta\",{\"property\":\"og:image\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/x-file-storage-2.2.0-0.svg\"}],[\"meta\",{\"property\":\"og:locale\",\"content\":\"zh-CN\"}],[\"meta\",{\"property\":\"og:locale:alternate\",\"content\":\"en-US\"}],[\"meta\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"meta\",{\"name\":\"twitter:image:src\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/x-file-storage-2.2.0-0.svg\"}],[\"meta\",{\"name\":\"twitter:image:alt\",\"content\":\"一站式文件存储 X File Storage 发布 2.2.0 版本，更新大量内容，新增 Solon 插件\"}],[\"meta\",{\"property\":\"article:author\",\"content\":\"X File Storage\"}],[\"meta\",{\"property\":\"article:published_time\",\"content\":\"2024-07-03T00:00:00.000Z\"}],[\"link\",{\"rel\":\"alternate\",\"hreflang\":\"en-us\",\"href\":\"https://vuepress-theme-hope-docs-demo.netlify.app/news/x-file-storage-2.2.0.html\"}],[\"meta\",{\"name\":\"新闻\"}]],\"description\":\"原名 X Spring File Storage 现已捐赠至 dromara 开源组织 x-file-storage.dromara.org | x-file-storage.xuyanwu.cn | spring-file-storage.xuyanwu.cn 📚简介 一行代码将文件存储到本地、FTP、SFTP、WebDAV、阿里云 OSS、华为云...\"},\"readingTime\":{\"minutes\":4.97,\"words\":1490},\"filePathRelative\":\"zh/news/x-file-storage-2.2.0.md\",\"autoDesc\":true}")
+export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}

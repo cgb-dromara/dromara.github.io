@@ -1,0 +1,66 @@
+<template><div><p>Skyeye cloud intelligent manufacturing, using winUI-Springboot low-code platform, mobile terminal using UNI-APP. It includes more than 30 application modules, more than 50 kinds of electronic processes, CRM, PM, ERP, MES, ADM, EHR, notes, knowledge base, projects, stores, shopping malls, finance, multi-shift attendance, salary, recruitment, cloud after-sales, forums, announcements, questionnaires, report design, workflow, schedule, cloud disk and other comprehensive management, realizing the integrated management of intelligent manufacturing industry. Realize the efficient operation of the management process &quot;customer relationship-&gt; online/offline quotation-&gt; sales quotation-&gt; sales contract-&gt; production plan-&gt; commodity design-&gt; purchase-&gt; processing and manufacturing-&gt; storage-&gt; delivery-&gt; after-sales service&quot;, and realize the management of enterprise employees and the process operation of internal operation, it has improved many functions for employees from &quot;induction-&gt; training-&gt; employment confirmation-&gt; office-&gt; resignation.</p>
+<p>FAQ Development Document</p>
+<p>After Skyeye cloud does not do commercial version content, [source code] is open source for {planet users}. After getting the source code, it can be used for learning, completion, enterprise, etc.</p>
+<p>Skyeye Cloud Intelligent Manufacturing v3.14.6 was released as follows:</p>
+<ul>
+<li>
+<p>Skyeye Cloud has joined the Dromara community</p>
+</li>
+<li>
+<p>New member level management function</p>
+</li>
+<li>
+<p>New payment channel management function</p>
+</li>
+<li>
+<p>New store commodity classification management function</p>
+</li>
+<li>
+<p>Mall login docking, support password login, verification code login</p>
+</li>
+<li>
+<p>Development documents have been added to 118</p>
+</li>
+<li>
+<p>Source code is open to planet users</p>
+</li>
+<li>
+<p>Addressing a number of issues.</p>
+</li>
+</ul>
+<p>Skyeye has the characteristics of low code, fast development, visual design, micro-service, etc., which facilitates the secondary development of customers and greatly improves the development efficiency.</p>
+<p>erp：https://gitee.com/doc_wei01/skyeye</p>
+<p>OA：https://gitee.com/dromara/skyeye</p>
+<p>Reports: https://gitee.com/doc_wei01/skyeye-report有问题可以联系作者,详情请看开发计划 。</p>
+<p>renderings</p>
+<table>
+<thead>
+<tr>
+<th>renderings</th>
+<th>renderings</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><img src="/assets/img/news/Skyeye-3.14.6-0.webp" alt=""></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>|</p>
+<figure><img src="/assets/img/news/Skyeye-3.14.6-1.webp" alt="" tabindex="0"><figcaption></figcaption></figure>
+<p>|
+|</p>
+<figure><img src="/assets/img/news/Skyeye-3.14.6-2.webp" alt="" tabindex="0"><figcaption></figcaption></figure>
+<p>|</p>
+<figure><img src="/assets/img/news/Skyeye-3.14.6-3.webp" alt="" tabindex="0"><figcaption></figcaption></figure>
+<p>|</p>
+<p>renderings</p>
+<figure><img src="/assets/img/news/Skyeye-3.14.6-4.webp" alt="" tabindex="0"><figcaption></figcaption></figure>
+</div></template>
+
+

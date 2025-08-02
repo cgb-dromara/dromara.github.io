@@ -1,0 +1,16 @@
+import comp from "E:/code/newstudy/new/dromara.github.io/src/.vuepress/.temp/pages/news/EasyAI-1.1.8.html.vue"
+const data = JSON.parse("{\"path\":\"/news/EasyAI-1.1.8.html\",\"title\":\"Java Native AI algorithm development engine EasyAI v1.1.8 Version Release\",\"lang\":\"en-US\",\"frontmatter\":{\"title\":\"Java Native AI algorithm development engine EasyAI v1.1.8 Version Release\",\"author\":\"easyAI\",\"tag\":[\"EasyAI\"],\"date\":\"2024-05-06T00:00:00.000Z\",\"cover\":\"/assets/img/news/EasyAI-1.1.8-0.png\",\"head\":[[\"script\",{\"type\":\"application/ld+json\"},\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"Article\\\",\\\"headline\\\":\\\"Java Native AI algorithm development engine EasyAI v1.1.8 Version Release\\\",\\\"image\\\":[\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/EasyAI-1.1.8-0.png\\\",\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/EasyAI-1.1.8-7.webp\\\"],\\\"datePublished\\\":\\\"2024-05-06T00:00:00.000Z\\\",\\\"dateModified\\\":null,\\\"author\\\":[{\\\"@type\\\":\\\"Person\\\",\\\"name\\\":\\\"easyAI\\\"}]}\"],[\"meta\",{\"property\":\"og:url\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/news/EasyAI-1.1.8.html\"}],[\"meta\",{\"property\":\"og:title\",\"content\":\"Java Native AI algorithm development engine EasyAI v1.1.8 Version Release\"}],[\"meta\",{\"property\":\"og:description\",\"content\":\"Introduction easyAI is the 1 java pure native AI algorithm development engine, built-in a variety of machine learning, reinforcement learning, evolutionary learning and a variet...\"}],[\"meta\",{\"property\":\"og:type\",\"content\":\"article\"}],[\"meta\",{\"property\":\"og:image\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/EasyAI-1.1.8-0.png\"}],[\"meta\",{\"property\":\"og:locale\",\"content\":\"en-US\"}],[\"meta\",{\"property\":\"og:locale:alternate\",\"content\":\"zh-CN\"}],[\"meta\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"meta\",{\"name\":\"twitter:image:src\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/EasyAI-1.1.8-0.png\"}],[\"meta\",{\"name\":\"twitter:image:alt\",\"content\":\"Java Native AI algorithm development engine EasyAI v1.1.8 Version Release\"}],[\"meta\",{\"property\":\"article:author\",\"content\":\"easyAI\"}],[\"meta\",{\"property\":\"article:tag\",\"content\":\"EasyAI\"}],[\"meta\",{\"property\":\"article:published_time\",\"content\":\"2024-05-06T00:00:00.000Z\"}],[\"link\",{\"rel\":\"alternate\",\"hreflang\":\"zh-cn\",\"href\":\"https://vuepress-theme-hope-docs-demo.netlify.app/zh/news/EasyAI-1.1.8.html\"}],[\"meta\",{\"name\":\"News\"}]],\"description\":\"Introduction easyAI is the 1 java pure native AI algorithm development engine, built-in a variety of machine learning, reinforcement learning, evolutionary learning and a variet...\"},\"readingTime\":{\"minutes\":2.54,\"words\":761},\"filePathRelative\":\"news/EasyAI-1.1.8.md\",\"autoDesc\":true}")
+export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}

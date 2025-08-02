@@ -1,0 +1,16 @@
+import comp from "E:/code/newstudy/new/dromara.github.io/src/.vuepress/.temp/pages/activity/dromara-activites-introduce.html.vue"
+const data = JSON.parse("{\"path\":\"/activity/dromara-activites-introduce.html\",\"title\":\"Dromara Dream Code Book Club Introduction\",\"lang\":\"en-US\",\"frontmatter\":{\"title\":\"Dromara Dream Code Book Club Introduction\",\"author\":\"xiaoyu\",\"date\":\"2020-12-27T00:00:00.000Z\",\"tag\":[\"DreamCode\",\"Dromara\",\"GateWay\"],\"cover\":\"/assets/img/activity/dromara-open-soul-01.jpg\",\"head\":[[\"script\",{\"type\":\"application/ld+json\"},\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"Article\\\",\\\"headline\\\":\\\"Dromara Dream Code Book Club Introduction\\\",\\\"image\\\":[\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/activite/soul-xmind.png\\\"],\\\"datePublished\\\":\\\"2020-12-27T00:00:00.000Z\\\",\\\"dateModified\\\":null,\\\"author\\\":[{\\\"@type\\\":\\\"Person\\\",\\\"name\\\":\\\"xiaoyu\\\"}]}\"],[\"meta\",{\"property\":\"og:url\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/activity/dromara-activites-introduce.html\"}],[\"meta\",{\"property\":\"og:title\",\"content\":\"Dromara Dream Code Book Club Introduction\"}],[\"meta\",{\"property\":\"og:description\",\"content\":\"Dromara Dream Code Book Club IntroductionDromara Dream Code Book Club Introduction Dromara Dream Code Book Club（Dromara 2020 event introduction） Date: Sunday, December 27, 2020 ...\"}],[\"meta\",{\"property\":\"og:type\",\"content\":\"article\"}],[\"meta\",{\"property\":\"og:image\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/activity/dromara-open-soul-01.jpg\"}],[\"meta\",{\"property\":\"og:locale\",\"content\":\"en-US\"}],[\"meta\",{\"property\":\"og:locale:alternate\",\"content\":\"zh-CN\"}],[\"meta\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"meta\",{\"name\":\"twitter:image:src\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/activity/dromara-open-soul-01.jpg\"}],[\"meta\",{\"name\":\"twitter:image:alt\",\"content\":\"Dromara Dream Code Book Club Introduction\"}],[\"meta\",{\"property\":\"article:author\",\"content\":\"xiaoyu\"}],[\"meta\",{\"property\":\"article:tag\",\"content\":\"GateWay\"}],[\"meta\",{\"property\":\"article:tag\",\"content\":\"Dromara\"}],[\"meta\",{\"property\":\"article:tag\",\"content\":\"DreamCode\"}],[\"meta\",{\"property\":\"article:published_time\",\"content\":\"2020-12-27T00:00:00.000Z\"}],[\"link\",{\"rel\":\"alternate\",\"hreflang\":\"zh-cn\",\"href\":\"https://vuepress-theme-hope-docs-demo.netlify.app/zh/activity/dromara-activites-introduce.html\"}],[\"meta\",{\"name\":\"Activity\"}]],\"description\":\"Dromara Dream Code Book Club IntroductionDromara Dream Code Book Club Introduction Dromara Dream Code Book Club（Dromara 2020 event introduction） Date: Sunday, December 27, 2020 ...\"},\"readingTime\":{\"minutes\":0.81,\"words\":242},\"filePathRelative\":\"activity/dromara-activites-introduce.md\",\"autoDesc\":true}")
+export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}

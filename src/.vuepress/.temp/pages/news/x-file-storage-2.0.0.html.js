@@ -1,0 +1,16 @@
+import comp from "E:/code/newstudy/new/dromara.github.io/src/.vuepress/.temp/pages/news/x-file-storage-2.0.0.html.vue"
+const data = JSON.parse("{\"path\":\"/news/x-file-storage-2.0.0.html\",\"title\":\"Welcome X File Storage to join dromara open source community, one-stop file storage\",\"lang\":\"en-US\",\"frontmatter\":{\"title\":\"Welcome X File Storage to join dromara open source community, one-stop file storage\",\"author\":\"XuYanwu\",\"tag\":[\"X-File-Storage\"],\"date\":\"2023-10-19T00:00:00.000Z\",\"cover\":\"/assets/img/news/X-File-Storage-Cover.svg\",\"head\":[[\"script\",{\"type\":\"application/ld+json\"},\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"Article\\\",\\\"headline\\\":\\\"Welcome X File Storage to join dromara open source community, one-stop file storage\\\",\\\"image\\\":[\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/X-File-Storage-Cover.svg\\\"],\\\"datePublished\\\":\\\"2023-10-19T00:00:00.000Z\\\",\\\"dateModified\\\":null,\\\"author\\\":[{\\\"@type\\\":\\\"Person\\\",\\\"name\\\":\\\"XuYanwu\\\"}]}\"],[\"meta\",{\"property\":\"og:url\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/news/x-file-storage-2.0.0.html\"}],[\"meta\",{\"property\":\"og:title\",\"content\":\"Welcome X File Storage to join dromara open source community, one-stop file storage\"}],[\"meta\",{\"property\":\"og:description\",\"content\":\"logo Originally known as X Spring File Storage, it has been donated to the dromara open source organization 📚Summary One line of code stores files locally, FTP, SFTP, WebDAV, A...\"}],[\"meta\",{\"property\":\"og:type\",\"content\":\"article\"}],[\"meta\",{\"property\":\"og:image\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/X-File-Storage-Cover.svg\"}],[\"meta\",{\"property\":\"og:locale\",\"content\":\"en-US\"}],[\"meta\",{\"property\":\"og:locale:alternate\",\"content\":\"zh-CN\"}],[\"meta\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"meta\",{\"name\":\"twitter:image:src\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/X-File-Storage-Cover.svg\"}],[\"meta\",{\"name\":\"twitter:image:alt\",\"content\":\"Welcome X File Storage to join dromara open source community, one-stop file storage\"}],[\"meta\",{\"property\":\"article:author\",\"content\":\"XuYanwu\"}],[\"meta\",{\"property\":\"article:tag\",\"content\":\"X-File-Storage\"}],[\"meta\",{\"property\":\"article:published_time\",\"content\":\"2023-10-19T00:00:00.000Z\"}],[\"link\",{\"rel\":\"alternate\",\"hreflang\":\"zh-cn\",\"href\":\"https://vuepress-theme-hope-docs-demo.netlify.app/zh/news/x-file-storage-2.0.0.html\"}],[\"meta\",{\"name\":\"News\"}]],\"description\":\"logo Originally known as X Spring File Storage, it has been donated to the dromara open source organization 📚Summary One line of code stores files locally, FTP, SFTP, WebDAV, A...\"},\"readingTime\":{\"minutes\":3.8,\"words\":1139},\"filePathRelative\":\"news/x-file-storage-2.0.0.md\",\"autoDesc\":true}")
+export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}

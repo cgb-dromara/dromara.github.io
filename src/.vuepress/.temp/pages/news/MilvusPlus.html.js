@@ -1,0 +1,16 @@
+import comp from "E:/code/newstudy/new/dromara.github.io/src/.vuepress/.temp/pages/news/MilvusPlus.html.vue"
+const data = JSON.parse("{\"path\":\"/news/MilvusPlus.html\",\"title\":\"Welcome MilvusPlus to join the community, vector database enhancement operation library\",\"lang\":\"en-US\",\"frontmatter\":{\"title\":\"Welcome MilvusPlus to join the community, vector database enhancement operation library\",\"author\":\"MilvusPlus\",\"date\":\"2024-05-23T00:00:00.000Z\",\"cover\":\"/assets/img/news/MilvusPlus-0.png\",\"head\":[[\"script\",{\"type\":\"application/ld+json\"},\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"Article\\\",\\\"headline\\\":\\\"Welcome MilvusPlus to join the community, vector database enhancement operation library\\\",\\\"image\\\":[\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/MilvusPlus-0.png\\\"],\\\"datePublished\\\":\\\"2024-05-23T00:00:00.000Z\\\",\\\"dateModified\\\":null,\\\"author\\\":[{\\\"@type\\\":\\\"Person\\\",\\\"name\\\":\\\"MilvusPlus\\\"}]}\"],[\"meta\",{\"property\":\"og:url\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/news/MilvusPlus.html\"}],[\"meta\",{\"property\":\"og:title\",\"content\":\"Welcome MilvusPlus to join the community, vector database enhancement operation library\"}],[\"meta\",{\"property\":\"og:description\",\"content\":\"MilvusPlus：Vector Database Enhanced Operations Library Project Profile MilvusPlus 🔥🔥🔥MilvusPlus (MP for short) is a Milvus operation tool designed to simplify the interaction...\"}],[\"meta\",{\"property\":\"og:type\",\"content\":\"article\"}],[\"meta\",{\"property\":\"og:image\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/MilvusPlus-0.png\"}],[\"meta\",{\"property\":\"og:locale\",\"content\":\"en-US\"}],[\"meta\",{\"property\":\"og:locale:alternate\",\"content\":\"zh-CN\"}],[\"meta\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"meta\",{\"name\":\"twitter:image:src\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/MilvusPlus-0.png\"}],[\"meta\",{\"name\":\"twitter:image:alt\",\"content\":\"Welcome MilvusPlus to join the community, vector database enhancement operation library\"}],[\"meta\",{\"property\":\"article:author\",\"content\":\"MilvusPlus\"}],[\"meta\",{\"property\":\"article:published_time\",\"content\":\"2024-05-23T00:00:00.000Z\"}],[\"link\",{\"rel\":\"alternate\",\"hreflang\":\"zh-cn\",\"href\":\"https://vuepress-theme-hope-docs-demo.netlify.app/zh/news/MilvusPlus.html\"}],[\"meta\",{\"name\":\"News\"}]],\"description\":\"MilvusPlus：Vector Database Enhanced Operations Library Project Profile MilvusPlus 🔥🔥🔥MilvusPlus (MP for short) is a Milvus operation tool designed to simplify the interaction...\"},\"readingTime\":{\"minutes\":9.63,\"words\":2888},\"filePathRelative\":\"news/MilvusPlus.md\",\"autoDesc\":true}")
+export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}

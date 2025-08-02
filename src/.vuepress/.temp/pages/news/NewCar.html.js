@@ -1,0 +1,16 @@
+import comp from "E:/code/newstudy/new/dromara.github.io/src/.vuepress/.temp/pages/news/NewCar.html.vue"
+const data = JSON.parse("{\"path\":\"/news/NewCar.html\",\"title\":\"Middle school students open source front-end animation engine NewCar to join the Dromara community\",\"lang\":\"en-US\",\"frontmatter\":{\"title\":\"Middle school students open source front-end animation engine NewCar to join the Dromara community\",\"author\":\"高中的BugDuck\",\"date\":\"2024-04-22T00:00:00.000Z\",\"cover\":\"/assets/img/news/NewCar-0.png\",\"head\":[[\"script\",{\"type\":\"application/ld+json\"},\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"Article\\\",\\\"headline\\\":\\\"Middle school students open source front-end animation engine NewCar to join the Dromara community\\\",\\\"image\\\":[\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/NewCar-0.png\\\"],\\\"datePublished\\\":\\\"2024-04-22T00:00:00.000Z\\\",\\\"dateModified\\\":null,\\\"author\\\":[{\\\"@type\\\":\\\"Person\\\",\\\"name\\\":\\\"高中的BugDuck\\\"}]}\"],[\"meta\",{\"property\":\"og:url\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/news/NewCar.html\"}],[\"meta\",{\"property\":\"og:title\",\"content\":\"Middle school students open source front-end animation engine NewCar to join the Dromara community\"}],[\"meta\",{\"property\":\"og:description\",\"content\":\"About the Author I'm with programming My name is AcboxSky. I live in Lu 'an, Anhui province. I am a high school student and I am currently studying in senior one. From the winte...\"}],[\"meta\",{\"property\":\"og:type\",\"content\":\"article\"}],[\"meta\",{\"property\":\"og:image\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/NewCar-0.png\"}],[\"meta\",{\"property\":\"og:locale\",\"content\":\"en-US\"}],[\"meta\",{\"property\":\"og:locale:alternate\",\"content\":\"zh-CN\"}],[\"meta\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"meta\",{\"name\":\"twitter:image:src\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/NewCar-0.png\"}],[\"meta\",{\"name\":\"twitter:image:alt\",\"content\":\"Middle school students open source front-end animation engine NewCar to join the Dromara community\"}],[\"meta\",{\"property\":\"article:author\",\"content\":\"高中的BugDuck\"}],[\"meta\",{\"property\":\"article:published_time\",\"content\":\"2024-04-22T00:00:00.000Z\"}],[\"link\",{\"rel\":\"alternate\",\"hreflang\":\"zh-cn\",\"href\":\"https://vuepress-theme-hope-docs-demo.netlify.app/zh/news/NewCar.html\"}],[\"meta\",{\"name\":\"News\"}]],\"description\":\"About the Author I'm with programming My name is AcboxSky. I live in Lu 'an, Anhui province. I am a high school student and I am currently studying in senior one. From the winte...\"},\"readingTime\":{\"minutes\":2.96,\"words\":888},\"filePathRelative\":\"news/NewCar.md\",\"autoDesc\":true}")
+export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}

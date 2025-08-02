@@ -1,0 +1,16 @@
+import comp from "E:/code/newstudy/new/dromara.github.io/src/.vuepress/.temp/pages/zh/news/EasyAI-0.html.vue"
+const data = JSON.parse("{\"path\":\"/zh/news/EasyAI-0.html\",\"title\":\"2024第一弹，JAVA原生AI算法引擎 EasyAI 加入Dromara开源社区\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"2024第一弹，JAVA原生AI算法引擎 EasyAI 加入Dromara开源社区\",\"author\":\"EasyAI\",\"date\":\"2024-01-05T00:00:00.000Z\",\"cover\":\"/assets/img/news/EasyAI-0-0.png\",\"head\":[[\"script\",{\"type\":\"application/ld+json\"},\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"Article\\\",\\\"headline\\\":\\\"2024第一弹，JAVA原生AI算法引擎 EasyAI 加入Dromara开源社区\\\",\\\"image\\\":[\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/EasyAI-0-0.png\\\",\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/EasyAI-0-1.png\\\",\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/EasyAI-0-2.png\\\",\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/EasyAI-0-3.png\\\",\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/EasyAI-0-4.png\\\",\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/EasyAI-0-5.png\\\",\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/EasyAI-0-6.png\\\",\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/EasyAI-0-7.png\\\"],\\\"datePublished\\\":\\\"2024-01-05T00:00:00.000Z\\\",\\\"dateModified\\\":null,\\\"author\\\":[{\\\"@type\\\":\\\"Person\\\",\\\"name\\\":\\\"EasyAI\\\"}]}\"],[\"meta\",{\"property\":\"og:url\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/zh/news/EasyAI-0.html\"}],[\"meta\",{\"property\":\"og:title\",\"content\":\"2024第一弹，JAVA原生AI算法引擎 EasyAI 加入Dromara开源社区\"}],[\"meta\",{\"property\":\"og:description\",\"content\":\"如今 AI 项目无论在工业领域还是生活领域都开始逐渐深入，ChatGPT，文心一言等大模型更是如火如荼，让我们看到了 AI 的强大。不知道多少小伙伴想快速涉猎到 AI 领域呢？因为各种原因 JAVA 在 AI 领域一直是传统弱项，但是 JAVA 程序员却占据了国内程序员就业的半壁江山，所以这次我带来的 java 原生开源 AI 算法引擎-easyAI（...\"}],[\"meta\",{\"property\":\"og:type\",\"content\":\"article\"}],[\"meta\",{\"property\":\"og:image\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/EasyAI-0-0.png\"}],[\"meta\",{\"property\":\"og:locale\",\"content\":\"zh-CN\"}],[\"meta\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"meta\",{\"name\":\"twitter:image:src\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/EasyAI-0-0.png\"}],[\"meta\",{\"name\":\"twitter:image:alt\",\"content\":\"2024第一弹，JAVA原生AI算法引擎 EasyAI 加入Dromara开源社区\"}],[\"meta\",{\"property\":\"article:author\",\"content\":\"EasyAI\"}],[\"meta\",{\"property\":\"article:published_time\",\"content\":\"2024-01-05T00:00:00.000Z\"}],[\"meta\",{\"name\":\"新闻\"}]],\"description\":\"如今 AI 项目无论在工业领域还是生活领域都开始逐渐深入，ChatGPT，文心一言等大模型更是如火如荼，让我们看到了 AI 的强大。不知道多少小伙伴想快速涉猎到 AI 领域呢？因为各种原因 JAVA 在 AI 领域一直是传统弱项，但是 JAVA 程序员却占据了国内程序员就业的半壁江山，所以这次我带来的 java 原生开源 AI 算法引擎-easyAI（...\"},\"readingTime\":{\"minutes\":7.56,\"words\":2268},\"filePathRelative\":\"zh/news/EasyAI-0.md\",\"autoDesc\":true}")
+export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}

@@ -1,0 +1,16 @@
+import comp from "E:/code/newstudy/new/dromara.github.io/src/.vuepress/.temp/pages/zh/news/FreeNginx.html.vue"
+const data = JSON.parse("{\"path\":\"/zh/news/FreeNginx.html\",\"title\":\"情人节即分手，FreeNginx 来了\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"情人节即分手，FreeNginx 来了\",\"author\":\"tom\",\"date\":\"2024-02-16T00:00:00.000Z\",\"cover\":\"/assets/img/news/FreeNginx-0.png\",\"head\":[[\"script\",{\"type\":\"application/ld+json\"},\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"Article\\\",\\\"headline\\\":\\\"情人节即分手，FreeNginx 来了\\\",\\\"image\\\":[\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/FreeNginx-0.png\\\",\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/FreeNginx-1.png\\\",\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/FreeNginx-2.png\\\",\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/FreeNginx-3.png\\\",\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/FreeNginx-4.png\\\",\\\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/FreeNginx-5.png\\\"],\\\"datePublished\\\":\\\"2024-02-16T00:00:00.000Z\\\",\\\"dateModified\\\":null,\\\"author\\\":[{\\\"@type\\\":\\\"Person\\\",\\\"name\\\":\\\"tom\\\"}]}\"],[\"meta\",{\"property\":\"og:url\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/zh/news/FreeNginx.html\"}],[\"meta\",{\"property\":\"og:title\",\"content\":\"情人节即分手，FreeNginx 来了\"}],[\"meta\",{\"property\":\"og:description\",\"content\":\"时间线 2019 年 3 月 11 日，F5 Networks 宣布以 6.7 亿美元收购 Nginx。 2022.01.18, NGINX 创始人 Igor Sysoev 从 NGINX 和 F5 离职：“Igor Sysoev 选择离开 F5，以便将更多的时间留给陪伴家人和朋友，以及个人项目。感谢他所做的一切让全世界的网站变得更好。” 在 2024...\"}],[\"meta\",{\"property\":\"og:type\",\"content\":\"article\"}],[\"meta\",{\"property\":\"og:image\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/FreeNginx-0.png\"}],[\"meta\",{\"property\":\"og:locale\",\"content\":\"zh-CN\"}],[\"meta\",{\"property\":\"og:locale:alternate\",\"content\":\"en-US\"}],[\"meta\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"meta\",{\"name\":\"twitter:image:src\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/assets/img/news/FreeNginx-0.png\"}],[\"meta\",{\"name\":\"twitter:image:alt\",\"content\":\"情人节即分手，FreeNginx 来了\"}],[\"meta\",{\"property\":\"article:author\",\"content\":\"tom\"}],[\"meta\",{\"property\":\"article:published_time\",\"content\":\"2024-02-16T00:00:00.000Z\"}],[\"link\",{\"rel\":\"alternate\",\"hreflang\":\"en-us\",\"href\":\"https://vuepress-theme-hope-docs-demo.netlify.app/news/FreeNginx.html\"}],[\"meta\",{\"name\":\"新闻\"}]],\"description\":\"时间线 2019 年 3 月 11 日，F5 Networks 宣布以 6.7 亿美元收购 Nginx。 2022.01.18, NGINX 创始人 Igor Sysoev 从 NGINX 和 F5 离职：“Igor Sysoev 选择离开 F5，以便将更多的时间留给陪伴家人和朋友，以及个人项目。感谢他所做的一切让全世界的网站变得更好。” 在 2024...\"},\"readingTime\":{\"minutes\":3.53,\"words\":1058},\"filePathRelative\":\"zh/news/FreeNginx.md\",\"autoDesc\":true}")
+export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}
