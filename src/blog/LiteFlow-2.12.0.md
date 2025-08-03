@@ -2,8 +2,6 @@
 title: Decision routing features hit, LiteFlow release of version 2.12.0, Make your code amaing!
 author: Platinum East
 date: 2024-04-16
-tag:
-  - 
 cover: /assets/img/blog/LiteFlow-2.12.0-0.png
 head:
   - - meta

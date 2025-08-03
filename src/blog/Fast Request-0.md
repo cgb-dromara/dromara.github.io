@@ -2,8 +2,6 @@
 title: Script library syntax hint support, Fast Request 2024.1.5 release
 author: Kings
 date: 2024-05-15
-tag:
-  - 
 cover: /assets/img/blog/Fast Request-0-1.webp
 head:
   - - meta

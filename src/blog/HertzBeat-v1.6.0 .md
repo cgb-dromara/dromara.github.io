@@ -2,8 +2,6 @@
 title: The first Apache version v1.6.0 was released in HertzBeat!
 author: tom
 date: 2024-06-17
-tag:
-  - 
 cover: /assets/img/blog/HertzBeat-v1.6.0-0.png
 head:
   - - meta

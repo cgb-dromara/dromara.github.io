@@ -2,8 +2,6 @@
 title: Multi-tab open API,Fast Request 2024.1.6 release
 author: Kings
 date: 2024-06-26
-tag:
-  - 
 cover: /assets/img/blog/FastRequest-1.webp
 head:
   - - meta
