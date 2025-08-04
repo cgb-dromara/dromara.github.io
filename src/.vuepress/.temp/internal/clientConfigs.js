@@ -15,7 +15,8 @@ import * as clientConfig13 from 'E:/code/newstudy/new/dromara.github.io/node_mod
 import * as clientConfig14 from 'E:/code/newstudy/new/dromara.github.io/node_modules/.pnpm/@vuepress+plugin-nprogress@_1ea74cec327d865f334ea3b5c420c5ff/node_modules/@vuepress/plugin-nprogress/lib/client/config.js'
 import * as clientConfig15 from 'E:/code/newstudy/new/dromara.github.io/node_modules/.pnpm/@vuepress+plugin-redirect@2_4c82e9935dac313a5face44625db2491/node_modules/@vuepress/plugin-redirect/lib/client/config.js'
 import * as clientConfig16 from 'E:/code/newstudy/new/dromara.github.io/src/.vuepress/.temp/theme-hope/config.js'
-import * as clientConfig17 from 'E:/code/newstudy/new/dromara.github.io/src/.vuepress/client.ts'
+import * as clientConfig17 from 'E:/code/newstudy/new/dromara.github.io/src/.vuepress/.temp/register-components/clientConfig.4f098f8d.js'
+import * as clientConfig18 from 'E:/code/newstudy/new/dromara.github.io/src/.vuepress/client.ts'
 
 export const clientConfigs = [
   clientConfig0,
@@ -36,4 +37,5 @@ export const clientConfigs = [
   clientConfig15,
   clientConfig16,
   clientConfig17,
+  clientConfig18,
 ].map((m) => m.default).filter(Boolean)

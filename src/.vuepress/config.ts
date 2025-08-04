@@ -2,6 +2,7 @@ import { getDirname, path } from "vuepress/utils";
 import { defineUserConfig } from "vuepress";
 import { hopeTheme } from "vuepress-theme-hope";
 // import { searchProPlugin } from "vuepress-plugin-search-pro";
+import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
 import { viteBundler } from "@vuepress/bundler-vite";
 
 import { enNavbar, zhNavbar } from "./navbar/index.js";
@@ -100,11 +101,16 @@ export default defineUserConfig({
     // searchProPlugin({
     //   indexContent: true
     // }),
+    registerComponentsPlugin({
+      // 配置项
+       componentsDir: path.resolve(__dirname, './components'),
+    }),
     getAllFrontmatter
   ],
 
   alias: {
-    "@theme-hope/components/HomePage": path.resolve(
+    // 新版本存储地址修改 多了一个/home
+    "@theme-hope/components/home/HomePage": path.resolve(
       __dirname,
       "./components/HomePage.vue"
     ),

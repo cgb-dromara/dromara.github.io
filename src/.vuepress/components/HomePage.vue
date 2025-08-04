@@ -49,7 +49,7 @@ const gvpProjects = [
 const totalStars = 305.5; // 来源于gitee总star数与github各仓库star数之和，需手动更新
 
 const allPagesFrontmatter = siteData.value.frontmatter;
-
+console.log('测试方法',allPagesFrontmatter)
 const enCommunityLink: CommunityLink[] = reactive([]);
 const zhCommunityLink: CommunityLink[] = reactive([]);
 

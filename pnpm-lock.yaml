@@ -18,6 +18,9 @@ importers:
       '@vuepress/bundler-vite':
         specifier: 2.0.0-rc.24
         version: 2.0.0-rc.24(@types/node@24.1.0)(sass-embedded@1.89.2)(sass@1.89.2)
+      '@vuepress/plugin-register-components':
+        specifier: 2.0.0-rc.112
+        version: 2.0.0-rc.112(vuepress@2.0.0-rc.24(@vuepress/bundler-vite@2.0.0-rc.24(@types/node@24.1.0)(sass-embedded@1.89.2)(sass@1.89.2))(vue@3.5.18))
       sass:
         specifier: ^1.89.2
         version: 1.89.2
@@ -1020,6 +1023,11 @@ packages:
   '@vuepress/plugin-redirect@2.0.0-rc.112':
     resolution: {integrity: sha512-IOSgVM3nUxO3zpQ7i4FY1kKM4A2I8iM9LCrCFALPrnvt1wfQ4SoTuCxqG3Z1BRgi30DzfMzoXsuVbMZkwk7n2g==}
     hasBin: true
+    peerDependencies:
+      vuepress: 2.0.0-rc.24
+
+  '@vuepress/plugin-register-components@2.0.0-rc.112':
+    resolution: {integrity: sha512-bUloAkR6RZ+QTz6HNKbtMhLO2TPMcLLg5exlW2deHrRY0Z2Iei3HYRwnIqMU4SdPn4Cc4Io2PI6KkrgiQ7Iw2w==}
     peerDependencies:
       vuepress: 2.0.0-rc.24
 
@@ -3285,6 +3293,12 @@ snapshots:
       vuepress: 2.0.0-rc.24(@vuepress/bundler-vite@2.0.0-rc.24(@types/node@24.1.0)(sass-embedded@1.89.2)(sass@1.89.2))(vue@3.5.18)
     transitivePeerDependencies:
       - typescript
+
+  '@vuepress/plugin-register-components@2.0.0-rc.112(vuepress@2.0.0-rc.24(@vuepress/bundler-vite@2.0.0-rc.24(@types/node@24.1.0)(sass-embedded@1.89.2)(sass@1.89.2))(vue@3.5.18))':
+    dependencies:
+      chokidar: 4.0.3
+      picomatch: 4.0.3
+      vuepress: 2.0.0-rc.24(@vuepress/bundler-vite@2.0.0-rc.24(@types/node@24.1.0)(sass-embedded@1.89.2)(sass@1.89.2))(vue@3.5.18)
 
   '@vuepress/plugin-rtl@2.0.0-rc.112(vuepress@2.0.0-rc.24(@vuepress/bundler-vite@2.0.0-rc.24(@types/node@24.1.0)(sass-embedded@1.89.2)(sass@1.89.2))(vue@3.5.18))':
     dependencies:
