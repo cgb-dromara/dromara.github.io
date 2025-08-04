@@ -64,8 +64,9 @@ const groupedPosts: GroupedPosts = {
 
 for (const frontmatter of allPagesFrontmatter) {
   if (frontmatter?.head.length > 0) {
-    const headName = frontmatter.head[0][1].name; // 拿到每篇md文章frontmatter下meta的name属性
+    const headName = frontmatter.head[frontmatter.head.length - 1][1].name; // 拿到每篇md文章frontmatter下meta的name属性
     // 如果是新闻、博客或活动，则添加到相应的数组中
+console.log('看看frontmatter.head',frontmatter.head[frontmatter.head.length - 1][1])
     if (groupedPosts[headName] !== undefined) {
       groupedPosts[headName].push({
         title: frontmatter.title,
