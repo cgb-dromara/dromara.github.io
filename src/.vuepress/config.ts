@@ -54,7 +54,7 @@ export default defineUserConfig({
       docsDir: "src",
 
       breadcrumb: false,
-      darkmode: "disable",
+      // darkmode: "disable",
       editLink: false,
 
       // 修复：将 icon 改为 plugins.icon.assets
@@ -118,7 +118,7 @@ export default defineUserConfig({
       __dirname,
       "./components/PageFooter.vue"
     ),
-    "@MembersPage": path.resolve(__dirname, "./components/MembersPage.vue"),
+    // "@MembersPage": path.resolve(__dirname, "./components/MembersPage.vue"),
     "@ProjectsPage": path.resolve(__dirname, "./components/ProjectsPage.vue"),
     "@HonorComp": path.resolve(__dirname, "./components/HonorComp.vue"),
     "@SiteSection": path.resolve(__dirname, "./components/SiteSection.vue")

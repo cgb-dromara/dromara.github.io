@@ -1,19 +1,3 @@
-<template><div><MembersPage /></div></template>
+<template><div></div></template>
 
 
-<script setup lang="ts">
-import MembersPage from "@MembersPage";
-</script>
-<style scoped lang="scss">
-.theme-hope-content {
-  margin: 0;
-  padding: 0;
-  max-width: none;
-  position: relative;
-  z-index: 1;
-  top: -161px;
-  @media (min-width: 1440px) {
-    background: #f9fbff;
-  }
-}
-</style>

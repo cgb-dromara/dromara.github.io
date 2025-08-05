@@ -12,8 +12,6 @@ export default {
     
       app.component("LogoAnimation", defineAsyncComponent(() => import("E:/code/newstudy/new/dromara.github.io/src/.vuepress/components/LogoAnimation.vue")))
     
-      app.component("MembersPage", defineAsyncComponent(() => import("E:/code/newstudy/new/dromara.github.io/src/.vuepress/components/MembersPage.vue")))
-    
       app.component("PageFooter", defineAsyncComponent(() => import("E:/code/newstudy/new/dromara.github.io/src/.vuepress/components/PageFooter.vue")))
     
       app.component("ProjectsPage", defineAsyncComponent(() => import("E:/code/newstudy/new/dromara.github.io/src/.vuepress/components/ProjectsPage.vue")))

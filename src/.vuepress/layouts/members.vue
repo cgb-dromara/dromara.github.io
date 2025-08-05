@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useMembersLocale } from "../composables/index.js";
 import { onMounted } from "vue";
-
+import { Layout } from "vuepress-theme-hope/client";
 const memberLocale = useMembersLocale();
 
 let webCn: boolean = false;
@@ -16,7 +16,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="members-page">
+    <layout>
+          <div class="members-page">
     <div class="bg-default">
       <div class="member-container">
         <h1 class="title">{{ memberLocale.MEMBERS }}</h1>
@@ -64,6 +65,8 @@ onMounted(() => {
       </div>
     </main>
   </div>
+    </layout>
+
 </template>
 
 <style scoped lang="scss">
@@ -72,9 +75,7 @@ onMounted(() => {
   min-width: 380px;
   overflow-x: hidden;
 
-  @media (min-width: 1440px) {
-    padding-left: 16rem;
-  }
+
 
   .bg-default {
     background-color: #e9eef8;
