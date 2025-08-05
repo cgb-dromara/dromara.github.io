@@ -4,9 +4,10 @@ pageInfo: false
 contributors: false
 editLink: false
 lastUpdated: false
+layout: projects
 ---
 
-<script setup lang="ts">
+<!-- <script setup lang="ts">
 import ProjectsPage from "@ProjectsPage";
 </script>
 
@@ -24,4 +25,4 @@ import ProjectsPage from "@ProjectsPage";
     background: #f9fbff;
   }
 }
-</style>
+</style> -->

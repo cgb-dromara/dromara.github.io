@@ -1,9 +1,9 @@
-<template><div><ProjectsPage /></div></template>
-
-
-<script setup lang="ts">
+<template><div><!-- <script setup lang="ts">
 import ProjectsPage from "@ProjectsPage";
 </script>
+
+<ProjectsPage />
+
 <style scoped lang="scss">
 .theme-hope-content {
   margin: 0;
@@ -16,4 +16,7 @@ import ProjectsPage from "@ProjectsPage";
     background: #f9fbff;
   }
 }
-</style>
+</style> -->
+</div></template>
+
+

@@ -19,6 +19,9 @@ const frontmatter = usePageFrontmatter<ThemeHopePageFrontmatter>();
 <SiteSection :title="frontmatter.title"/>
 
 <style scoped lang="scss">
+  .vp-page-title {
+    display: none;
+  }
 .theme-hope-content {
   margin: 0;
   padding: 0;
