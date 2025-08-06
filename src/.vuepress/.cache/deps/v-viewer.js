@@ -10,7 +10,7 @@ import {
   render,
   renderSlot,
   watch
-} from "./chunk-7X4VNE2G.js";
+} from "./chunk-G6266EAP.js";
 
 // node_modules/.pnpm/viewerjs@1.11.7/node_modules/viewerjs/dist/viewer.esm.js
 function _classCallCheck(a, n) {
@@ -2835,7 +2835,7 @@ var Viewer = function() {
 }();
 assign(Viewer.prototype, render2, events, handlers, methods, others);
 
-// node_modules/.pnpm/v-viewer@3.0.22_viewerjs@1.11.7_vue@3.5.18/node_modules/v-viewer/dist/index.js
+// node_modules/.pnpm/v-viewer@3.0.22_viewerjs@1.11.7_vue@3.5.18_typescript@5.9.2_/node_modules/v-viewer/dist/index.js
 var je = typeof global == "object" && global && global.Object === Object && global;
 var re = je;
 var _e = typeof self == "object" && self && self.Object === Object && self;

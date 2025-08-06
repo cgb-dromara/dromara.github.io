@@ -5,7 +5,7 @@ import {
   EffectCoverflow,
   Navigation,
   Autoplay,
-  Pagination
+  Pagination,
 } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/vue";
 
@@ -13,7 +13,7 @@ import LogoAnimation from "./LogoAnimation.vue";
 import {
   type GroupedPosts,
   type CommunityLink,
-  useHomeLocale
+  useHomeLocale,
 } from "../composables/index.js";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -44,12 +44,12 @@ const gvpProjects = [
   "EasyAi",
   "MilvusPlus",
   "easy-es",
-  "carbon"
+  "carbon",
 ];
 const totalStars = 305.5; // 来源于gitee总star数与github各仓库star数之和，需手动更新
 
 const allPagesFrontmatter = siteData.value.frontmatter;
-console.log('测试方法',allPagesFrontmatter)
+console.log("测试方法", allPagesFrontmatter);
 const enCommunityLink: CommunityLink[] = reactive([]);
 const zhCommunityLink: CommunityLink[] = reactive([]);
 
@@ -59,14 +59,17 @@ const groupedPosts: GroupedPosts = {
   博客: [],
   Blog: [],
   活动: [],
-  Activity: []
+  Activity: [],
 };
 
 for (const frontmatter of allPagesFrontmatter) {
   if (frontmatter?.head.length > 0) {
     const headName = frontmatter.head[frontmatter.head.length - 1][1].name; // 拿到每篇md文章frontmatter下meta的name属性
     // 如果是新闻、博客或活动，则添加到相应的数组中
-console.log('看看frontmatter.head',frontmatter.head[frontmatter.head.length - 1][1])
+    console.log(
+      "看看frontmatter.head",
+      frontmatter.head[frontmatter.head.length - 1][1],
+    );
     if (groupedPosts[headName] !== undefined) {
       groupedPosts[headName].push({
         title: frontmatter.title,
@@ -75,18 +78,18 @@ console.log('看看frontmatter.head',frontmatter.head[frontmatter.head.length - 
             frontmatter.head
               .flat()
               .find(
-                (item: { property: string, content: string }) =>
-                  item.property === "og:url"
-              ).content
+                (item: { property: string; content: string }) =>
+                  item.property === "og:url",
+              ).content,
           ) ?? "", // head的一个数组对象中包含url
-        time: formatDate(frontmatter.date)
+        time: formatDate(frontmatter.date),
       });
     }
   }
 }
 
 // 从框架提供的url中拿到跳转路径
-function extractPathFromURL (url: string): string | null {
+function extractPathFromURL(url: string): string | null {
   const match = url.match(/\/([^/]+\.html)$/);
   if (match?.[1] != null) {
     return match[1];
@@ -94,7 +97,7 @@ function extractPathFromURL (url: string): string | null {
     return null;
   }
 }
-function formatDate (inputDate: string): string {
+function formatDate(inputDate: string): string {
   const date = new Date(inputDate);
   const year = date.getFullYear();
   const month = String(date.getMonth() + 1).padStart(2, "0");
@@ -103,13 +106,13 @@ function formatDate (inputDate: string): string {
 }
 
 // 定义一个映射，将 headName 映射到对应的 icon、路径
-const mapping: Record<string, { icon: string, urlPrefix: string }> = {
+const mapping: Record<string, { icon: string; urlPrefix: string }> = {
   News: { icon: "/assets/img/news.png", urlPrefix: "news/" },
   Activity: { icon: "/assets/img/activity.png", urlPrefix: "activity/" },
   Blog: { icon: "/assets/img/blog.png", urlPrefix: "blog/" },
   新闻: { icon: "/assets/img/news.png", urlPrefix: "news/" },
   活动: { icon: "/assets/img/activity.png", urlPrefix: "activity/" },
-  博客: { icon: "/assets/img/blog.png", urlPrefix: "blog/" }
+  博客: { icon: "/assets/img/blog.png", urlPrefix: "blog/" },
 };
 
 // 遍历 groupedPosts 中的每个分组
@@ -127,8 +130,8 @@ for (const headName in groupedPosts) {
     details: latestPages.map((page) => ({
       title: page.title,
       time: page.time,
-      url: `${urlPrefix}${page.url}`
-    }))
+      url: `${urlPrefix}${page.url}`,
+    })),
   };
 
   if (["News", "Activity", "Blog"].includes(headName)) {
@@ -142,7 +145,7 @@ const routeLocale = useRouteLocale();
 const homeLocale = useHomeLocale();
 
 const communityLink = computed(() =>
-  routeLocale.value === "/zh/" ? zhCommunityLink : enCommunityLink
+  routeLocale.value === "/zh/" ? zhCommunityLink : enCommunityLink,
 );
 
 // 全网star数
@@ -151,7 +154,7 @@ const increment = totalStars / (1 * 60);
 const updateValue = (): void => {
   if (currentStars.value < totalStars) {
     currentStars.value = parseFloat(
-      (currentStars.value + increment).toFixed(1)
+      (currentStars.value + increment).toFixed(1),
     );
     currentStars.value = Math.min(currentStars.value, totalStars); // 确保不超过总星数
     requestAnimationFrame(updateValue);
@@ -168,7 +171,7 @@ onMounted(() => {
         observer.disconnect();
       }
     },
-    { threshold: 1.0 }
+    { threshold: 1.0 },
   );
 
   if (starNumber != null) {
@@ -176,7 +179,7 @@ onMounted(() => {
   }
 });
 
-function jumpTo (url: string): void {
+function jumpTo(url: string): void {
   window.location.href = url;
 }
 </script>
@@ -193,17 +196,17 @@ function jumpTo (url: string): void {
               <RouterLink to="./projects/" class="banner-action primary">{{
                 homeLocale.QUICK_START
               }}</RouterLink>
-              <a href="https://incubator.dromara.org/" class="banner-action"
-              >{{ homeLocale.INCUBATOR }}</a
-              >
+              <a href="https://incubator.dromara.org/" class="banner-action">{{
+                homeLocale.INCUBATOR
+              }}</a>
               <a href="https://github.com/dromara" class="banner-action"
                 >GitHub</a
               >
               <a href="https://gitee.com/dromara" class="banner-action"
-              >Gitee</a
+                >Gitee</a
               >
               <a href="https://gitcode.com/dromara" class="banner-action"
-              >GitCode</a
+                >GitCode</a
               >
             </p>
           </div>
@@ -266,7 +269,7 @@ function jumpTo (url: string): void {
           slideToClickedSlide
           :autoplay="{
             delay: 2500,
-            disableOnInteraction: false
+            disableOnInteraction: false,
           }"
           :pagination="{ clickable: true }"
           effect="coverflow"
@@ -275,7 +278,7 @@ function jumpTo (url: string): void {
             stretch: -50,
             depth: 100,
             modifier: 3,
-            slideShadows: false
+            slideShadows: false,
           }"
         >
           <swiper-slide
@@ -411,9 +414,10 @@ function jumpTo (url: string): void {
       font-weight: bold;
       font-size: 3.6rem;
       -webkit-text-fill-color: transparent;
-      font-family: "Segoe UI", "PingFang SC", "Hiragino Sans GB",
-        "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif,
-        "Segoe UI Emoji", "Segoe UI Symbol";
+      font-family:
+        "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+        "Helvetica Neue", Helvetica, Arial, sans-serif, "Segoe UI Emoji",
+        "Segoe UI Symbol";
 
       @media (max-width: 959px) {
         font-size: 2.5rem;
@@ -462,7 +466,10 @@ function jumpTo (url: string): void {
     color: #2c3e50;
     font-size: 1.2rem;
     text-align: center;
-    transition: color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    transition:
+      color 0.3s ease,
+      color 0.3s ease,
+      transform 0.3s ease;
     &:hover {
       border-color: #eceef1;
       background: #eceef1;
@@ -630,7 +637,8 @@ function jumpTo (url: string): void {
     border-radius: 15px;
   }
   .swiper-slide-active {
-    box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.06),
+    box-shadow:
+      0px 4px 32px 0px rgba(0, 0, 0, 0.06),
       0px 0px 10px 0px rgba(0, 0, 0, 0.04);
   }
 

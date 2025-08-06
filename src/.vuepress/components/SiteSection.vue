@@ -64,7 +64,7 @@ import {
   enNewsOption,
   zhActivityOption,
   zhBlogOption,
-  zhNewsOption
+  zhNewsOption,
 } from "../composables/index.js";
 
 import { useClientData } from "vuepress/client";
@@ -75,7 +75,7 @@ const allPagesFrontmatter = siteData.value.frontmatter;
 const props = defineProps({ title: String });
 
 let option: ActivityOption = reactive({
-  DESC: ""
+  DESC: "",
 });
 
 let webCn: boolean = false;
@@ -85,8 +85,8 @@ onMounted(() => {
   const orgAds = document.getElementById("wwadsadsorg");
   if (orgAds) {
     orgAds.innerHTML = webCn
-      ? "<div class=\"wwads-cn wwads-horizontal\" data-id=\"339\" style=\"max-width:350px\"></div>"
-      : "<div class=\"wwads-cn wwads-horizontal\" data-id=\"127\" style=\"max-width: 500px\"></div>";
+      ? '<div class="wwads-cn wwads-horizontal" data-id="339" style="max-width:350px"></div>'
+      : '<div class="wwads-cn wwads-horizontal" data-id="127" style="max-width: 500px"></div>';
   }
 });
 
@@ -99,7 +99,7 @@ const options = {
   Activity: enActivityOption,
   活动: zhActivityOption,
   Blog: enBlogOption,
-  博客: zhBlogOption
+  博客: zhBlogOption,
 };
 // 初始化分组对象
 const groupedPages: GroupedSectionPages = {
@@ -108,7 +108,7 @@ const groupedPages: GroupedSectionPages = {
   博客: [],
   Blog: [],
   活动: [],
-  Activity: []
+  Activity: [],
 };
 
 for (const frontmatter of allPagesFrontmatter) {
@@ -125,19 +125,19 @@ for (const frontmatter of allPagesFrontmatter) {
             frontmatter.head
               .flat()
               .find(
-                (item: { property: string, content: string }) =>
-                  item.property === "og:url"
-              ).content
+                (item: { property: string; content: string }) =>
+                  item.property === "og:url",
+              ).content,
           ) ?? "", // head的一个数组对象中包含url
         author: frontmatter.author,
-        date: formatDate(frontmatter.date)
+        date: formatDate(frontmatter.date),
       });
     }
   }
 }
 for (const key in groupedPages) {
   groupedPages[key].sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
   );
 }
 
@@ -154,7 +154,7 @@ const TAGS = [
   "Soul",
   "EasyAI",
   "TestHub",
-  "Skyeye"
+  "Skyeye",
 ];
 
 const LANG_MAPPING: LangMapping = {
@@ -163,7 +163,7 @@ const LANG_MAPPING: LangMapping = {
   Blog: "英文",
   新闻: "中文",
   活动: "中文",
-  博客: "中文"
+  博客: "中文",
 };
 
 const langMapping = computed(() => LANG_MAPPING[props.title ?? ""] ?? "中文");
@@ -174,7 +174,7 @@ const filteredSectionDetail = computed(() => {
   }
 
   return sectionDetail.filter((obj: GroupedSectionPage) =>
-    obj.tag?.includes(currentTag.value)
+    obj.tag?.includes(currentTag.value),
   );
 });
 
@@ -185,7 +185,7 @@ watchEffect(() => {
   }
 });
 
-function formatDate (inputDate: string): string {
+function formatDate(inputDate: string): string {
   const date = new Date(inputDate);
   const year = date.getFullYear();
   const month = String(date.getMonth() + 1).padStart(2, "0");
@@ -195,14 +195,14 @@ function formatDate (inputDate: string): string {
 }
 
 // 从框架提供的url中拿到跳转路径
-function extractPathFromURL (url: string): string | null {
+function extractPathFromURL(url: string): string | null {
   const match = url.match(/\/([^/]+\.html)$/);
 
   return match?.[1] ?? null;
 }
 
 // 跳转到博客详情
-function goBlogDetail (url: string): void {
+function goBlogDetail(url: string): void {
   location.href = url;
 }
 </script>

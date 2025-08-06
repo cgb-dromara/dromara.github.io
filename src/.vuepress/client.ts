@@ -1,8 +1,8 @@
 import { defineClientConfig } from "vuepress/client";
 
 // import GiteeRepo from "./components/GiteeRepo.vue";
-import  projects from "./layouts/projects.vue";
-import  members  from "./layouts/members.vue";
+import projects from "./layouts/projects.vue";
+import members from "./layouts/members.vue";
 
 import VueViewer from "v-viewer";
 import "viewerjs/dist/viewer.css";
@@ -12,7 +12,7 @@ export default defineClientConfig({
     // app.component("GiteeRepo", GiteeRepo);
     app.use(VueViewer);
   },
-   layouts: {
+  layouts: {
     members,
     projects,
   },

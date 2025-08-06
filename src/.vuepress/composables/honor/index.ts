@@ -6,7 +6,7 @@ import { zhHonorOption } from "./zh.js";
 export const useHonorLocale = () =>
   useLocaleConfig({
     "/": enHonorOption,
-    "/zh/": zhHonorOption
+    "/zh/": zhHonorOption,
   });
 
 export * from "./types.js";

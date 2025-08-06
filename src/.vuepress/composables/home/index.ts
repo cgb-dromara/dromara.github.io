@@ -6,7 +6,7 @@ import { zhHomeOption } from "./zh.js";
 export const useHomeLocale = () =>
   useLocaleConfig({
     "/": enHomeOption,
-    "/zh/": zhHomeOption
+    "/zh/": zhHomeOption,
   });
 
 export * from "./types.js";

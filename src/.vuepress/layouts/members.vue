@@ -10,63 +10,67 @@ onMounted(() => {
   webCn = document.location.host.includes("dromara.org.cn");
   const orgAds = document.getElementById("wwadsadsorg");
   if (orgAds) {
-    orgAds.innerHTML = webCn ? "<div class=\"wwads-cn wwads-horizontal\" data-id=\"339\" style=\"max-width:350px\"></div>" : "<div class=\"wwads-cn wwads-horizontal\" data-id=\"127\" style=\"max-width: 500px\"></div>";
+    orgAds.innerHTML = webCn
+      ? '<div class="wwads-cn wwads-horizontal" data-id="339" style="max-width:350px"></div>'
+      : '<div class="wwads-cn wwads-horizontal" data-id="127" style="max-width: 500px"></div>';
   }
 });
 </script>
 
 <template>
-    <layout>
-          <div class="members-page">
-    <div class="bg-default">
-      <div class="member-container">
-        <h1 class="title">{{ memberLocale.MEMBERS }}</h1>
-        <p class="description">
-          {{ memberLocale.DESCRIPTION }}
-        </p>
-      </div>
-    </div>
-    <div id="wwadsadsorg" style="max-width: 500px"></div>
-    <main class="member-main">
-      <div class="member-banner">
-        <h2 class="title">{{ memberLocale.FUNDER_TITLE }}</h2>
-        <div class="founder">
-          <img class="photo" src="/assets/img/members/xiaoyu.webp" alt="" />
-          <div class="info">
-            <div class="name">{{ memberLocale.FOUNDER.name }}</div>
-            <div class="role">{{ memberLocale.FOUNDER.role }}</div>
-            <div class="desc">{{ memberLocale.FOUNDER.desc }}</div>
-          </div>
+  <layout>
+    <div class="members-page">
+      <div class="bg-default">
+        <div class="member-container">
+          <h1 class="title">{{ memberLocale.MEMBERS }}</h1>
+          <p class="description">
+            {{ memberLocale.DESCRIPTION }}
+          </p>
         </div>
-        <template v-for="item in memberLocale.MEMBERS_ITEM" :key="item.header">
-          <h2 class="title" v-if="item.header">{{ item.header }}</h2>
-          <ul class="members">
-            <li
-              class="member"
-              v-for="member in item.members"
-              :key="member.name"
-            >
-              <div class="member-left">
-                <img
-                  class="photo"
-                  :src="member.photo"
-                  :alt="member.name + ' photo'"
-                />
-                <div class="slider"></div>
-              </div>
-              <div class="info">
-                <div class="name">{{ member.name }}</div>
-                <div class="role">{{ member.role }}</div>
-                <div class="desc">{{ member.desc }}</div>
-              </div>
-            </li>
-          </ul>
-        </template>
       </div>
-    </main>
-  </div>
-    </layout>
-
+      <div id="wwadsadsorg" style="max-width: 500px"></div>
+      <main class="member-main">
+        <div class="member-banner">
+          <h2 class="title">{{ memberLocale.FUNDER_TITLE }}</h2>
+          <div class="founder">
+            <img class="photo" src="/assets/img/members/xiaoyu.webp" alt="" />
+            <div class="info">
+              <div class="name">{{ memberLocale.FOUNDER.name }}</div>
+              <div class="role">{{ memberLocale.FOUNDER.role }}</div>
+              <div class="desc">{{ memberLocale.FOUNDER.desc }}</div>
+            </div>
+          </div>
+          <template
+            v-for="item in memberLocale.MEMBERS_ITEM"
+            :key="item.header"
+          >
+            <h2 class="title" v-if="item.header">{{ item.header }}</h2>
+            <ul class="members">
+              <li
+                class="member"
+                v-for="member in item.members"
+                :key="member.name"
+              >
+                <div class="member-left">
+                  <img
+                    class="photo"
+                    :src="member.photo"
+                    :alt="member.name + ' photo'"
+                  />
+                  <div class="slider"></div>
+                </div>
+                <div class="info">
+                  <div class="name">{{ member.name }}</div>
+                  <div class="role">{{ member.role }}</div>
+                  <div class="desc">{{ member.desc }}</div>
+                </div>
+              </li>
+            </ul>
+          </template>
+        </div>
+      </main>
+    </div>
+  </layout>
 </template>
 
 <style scoped lang="scss">
@@ -74,8 +78,6 @@ onMounted(() => {
   padding-top: var(--navbar-height);
   min-width: 380px;
   overflow-x: hidden;
-
-
 
   .bg-default {
     background-color: #e9eef8;
@@ -218,7 +220,9 @@ onMounted(() => {
           visibility: hidden;
           max-height: 0;
           overflow: hidden;
-          transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out,
+          transition:
+            opacity 0.5s ease-in-out,
+            visibility 0.5s ease-in-out,
             max-height 0.5s ease-in-out;
         }
 
@@ -236,7 +240,9 @@ onMounted(() => {
           height: 32px;
           border-radius: 5%;
           background-color: #2e64fe;
-          transition: top 0.7s ease, right 0.7s ease;
+          transition:
+            top 0.7s ease,
+            right 0.7s ease;
         }
 
         &:hover {

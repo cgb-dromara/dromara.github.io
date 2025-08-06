@@ -20,22 +20,22 @@ const linkOption = computed(() => [
     title: footerLocale.value.RESOURCES,
     links: [
       { name: "Github", href: "https://github.com/dromara" },
-      { name: "Gitee", href: "https://gitee.com/dromara" }
-    ]
+      { name: "Gitee", href: "https://gitee.com/dromara" },
+    ],
   },
   {
     title: footerLocale.value.INVOLVED,
     links: [
       {
         name: footerLocale.value.BLOG,
-        href: "https://dromara.org/zh/blog"
+        href: "https://dromara.org/zh/blog",
       },
       {
         name: footerLocale.value.About,
-        href: "https://dromara.org/zh/about"
-      }
-    ]
-  }
+        href: "https://dromara.org/zh/about",
+      },
+    ],
+  },
   // 删除页脚的Document
   // {
   //   title: footerLocale.value.DOCUMENT,
@@ -60,7 +60,7 @@ const qrcodeOption = computed(() => [
   { title: footerLocale.value.DONATE, name: "donate" },
   { title: footerLocale.value.WECHAT, name: "qrcode_wx" },
   { title: footerLocale.value.KNOWLEDGE_PLANET, name: "qrcode_zsxq" },
-  { title: footerLocale.value.Email, name: "Email" }
+  { title: footerLocale.value.Email, name: "Email" },
 ]);
 </script>
 

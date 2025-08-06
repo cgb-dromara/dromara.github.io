@@ -32,25 +32,25 @@ const animData = {
       opacity: 0.4,
       opacityAnimMap: new Map([
         [0.2, 0.4], // [帧，值]
-        [1, 1]
+        [1, 1],
       ]),
       transform: {
-        translate3d: { x: 0, y: 0, z: 0 }
+        translate3d: { x: 0, y: 0, z: 0 },
       },
       transformAnimMap: new Map([
         [
           0,
           {
-            translate3d: { x: 0, y: 0, z: 0 }
-          }
+            translate3d: { x: 0, y: 0, z: 0 },
+          },
         ],
         [
           1,
           {
-            translate3d: { x: 0, y: 0, z: 800 }
-          }
-        ]
-      ])
+            translate3d: { x: 0, y: 0, z: 800 },
+          },
+        ],
+      ]),
     },
     {
       widthStr: "8vw",
@@ -65,22 +65,22 @@ const animData = {
       opacity: 1,
       opacityAnimMap: new Map([]),
       transform: {
-        translate3d: { x: 0, y: 0, z: 0 }
+        translate3d: { x: 0, y: 0, z: 0 },
       },
       transformAnimMap: new Map([
         [
           0,
           {
-            translate3d: { x: 0, y: 0, z: 0 }
-          }
+            translate3d: { x: 0, y: 0, z: 0 },
+          },
         ],
         [
           1,
           {
-            translate3d: { x: 0, y: -250, z: 1000 }
-          }
-        ]
-      ])
+            translate3d: { x: 0, y: -250, z: 1000 },
+          },
+        ],
+      ]),
     },
     {
       widthStr: "7vw",
@@ -95,25 +95,25 @@ const animData = {
       opacity: 0.8,
       opacityAnimMap: new Map([
         [0, 0.8],
-        [1, 1]
+        [1, 1],
       ]),
       transform: {
-        translate3d: { x: 0, y: 0, z: 0 }
+        translate3d: { x: 0, y: 0, z: 0 },
       },
       transformAnimMap: new Map([
         [
           0,
           {
-            translate3d: { x: 0, y: 0, z: 0 }
-          }
+            translate3d: { x: 0, y: 0, z: 0 },
+          },
         ],
         [
           1,
           {
-            translate3d: { x: 0, y: 0, z: 800 }
-          }
-        ]
-      ])
+            translate3d: { x: 0, y: 0, z: 800 },
+          },
+        ],
+      ]),
     },
 
     {
@@ -129,25 +129,25 @@ const animData = {
       opacity: 0.3,
       opacityAnimMap: new Map([
         [0, 0.6],
-        [1, 1]
+        [1, 1],
       ]),
       transform: {
-        translate3d: { x: 0, y: 0, z: 0 }
+        translate3d: { x: 0, y: 0, z: 0 },
       },
       transformAnimMap: new Map([
         [
           0,
           {
-            translate3d: { x: 0, y: 0, z: 0 }
-          }
+            translate3d: { x: 0, y: 0, z: 0 },
+          },
         ],
         [
           1,
           {
-            translate3d: { x: 0, y: 0, z: 900 }
-          }
-        ]
-      ])
+            translate3d: { x: 0, y: 0, z: 900 },
+          },
+        ],
+      ]),
     },
     {
       widthStr: "4vw",
@@ -162,25 +162,25 @@ const animData = {
       opacity: 0.4,
       opacityAnimMap: new Map([
         [0, 0.4],
-        [1, 1]
+        [1, 1],
       ]),
       transform: {
-        translate3d: { x: 0, y: 0, z: 0 }
+        translate3d: { x: 0, y: 0, z: 0 },
       },
       transformAnimMap: new Map([
         [
           0,
           {
-            translate3d: { x: 0, y: 0, z: 0 }
-          }
+            translate3d: { x: 0, y: 0, z: 0 },
+          },
         ],
         [
           1,
           {
-            translate3d: { x: 0, y: 30, z: 1000 }
-          }
-        ]
-      ])
+            translate3d: { x: 0, y: 30, z: 1000 },
+          },
+        ],
+      ]),
     },
     {
       widthStr: "11vw",
@@ -196,25 +196,25 @@ const animData = {
       opacity: 0.3,
       opacityAnimMap: new Map([
         [0, 0.3],
-        [1, 1]
+        [1, 1],
       ]),
       transform: {
-        translate3d: { x: 0, y: 0, z: 0 }
+        translate3d: { x: 0, y: 0, z: 0 },
       },
       transformAnimMap: new Map([
         [
           0,
           {
-            translate3d: { x: 0, y: 0, z: 0 }
-          }
+            translate3d: { x: 0, y: 0, z: 0 },
+          },
         ],
         [
           1,
           {
-            translate3d: { x: 0, y: 0, z: 800 }
-          }
-        ]
-      ])
+            translate3d: { x: 0, y: 0, z: 800 },
+          },
+        ],
+      ]),
     },
     {
       widthStr: "6vw",
@@ -229,25 +229,25 @@ const animData = {
       opacity: 0.3,
       opacityAnimMap: new Map([
         [0, 0.5],
-        [1, 1]
+        [1, 1],
       ]),
       transform: {
-        translate3d: { x: 0, y: 0, z: 0 }
+        translate3d: { x: 0, y: 0, z: 0 },
       },
       transformAnimMap: new Map([
         [
           0,
           {
-            translate3d: { x: 0, y: 0, z: 0 }
-          }
+            translate3d: { x: 0, y: 0, z: 0 },
+          },
         ],
         [
           1,
           {
-            translate3d: { x: -100, y: -100, z: 1000 }
-          }
-        ]
-      ])
+            translate3d: { x: -100, y: -100, z: 1000 },
+          },
+        ],
+      ]),
     },
     {
       widthStr: "6vw",
@@ -262,25 +262,25 @@ const animData = {
       opacity: 0.95,
       opacityAnimMap: new Map([
         [0, 0.95],
-        [1, 1]
+        [1, 1],
       ]),
       transform: {
-        translate3d: { x: 0, y: 0, z: 0 }
+        translate3d: { x: 0, y: 0, z: 0 },
       },
       transformAnimMap: new Map([
         [
           0,
           {
-            translate3d: { x: 0, y: 0, z: 0 }
-          }
+            translate3d: { x: 0, y: 0, z: 0 },
+          },
         ],
         [
           1,
           {
-            translate3d: { x: 0, y: 0, z: 800 }
-          }
-        ]
-      ])
+            translate3d: { x: 0, y: 0, z: 800 },
+          },
+        ],
+      ]),
     },
     {
       widthStr: "5vw",
@@ -295,25 +295,25 @@ const animData = {
       opacity: 0.35,
       opacityAnimMap: new Map([
         [0, 0.35],
-        [1, 1]
+        [1, 1],
       ]),
       transform: {
-        translate3d: { x: 0, y: 0, z: 0 }
+        translate3d: { x: 0, y: 0, z: 0 },
       },
       transformAnimMap: new Map([
         [
           0,
           {
-            translate3d: { x: 0, y: 0, z: 0 }
-          }
+            translate3d: { x: 0, y: 0, z: 0 },
+          },
         ],
         [
           1,
           {
-            translate3d: { x: 0, y: 0, z: 800 }
-          }
-        ]
-      ])
+            translate3d: { x: 0, y: 0, z: 800 },
+          },
+        ],
+      ]),
     },
     {
       widthStr: "8vw",
@@ -328,25 +328,25 @@ const animData = {
       opacity: 0.4,
       opacityAnimMap: new Map([
         [0, 0.4],
-        [1, 1]
+        [1, 1],
       ]),
       transform: {
-        translate3d: { x: 0, y: 0, z: 0 }
+        translate3d: { x: 0, y: 0, z: 0 },
       },
       transformAnimMap: new Map([
         [
           0,
           {
-            translate3d: { x: 0, y: 0, z: 0 }
-          }
+            translate3d: { x: 0, y: 0, z: 0 },
+          },
         ],
         [
           1,
           {
-            translate3d: { x: 300, y: -400, z: 800 }
-          }
-        ]
-      ])
+            translate3d: { x: 300, y: -400, z: 800 },
+          },
+        ],
+      ]),
     },
     {
       widthStr: "4vw",
@@ -361,25 +361,25 @@ const animData = {
       opacity: 0.3,
       opacityAnimMap: new Map([
         [0, 0.4],
-        [1, 1]
+        [1, 1],
       ]),
       transform: {
-        translate3d: { x: 0, y: 0, z: 0 }
+        translate3d: { x: 0, y: 0, z: 0 },
       },
       transformAnimMap: new Map([
         [
           0,
           {
-            translate3d: { x: 0, y: 0, z: 0 }
-          }
+            translate3d: { x: 0, y: 0, z: 0 },
+          },
         ],
         [
           1,
           {
-            translate3d: { x: -50, y: -100, z: 1000 }
-          }
-        ]
-      ])
+            translate3d: { x: -50, y: -100, z: 1000 },
+          },
+        ],
+      ]),
     },
     {
       widthStr: "6vw",
@@ -394,25 +394,25 @@ const animData = {
       opacity: 0.95,
       opacityAnimMap: new Map([
         [0, 0.95],
-        [1, 1]
+        [1, 1],
       ]),
       transform: {
-        translate3d: { x: 0, y: 0, z: 0 }
+        translate3d: { x: 0, y: 0, z: 0 },
       },
       transformAnimMap: new Map([
         [
           0,
           {
-            translate3d: { x: 0, y: 0, z: 0 }
-          }
+            translate3d: { x: 0, y: 0, z: 0 },
+          },
         ],
         [
           1,
           {
-            translate3d: { x: 0, y: 0, z: 800 }
-          }
-        ]
-      ])
+            translate3d: { x: 0, y: 0, z: 800 },
+          },
+        ],
+      ]),
     },
     {
       widthStr: "2.5vw",
@@ -427,25 +427,25 @@ const animData = {
       opacity: 0.2,
       opacityAnimMap: new Map([
         [0, 0.3],
-        [1, 1]
+        [1, 1],
       ]),
       transform: {
-        translate3d: { x: 0, y: 0, z: 0 }
+        translate3d: { x: 0, y: 0, z: 0 },
       },
       transformAnimMap: new Map([
         [
           0,
           {
-            translate3d: { x: 0, y: 0, z: 0 }
-          }
+            translate3d: { x: 0, y: 0, z: 0 },
+          },
         ],
         [
           1,
           {
-            translate3d: { x: 0, y: 0, z: 1600 }
-          }
-        ]
-      ])
+            translate3d: { x: 0, y: 0, z: 1600 },
+          },
+        ],
+      ]),
     },
     {
       widthStr: "3vw",
@@ -460,25 +460,25 @@ const animData = {
       opacity: 0.96,
       opacityAnimMap: new Map([
         [0, 0.96],
-        [1, 1]
+        [1, 1],
       ]),
       transform: {
-        translate3d: { x: 0, y: 0, z: 0 }
+        translate3d: { x: 0, y: 0, z: 0 },
       },
       transformAnimMap: new Map([
         [
           0,
           {
-            translate3d: { x: 0, y: 0, z: 0 }
-          }
+            translate3d: { x: 0, y: 0, z: 0 },
+          },
         ],
         [
           1,
           {
-            translate3d: { x: 0, y: 0, z: 800 }
-          }
-        ]
-      ])
+            translate3d: { x: 0, y: 0, z: 800 },
+          },
+        ],
+      ]),
     },
     {
       widthStr: "5vw",
@@ -493,25 +493,25 @@ const animData = {
       opacity: 0.96,
       opacityAnimMap: new Map([
         [0, 0.96],
-        [1, 1]
+        [1, 1],
       ]),
       transform: {
-        translate3d: { x: 0, y: 0, z: 0 }
+        translate3d: { x: 0, y: 0, z: 0 },
       },
       transformAnimMap: new Map([
         [
           0,
           {
-            translate3d: { x: 0, y: 0, z: 0 }
-          }
+            translate3d: { x: 0, y: 0, z: 0 },
+          },
         ],
         [
           1,
           {
-            translate3d: { x: 20, y: 0, z: 1000 }
-          }
-        ]
-      ])
+            translate3d: { x: 20, y: 0, z: 1000 },
+          },
+        ],
+      ]),
     },
     {
       widthStr: "6vw",
@@ -526,25 +526,25 @@ const animData = {
       opacity: 0.96,
       opacityAnimMap: new Map([
         [0, 0.96],
-        [1, 1]
+        [1, 1],
       ]),
       transform: {
-        translate3d: { x: 0, y: 0, z: 0 }
+        translate3d: { x: 0, y: 0, z: 0 },
       },
       transformAnimMap: new Map([
         [
           0,
           {
-            translate3d: { x: 0, y: 0, z: 0 }
-          }
+            translate3d: { x: 0, y: 0, z: 0 },
+          },
         ],
         [
           1,
           {
-            translate3d: { x: 0, y: 0, z: 800 }
-          }
-        ]
-      ])
+            translate3d: { x: 0, y: 0, z: 800 },
+          },
+        ],
+      ]),
     },
     {
       widthStr: "11vw",
@@ -560,25 +560,25 @@ const animData = {
       opacity: 0.5,
       opacityAnimMap: new Map([
         [0, 0.5],
-        [1, 1]
+        [1, 1],
       ]),
       transform: {
-        translate3d: { x: 0, y: 0, z: 0 }
+        translate3d: { x: 0, y: 0, z: 0 },
       },
       transformAnimMap: new Map([
         [
           0,
           {
-            translate3d: { x: 0, y: 0, z: 0 }
-          }
+            translate3d: { x: 0, y: 0, z: 0 },
+          },
         ],
         [
           1,
           {
-            translate3d: { x: 0, y: 0, z: 800 }
-          }
-        ]
-      ])
+            translate3d: { x: 0, y: 0, z: 800 },
+          },
+        ],
+      ]),
     },
     {
       widthStr: "6vw",
@@ -593,25 +593,25 @@ const animData = {
       opacity: 0.2,
       opacityAnimMap: new Map([
         [0, 0.2],
-        [1, 1]
+        [1, 1],
       ]),
       transform: {
-        translate3d: { x: 0, y: 0, z: 0 }
+        translate3d: { x: 0, y: 0, z: 0 },
       },
       transformAnimMap: new Map([
         [
           0,
           {
-            translate3d: { x: 0, y: 0, z: 0 }
-          }
+            translate3d: { x: 0, y: 0, z: 0 },
+          },
         ],
         [
           1,
           {
-            translate3d: { x: 150, y: 0, z: 1100 }
-          }
-        ]
-      ])
+            translate3d: { x: 150, y: 0, z: 1100 },
+          },
+        ],
+      ]),
     },
     {
       widthStr: "4.2vw",
@@ -626,25 +626,25 @@ const animData = {
       opacity: 0.2,
       opacityAnimMap: new Map([
         [0, 0.2],
-        [1, 1]
+        [1, 1],
       ]),
       transform: {
-        translate3d: { x: 0, y: 0, z: 0 }
+        translate3d: { x: 0, y: 0, z: 0 },
       },
       transformAnimMap: new Map([
         [
           0,
           {
-            translate3d: { x: 0, y: 0, z: 0 }
-          }
+            translate3d: { x: 0, y: 0, z: 0 },
+          },
         ],
         [
           1,
           {
-            translate3d: { x: 0, y: -80, z: 800 }
-          }
-        ]
-      ])
+            translate3d: { x: 0, y: -80, z: 800 },
+          },
+        ],
+      ]),
     },
 
     // logo 图标
@@ -661,28 +661,28 @@ const animData = {
       opacity: 0.4,
       opacityAnimMap: new Map([
         [0, 0.4], // [帧，值]
-        [0.6, 1]
+        [0.6, 1],
       ]),
       transform: {
         translate3d: { x: 0, y: 0, z: 0 },
-        scale: 1
+        scale: 1,
       },
       transformAnimMap: new Map([
         [
           0,
           {
             translate3d: { x: 0, y: 0, z: 0 },
-            scale: 1
-          }
+            scale: 1,
+          },
         ],
         [
           1,
           {
             translate3d: { x: 0, y: -1000, z: 800 },
-            scale: 1.5
-          }
-        ]
-      ])
+            scale: 1.5,
+          },
+        ],
+      ]),
     },
     {
       widthStr: "100%",
@@ -697,50 +697,50 @@ const animData = {
       opacity: 0,
       opacityAnimMap: new Map([
         [0.2, 0], // [帧，值]
-        [0.35, 1]
+        [0.35, 1],
       ]),
       transform: {
         translate3d: { x: 0, y: 0, z: 10 },
-        scale: 0.8
+        scale: 0.8,
       },
       transformAnimMap: new Map([
         [
           0.2,
           {
             translate3d: { x: 0, y: 0, z: 10 },
-            scale: 0.8
-          }
+            scale: 0.8,
+          },
         ],
         [
           0.35,
           {
             translate3d: { x: 0, y: 0, z: 10 },
-            scale: 1
-          }
-        ]
-      ])
-    }
-  ]
+            scale: 1,
+          },
+        ],
+      ]),
+    },
+  ],
 };
 
 // 特效管理
-function executeEffectManager (data = animData): void {
+function executeEffectManager(data = animData): void {
   data.domArr.forEach((item) => {
     const entity = new Entity();
 
     // 添加形状组件
     entity.addComp(
       new ShapeComp({
-        shapeAtt: item
-      })
+        shapeAtt: item,
+      }),
     );
 
     // 添加动画组件
     entity.addComp(
       new ShapeAnimComp({
         opacityAnimMap: item.opacityAnimMap,
-        transformAnimMap: item.transformAnimMap
-      })
+        transformAnimMap: item.transformAnimMap,
+      }),
     );
 
     // 添加滚动事件组件
@@ -749,14 +749,14 @@ function executeEffectManager (data = animData): void {
         cb: function (scrollPos) {
           this.getComp("ShapeAnimComp").changeOpacity(
             scrollPos,
-            this.getComp("ShapeComp")
+            this.getComp("ShapeComp"),
           );
           this.getComp("ShapeAnimComp").changeTransform(
             scrollPos,
-            this.getComp("ShapeComp")
+            this.getComp("ShapeComp"),
           );
-        }.bind(entity)
-      })
+        }.bind(entity),
+      }),
     );
   });
 }
@@ -764,26 +764,26 @@ function executeEffectManager (data = animData): void {
 // 单体
 class Entity {
   _compMap: Map<any, any>;
-  constructor () {
+  constructor() {
     this._compMap = new Map();
   }
 
-  addComp (comp: ShapeComp | ShapeAnimComp | RollEventComp): void {
+  addComp(comp: ShapeComp | ShapeAnimComp | RollEventComp): void {
     this._compMap.set(comp.name, comp);
   }
 
-  getComp (compName: string): any {
+  getComp(compName: string): any {
     return this._compMap.get(compName);
   }
 }
 
 interface TransformValue {
   translate3d?: {
-    x: number
-    y: number
-    z: number
-  }
-  scale?: number
+    x: number;
+    y: number;
+    z: number;
+  };
+  scale?: number;
 }
 // 形状组件
 class ShapeComp {
@@ -791,7 +791,7 @@ class ShapeComp {
   _shapeDom: HTMLDivElement;
   _opacity: number | null;
   _transform: TransformValue | null;
-  constructor (data: { shapeAtt: any }) {
+  constructor(data: { shapeAtt: any }) {
     this.name = "ShapeComp";
     this._shapeDom = document.createElement("div");
     this._shapeDom.classList.add(data.shapeAtt.className);
@@ -818,18 +818,18 @@ class ShapeComp {
     this.transform = data.shapeAtt.transform;
   }
 
-  set opacity (value: number | null) {
+  set opacity(value: number | null) {
     if (value !== this._opacity) {
       this._shapeDom.style.opacity = String(value);
     }
     this._opacity = value;
   }
 
-  get opacity (): number | null {
+  get opacity(): number | null {
     return this._opacity;
   }
 
-  set transform (value: TransformValue | null) {
+  set transform(value: TransformValue | null) {
     if (value == null) {
       return;
     }
@@ -847,7 +847,7 @@ class ShapeComp {
     this._transform = value;
   }
 
-  get transform (): TransformValue | null {
+  get transform(): TransformValue | null {
     return this._transform;
   }
 }
@@ -857,14 +857,14 @@ class ShapeAnimComp {
   name: string;
   _opacityAnimMap: any;
   _transformAnimMap: any;
-  constructor (data) {
+  constructor(data) {
     this.name = "ShapeAnimComp";
     this._opacityAnimMap = data.opacityAnimMap;
     this._transformAnimMap = data.transformAnimMap;
   }
 
   // 返回根据滚动改变的状态值
-  _getStateValue (scrollPos, beginPos, endPos, beginValue, endValue): number {
+  _getStateValue(scrollPos, beginPos, endPos, beginValue, endValue): number {
     if (beginValue === endValue) {
       return beginValue;
     }
@@ -879,7 +879,7 @@ class ShapeAnimComp {
   }
 
   // 根据滚动值改变透明度
-  changeOpacity (scrollPos, shapeComp): void {
+  changeOpacity(scrollPos, shapeComp): void {
     if (this._opacityAnimMap.size === 0) {
       return;
     }
@@ -904,13 +904,13 @@ class ShapeAnimComp {
       beginPos,
       endPos,
       beginValue,
-      endValue
+      endValue,
     );
     shapeComp.opacity = opacity;
   }
 
   // 根据滚动值改变 transform
-  changeTransform (scrollPos, shapeComp): void {
+  changeTransform(scrollPos, shapeComp): void {
     // return;
     if (this._transformAnimMap.size === 0) {
       return;
@@ -935,26 +935,26 @@ class ShapeAnimComp {
         beginPos,
         endPos,
         beginValue.translate3d.x,
-        endValue.translate3d.x
+        endValue.translate3d.x,
       );
       const translate3dy = this._getStateValue(
         scrollPos,
         beginPos,
         endPos,
         beginValue.translate3d.y,
-        endValue.translate3d.y
+        endValue.translate3d.y,
       );
       const translate3dz = this._getStateValue(
         scrollPos,
         beginPos,
         endPos,
         beginValue.translate3d.z,
-        endValue.translate3d.z
+        endValue.translate3d.z,
       );
       transform.translate3d = {
         x: translate3dx,
         y: translate3dy,
-        z: translate3dz
+        z: translate3dz,
       };
     }
     // scale
@@ -964,7 +964,7 @@ class ShapeAnimComp {
         beginPos,
         endPos,
         beginValue.scale,
-        endValue.scale
+        endValue.scale,
       );
       transform.scale = scale;
     }
@@ -975,7 +975,7 @@ class ShapeAnimComp {
 // 滚动事件组件
 class RollEventComp {
   name: string;
-  constructor (data) {
+  constructor(data) {
     this.name = "RollEventComp";
 
     window.addEventListener("scroll", (event) => {
@@ -989,7 +989,7 @@ class RollEventComp {
         scrollPos = 0;
       } else {
         scrollPos = Number(
-          (scrollTop / (scrollHeight - clientHeight)).toFixed(3)
+          (scrollTop / (scrollHeight - clientHeight)).toFixed(3),
         );
       }
       data.cb(scrollPos);
@@ -997,7 +997,7 @@ class RollEventComp {
   }
 }
 
-function ensureDomElement (): void {
+function ensureDomElement(): void {
   // 检查元素是否已经存在
   if (document.querySelector(".e-square") == null) {
     // 如果元素不存在，则创建新元素
@@ -1016,11 +1016,8 @@ onMounted(() => {
 }
 .content {
   height: 100%;
-  background-image: radial-gradient(
-      100px at 50% 40%,
-      #c6c6f7 1%,
-      transparent 100%
-    ),
+  background-image:
+    radial-gradient(100px at 50% 40%, #c6c6f7 1%, transparent 100%),
     radial-gradient(farthest-corner at 40% 50%, #dfe6fe 1%, transparent 600px);
 }
 .effect-content {

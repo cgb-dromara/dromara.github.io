@@ -1,13 +1,13 @@
-import { Layout, NotFound, injectDarkMode, setupDarkMode, setupSidebarItems, scrollPromise } from "E:/code/newstudy/new/dromara.github.io/node_modules/.pnpm/vuepress-theme-hope@2.0.0-r_8a2368fe4aa73f42b8c389f1c2aaa00c/node_modules/vuepress-theme-hope/lib/client/exports/base.js";
+import { Layout, NotFound, injectDarkMode, setupDarkMode, setupSidebarItems, scrollPromise } from "E:/code/newstudy/new/dromara.github.io/node_modules/.pnpm/vuepress-theme-hope@2.0.0-r_07d63941902df585edab46da288f05e9/node_modules/vuepress-theme-hope/lib/client/exports/base.js";
 
-import { defineCatalogInfoGetter } from "E:/code/newstudy/new/dromara.github.io/node_modules/.pnpm/@vuepress+plugin-catalog@2._100e457bcb788393536088193daa8094/node_modules/@vuepress/plugin-catalog/lib/client/index.js"
+import { defineCatalogInfoGetter } from "E:/code/newstudy/new/dromara.github.io/node_modules/.pnpm/@vuepress+plugin-catalog@2._05114881720c9d64e6be494cf6fa34b8/node_modules/@vuepress/plugin-catalog/lib/client/index.js"
 import { h } from "vue"
 import { resolveComponent } from "vue"
 
-import "E:/code/newstudy/new/dromara.github.io/node_modules/.pnpm/@vuepress+helper@2.0.0-rc.1_76ed21532a9bd23aaa502f86fa1877bd/node_modules/@vuepress/helper/lib/client/styles/colors.css";
-import "E:/code/newstudy/new/dromara.github.io/node_modules/.pnpm/@vuepress+helper@2.0.0-rc.1_76ed21532a9bd23aaa502f86fa1877bd/node_modules/@vuepress/helper/lib/client/styles/normalize.css";
-import "E:/code/newstudy/new/dromara.github.io/node_modules/.pnpm/@vuepress+helper@2.0.0-rc.1_76ed21532a9bd23aaa502f86fa1877bd/node_modules/@vuepress/helper/lib/client/styles/sr-only.css";
-import "E:/code/newstudy/new/dromara.github.io/node_modules/.pnpm/vuepress-theme-hope@2.0.0-r_8a2368fe4aa73f42b8c389f1c2aaa00c/node_modules/vuepress-theme-hope/lib/client/styles/index.scss";
+import "E:/code/newstudy/new/dromara.github.io/node_modules/.pnpm/@vuepress+helper@2.0.0-rc.1_4f1e5edff9ece87815e2be66b09b269e/node_modules/@vuepress/helper/lib/client/styles/colors.css";
+import "E:/code/newstudy/new/dromara.github.io/node_modules/.pnpm/@vuepress+helper@2.0.0-rc.1_4f1e5edff9ece87815e2be66b09b269e/node_modules/@vuepress/helper/lib/client/styles/normalize.css";
+import "E:/code/newstudy/new/dromara.github.io/node_modules/.pnpm/@vuepress+helper@2.0.0-rc.1_4f1e5edff9ece87815e2be66b09b269e/node_modules/@vuepress/helper/lib/client/styles/sr-only.css";
+import "E:/code/newstudy/new/dromara.github.io/node_modules/.pnpm/vuepress-theme-hope@2.0.0-r_07d63941902df585edab46da288f05e9/node_modules/vuepress-theme-hope/lib/client/styles/index.scss";
 
 defineCatalogInfoGetter((meta) => {
   const title = meta.title;

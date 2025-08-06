@@ -10,9 +10,9 @@ export default [
   {
     ignores: [
       "node_modules/**",
-      ".vuepress/dist/**",
-      ".vuepress/.temp/**",
-      ".vuepress/.cache/**",
+      "src/.vuepress/dist/**",
+      "src/.vuepress/.temp/**",
+      "src/.vuepress/.cache/**",
     ],
   },
 
@@ -31,7 +31,8 @@ export default [
         process: "readonly",
         fetch: "readonly",
         console: "readonly",
-        lang: "readonly",
+        requestAnimationFrame: "readonly",
+        location: "readonly",
       },
     },
   },

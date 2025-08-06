@@ -5,7 +5,7 @@ import {
   noGiteeProjects,
   noGithubProjects,
   noImageProject,
-  useProjectsData
+  useProjectsData,
 } from "../composables/index.js";
 import { onMounted } from "vue";
 
@@ -21,101 +21,103 @@ onMounted(() => {
   webCn = document.location.host.includes("dromara.org.cn");
   const orgAds = document.getElementById("wwadsadsorg");
   if (orgAds) {
-    orgAds.innerHTML = webCn ? "<div class=\"wwads-cn wwads-horizontal\" data-id=\"339\" style=\"max-width:350px\"></div>" : "<div class=\"wwads-cn wwads-horizontal\" data-id=\"127\" style=\"max-width: 500px\"></div>";
+    orgAds.innerHTML = webCn
+      ? '<div class="wwads-cn wwads-horizontal" data-id="339" style="max-width:350px"></div>'
+      : '<div class="wwads-cn wwads-horizontal" data-id="127" style="max-width: 500px"></div>';
   }
 });
 </script>
 
 <template>
- <layout>
-     <div class="projects-page">
-    <div class="bg-default">
-      <div class="project-container">
-        <h1 class="title">{{ projectLocale.PROJECTS }}</h1>
-        <p class="description">
-          {{ projectLocale.DESCRIPTION }}
-        </p>
+  <layout>
+    <div class="projects-page">
+      <div class="bg-default">
+        <div class="project-container">
+          <h1 class="title">{{ projectLocale.PROJECTS }}</h1>
+          <p class="description">
+            {{ projectLocale.DESCRIPTION }}
+          </p>
+        </div>
       </div>
+      <div id="wwadsadsorg" style="max-width: 500px"></div>
     </div>
-    <div id="wwadsadsorg" style="max-width: 500px"></div>
-  </div>
-  <main class="project-main">
-    <div
-      v-for="item in projectItems"
-      :key="item.groupName"
-      class="project-group"
-    >
-      <h2 class="group-name">{{ item.groupName }}</h2>
-      <div class="project-card">
-        <div class="project" v-for="obj in item.projects" :key="obj.name">
-          <div class="project-top">
-            <div class="project-header">
-              <img
-                v-if="!noImageProject.includes(obj.name)"
-                class="project-title"
-                :src="`/assets/img/logo/${obj.name}.webp`"
-                :alt="obj.name"
-              />
-              <div v-else class="project-title text">
-                {{ convertToUpperCamelCase(obj.name) }}
+    <main class="project-main">
+      <div
+        v-for="item in projectItems"
+        :key="item.groupName"
+        class="project-group"
+      >
+        <h2 class="group-name">{{ item.groupName }}</h2>
+        <div class="project-card">
+          <div class="project" v-for="obj in item.projects" :key="obj.name">
+            <div class="project-top">
+              <div class="project-header">
+                <img
+                  v-if="!noImageProject.includes(obj.name)"
+                  class="project-title"
+                  :src="`/assets/img/logo/${obj.name}.webp`"
+                  :alt="obj.name"
+                />
+                <div v-else class="project-title text">
+                  {{ convertToUpperCamelCase(obj.name) }}
+                </div>
+                <div class="gitstar">
+                  <template v-if="lang == 'zh-CN' || lang == '/zh/'">
+                    <a
+                      v-if="!noGiteeProjects.includes(obj.name)"
+                      :href="`https://gitee.com/dromara/${obj.name}/stargazers`"
+                      target="_blank"
+                      ><img
+                        :src="`https://gitee.com/dromara/${obj.name}/badge/star.svg?theme=gvp`"
+                    /></a>
+                  </template>
+                  <template v-else>
+                    <GitHubStars
+                      v-if="!noGithubProjects.includes(obj.name)"
+                      :project="obj.name"
+                    />
+                  </template>
+                </div>
               </div>
-              <div class="gitstar">
-                <template v-if="lang == 'zh-CN' || lang == '/zh/'">
-                  <a
-                    v-if="!noGiteeProjects.includes(obj.name)"
-                    :href="`https://gitee.com/dromara/${obj.name}/stargazers`"
-                    target="_blank"
-                    ><img
-                      :src="`https://gitee.com/dromara/${obj.name}/badge/star.svg?theme=gvp`"
-                  /></a>
-                </template>
-                <template v-else>
-                  <GitHubStars
-                    v-if="!noGithubProjects.includes(obj.name)"
-                    :project="obj.name"
-                  />
-                </template>
-              </div>
+              <div class="project-content">{{ obj.description }}</div>
             </div>
-            <div class="project-content">{{ obj.description }}</div>
-          </div>
-          <div class="hiding-detail">
-            <p v-if="obj.sponsor">
-              {{ projectLocale.PROJECT_SPONSOR }}：{{ obj.sponsor }}
-            </p>
-            <p v-if="obj.date">
-              {{ projectLocale.JOINING_DATE }}：{{ obj.date }}
-            </p>
-            <p v-html="obj.link"></p>
-          </div>
-          <div class="project-buttons">
-            <a
-              class="project-button primary"
-              target="_blank"
-              :href="obj.website"
-            >
-              {{ projectLocale.START_UP }}
-            </a>
-            <a
-              v-if="!noGiteeProjects.includes(obj.name)"
-              class="project-button"
-              target="_blank"
-              :href="`https://gitee.com/dromara/${obj.name}`"
-              >Gitee</a
-            >
-            <a
-              v-if="!noGithubProjects.includes(obj.name)"
-              class="project-button"
-              target="_blank"
-              :href="`https://github.com/dromara/${obj.name}`"
-              >Github</a
-            >
+            <div class="hiding-detail">
+              <p v-if="obj.sponsor">
+                {{ projectLocale.PROJECT_SPONSOR }}：{{ obj.sponsor }}
+              </p>
+              <p v-if="obj.date">
+                {{ projectLocale.JOINING_DATE }}：{{ obj.date }}
+              </p>
+              <p v-html="obj.link"></p>
+            </div>
+            <div class="project-buttons">
+              <a
+                class="project-button primary"
+                target="_blank"
+                :href="obj.website"
+              >
+                {{ projectLocale.START_UP }}
+              </a>
+              <a
+                v-if="!noGiteeProjects.includes(obj.name)"
+                class="project-button"
+                target="_blank"
+                :href="`https://gitee.com/dromara/${obj.name}`"
+                >Gitee</a
+              >
+              <a
+                v-if="!noGithubProjects.includes(obj.name)"
+                class="project-button"
+                target="_blank"
+                :href="`https://github.com/dromara/${obj.name}`"
+                >Github</a
+              >
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </main>
- </layout>
+    </main>
+  </layout>
 </template>
 
 <style scoped lang="scss">
