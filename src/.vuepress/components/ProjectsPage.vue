@@ -4,7 +4,7 @@ import {
   noGiteeProjects,
   noGithubProjects,
   noImageProject,
-  useProjectsData
+  useProjectsData,
 } from "../composables/index.js";
 import { onMounted } from "vue";
 
@@ -20,7 +20,9 @@ onMounted(() => {
   webCn = document.location.host.includes("dromara.org.cn");
   const orgAds = document.getElementById("wwadsadsorg");
   if (orgAds) {
-    orgAds.innerHTML = webCn ? "<div class=\"wwads-cn wwads-horizontal\" data-id=\"339\" style=\"max-width:350px\"></div>" : "<div class=\"wwads-cn wwads-horizontal\" data-id=\"127\" style=\"max-width: 500px\"></div>";
+    orgAds.innerHTML = webCn
+      ? '<div class="wwads-cn wwads-horizontal" data-id="339" style="max-width:350px"></div>'
+      : '<div class="wwads-cn wwads-horizontal" data-id="127" style="max-width: 500px"></div>';
   }
 });
 </script>
