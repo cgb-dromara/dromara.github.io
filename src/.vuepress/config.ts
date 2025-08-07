@@ -63,10 +63,9 @@ export default defineUserConfig({
           assets: "fontawesome-with-brands", // 原 icon 配置迁移到这里
         },
         // 修复：移除 mdEnhance.figure，迁移到顶层 markdown.figure
-        mdEnhance: {
-          // 保留其他可能的 mdEnhance 配置（如果有）
-          // 例如：mermaid: true, chart: true 等
-        },
+        // mdEnhance: {
+        //   // 保留其他可能的 mdEnhance 配置（如果有）
+        // },
         photoSwipe: false,
       },
 

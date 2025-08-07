@@ -33,6 +33,7 @@ export default [
         console: "readonly",
         requestAnimationFrame: "readonly",
         location: "readonly",
+        frontmatter: "readonly",
       },
     },
   },
