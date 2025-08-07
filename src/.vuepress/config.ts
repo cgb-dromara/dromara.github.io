@@ -49,7 +49,7 @@ export default defineUserConfig({
   theme: hopeTheme(
     {
       hostname: "https://vuepress-theme-hope-docs-demo.netlify.app",
-      logo: "/logo.svg",
+      logo: "/Dlogo.svg",
       repo: "dromara",
       docsDir: "src",
 

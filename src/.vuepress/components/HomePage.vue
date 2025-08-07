@@ -48,7 +48,7 @@ const gvpProjects = [
 ];
 const totalStars = 305.5; // 来源于gitee总star数与github各仓库star数之和，需手动更新
 
-const allPagesFrontmatter = siteData.value.frontmatter;
+const allPagesFrontmatter = (siteData as any).value.frontmatter;
 console.log("测试方法", allPagesFrontmatter);
 const enCommunityLink: CommunityLink[] = reactive([]);
 const zhCommunityLink: CommunityLink[] = reactive([]);
@@ -390,7 +390,7 @@ function jumpTo(url: string): void {
     border-bottom: none;
   }
   .banner-mask {
-    background: url(/assets/img/bg-image.webp) no-repeat;
+    // background: url(/assets/img/bg-image.webp) no-repeat;
     background-size: cover;
     background-position: center;
     min-height: 65vh;
@@ -402,18 +402,24 @@ function jumpTo(url: string): void {
     }
   }
   .banner-default {
+    // 修改
     background-color: #e4edff;
   }
   .banner-info {
     padding: 100px 24px;
     #main-title {
       margin: 0.5rem 0;
-      background: linear-gradient(120deg, #0a7bf4, #096dd9, #7509d9 100%);
+      color: #fff;
+      text-shadow:
+        0 0 5px #00f7ff,
+        0 0 10px #00f7ff,
+        0 0 20px #00f7ff,
+        0 0 40px #00f7ff;
       -webkit-background-clip: text;
       background-clip: text;
       font-weight: bold;
       font-size: 3.6rem;
-      -webkit-text-fill-color: transparent;
+      // -webkit-text-fill-color: transparent;
       font-family:
         "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
         "Helvetica Neue", Helvetica, Arial, sans-serif, "Segoe UI Emoji",

@@ -7,8 +7,9 @@ body {
 }
 
 #navbar {
-  background-color: #e4eeff;
+  background-color: #030412;
   box-shadow: none;
+  border-bottom: 1px solid #2c2d3b;
 }
 
 .nav-item {
@@ -17,6 +18,9 @@ body {
   font-weight: 400;
   text-align: center;
   --dark-grey: #414960;
+  &:hover {
+
+  }
 }
 
 .theme-hope-content a:hover {
