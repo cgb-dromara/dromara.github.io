@@ -2,6 +2,8 @@ import { defineAsyncComponent } from 'vue'
 
 export default {
   enhance: ({ app }) => {    
+      app.component("Galaxy", defineAsyncComponent(() => import("E:/code/newstudy/new/dromara.github.io/src/.vuepress/components/Galaxy.vue")))
+    
       app.component("GiteeRepo", defineAsyncComponent(() => import("E:/code/newstudy/new/dromara.github.io/src/.vuepress/components/GiteeRepo.vue")))
     
       app.component("GitHubStars", defineAsyncComponent(() => import("E:/code/newstudy/new/dromara.github.io/src/.vuepress/components/GitHubStars.vue")))

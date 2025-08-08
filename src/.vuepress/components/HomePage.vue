@@ -20,6 +20,8 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+import Galaxy from "../components/Galaxy.vue";
+
 const { siteData } = useClientData();
 
 const gvpProjects = [
@@ -49,7 +51,6 @@ const gvpProjects = [
 const totalStars = 305.5; // 来源于gitee总star数与github各仓库star数之和，需手动更新
 
 const allPagesFrontmatter = (siteData as any).value.frontmatter;
-console.log("测试方法", allPagesFrontmatter);
 const enCommunityLink: CommunityLink[] = reactive([]);
 const zhCommunityLink: CommunityLink[] = reactive([]);
 
@@ -186,8 +187,20 @@ function jumpTo(url: string): void {
 
 <template>
   <div class="home-page">
-    <div class="wrapper">
-      <div class="banner-default">
+    <div class="banner-container">
+      <!-- 背景 -->
+      <div class="galaxy-background">
+        <Galaxy
+          :speed="0.6"
+          :rotationSpeed="0"
+          :density="0.3"
+          :twinkleIntensity="0.1"
+          :glowIntensity="0.2"
+          :mouseRepulsion="false"
+        />
+      </div>
+      <!-- 核心内容 -->
+      <div class="wrapper">
         <div class="banner-mask">
           <div class="banner-info">
             <h1 id="main-title">Dromara</h1>
@@ -211,22 +224,22 @@ function jumpTo(url: string): void {
             </p>
           </div>
         </div>
-      </div>
-      <div class="feature-wrapper">
-        <div class="feature slogan">
-          <div
-            v-for="feature in homeLocale.FEATURES"
-            :key="feature.name"
-            class="feature-container slogan-container"
-          >
-            <div class="feature-title">
-              <img
-                :src="`/assets/img/${feature.name}.png`"
-                :alt="feature.name"
-              />
-              <h2>{{ feature.title }}</h2>
+        <div class="feature-wrapper">
+          <div class="feature slogan">
+            <div
+              v-for="feature in homeLocale.FEATURES"
+              :key="feature.name"
+              class="feature-container slogan-container"
+            >
+              <div class="feature-title">
+                <img
+                  :src="`/assets/img/${feature.name}.png`"
+                  :alt="feature.name"
+                />
+                <h2>{{ feature.title }}</h2>
+              </div>
+              <p class="home-description">{{ feature.desc }}</p>
             </div>
-            <p class="home-description">{{ feature.desc }}</p>
           </div>
         </div>
       </div>
@@ -381,9 +394,28 @@ function jumpTo(url: string): void {
   overflow-x: hidden;
   padding-top: var(--navbar-height);
   background: #f9fbff;
+  .banner-container {
+    position: relative;
+    width: 100%;
+    min-height: 65vh;
+    overflow: hidden;
+    .galaxy-background {
+      background: #030513;
+      border: 1px solid #333;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+  }
+
   .wrapper {
     display: flex;
     flex-direction: column;
+    position: relative;
+    z-index: 2;
     min-height: calc(100vh - var(--navbar-height));
   }
   h2 {
@@ -401,10 +433,7 @@ function jumpTo(url: string): void {
       min-height: 0;
     }
   }
-  .banner-default {
-    // 修改
-    background-color: #e4edff;
-  }
+
   .banner-info {
     padding: 100px 24px;
     #main-title {
@@ -515,7 +544,7 @@ function jumpTo(url: string): void {
     .feature-container {
       display: flex;
       flex-direction: column;
-      background-color: rgba(255, 255, 255, 0.9);
+      background-image: linear-gradient(106deg, #ffffff0f, #ffffff0a);
       margin: 20px 12px;
       border-radius: 0.375rem;
       padding: 20px 42px;

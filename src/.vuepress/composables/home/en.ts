@@ -8,7 +8,7 @@ export const enHomeOption: HomeOption = {
     {
       name: "open",
       title: "Open",
-      desc: "The technology stack is fully open source construction, maintain the community neutrality, compatible with the community open source ecology, welcome to participate in various contributions at any time.",
+      desc: "The tech stack is fully open-source, community-co-built, neutral, ecosystem-compatible, and always welcomes contributions.",
     },
     {
       name: "vision",

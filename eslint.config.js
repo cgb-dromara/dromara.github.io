@@ -34,6 +34,7 @@ export default [
         requestAnimationFrame: "readonly",
         location: "readonly",
         frontmatter: "readonly",
+        cancelAnimationFrame: "readonly",
       },
     },
   },
