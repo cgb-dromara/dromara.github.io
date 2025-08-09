@@ -1013,6 +1013,7 @@ onMounted(() => {
 .logo-animation {
   width: 100%;
   height: 100vh;
+  background: linear-gradient(to bottom, #010826, #010c36);
 }
 .content {
   height: 100%;
@@ -1022,6 +1023,7 @@ onMounted(() => {
 }
 .effect-content {
   height: 100%;
+  background: linear-gradient(to bottom, #010826, #010c36);
 }
 
 .effect-box {

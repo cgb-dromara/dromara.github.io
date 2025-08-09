@@ -22,7 +22,7 @@ export const enHomeOption: HomeOption = {
     },
   ],
   STARS_OVERALL: "Total stars exceed",
-  DATA_SOURCE: "——Data sourced from Gitee and Github",
+  DATA_SOURCE: "Data sourced from Gitee and Github",
   OUR: "Our",
   PROJECT: "Recommended Projects",
   MORE_PROJECTS: "View All Projects",

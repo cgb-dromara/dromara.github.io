@@ -162,6 +162,72 @@ const updateValue = (): void => {
   }
 };
 
+// 光效
+interface LightState {
+  display: "block" | "none";
+  left: string;
+  top: string;
+}
+
+// 获取特性数量并初始化光效状态
+const lights = ref<LightState[]>([]);
+const containerRefs = ref<(HTMLElement | null)[]>([]);
+
+// 初始化光效状态
+const initLightStates = () => {
+  if (homeLocale.value.FEATURES) {
+    lights.value = homeLocale.value.FEATURES.map(() => ({
+      display: "none",
+      left: "0px",
+      top: "0px",
+    }));
+  }
+};
+
+// 设置容器引用
+const setContainerRef = (el: HTMLElement | null, index: number) => {
+  if (el) {
+    containerRefs.value[index] = el;
+  }
+};
+
+// 鼠标悬停时显示光效
+const handleMouseOver = (index: number) => {
+  if (lights.value[index]) {
+    lights.value[index].display = "block";
+  }
+};
+
+// 鼠标移动时更新光效位置
+const handleMouseMove = (index: number, e: MouseEvent) => {
+  const container = containerRefs.value[index];
+  if (!container || !lights.value[index]) return;
+
+  // 获取光效元素
+  const light = container.querySelector(".hover-light") as HTMLElement;
+  if (!light) return;
+
+  // 计算光效位置（使鼠标位于光效中心）
+  const x =
+    e.clientX - container.getBoundingClientRect().left - light.offsetWidth / 2;
+  const y =
+    e.clientY - container.getBoundingClientRect().top - light.offsetHeight / 2;
+
+  // 更新光效位置
+  lights.value[index].left = `${x}px`;
+  lights.value[index].top = `${y}px`;
+};
+
+// 鼠标离开时隐藏光效
+const handleMouseOut = (index: number) => {
+  if (lights.value[index]) {
+    lights.value[index].display = "none";
+  }
+};
+
+// 当homeLocale加载完成后初始化光效状态
+// 实际项目中可能需要在数据加载完成后调用
+initLightStates();
 onMounted(() => {
   // 数字元素进入可视区域后，数字开始增长
   const starNumber = document.querySelector(".star-number");
@@ -227,9 +293,13 @@ function jumpTo(url: string): void {
         <div class="feature-wrapper">
           <div class="feature slogan">
             <div
-              v-for="feature in homeLocale.FEATURES"
+              v-for="(feature, index) in homeLocale.FEATURES"
               :key="feature.name"
               class="feature-container slogan-container"
+              @mouseover="handleMouseOver(index)"
+              @mousemove="handleMouseMove(index, $event)"
+              @mouseout="handleMouseOut(index)"
+              :ref="(el) => setContainerRef(el, index)"
             >
               <div class="feature-title">
                 <img
@@ -239,10 +309,22 @@ function jumpTo(url: string): void {
                 <h2>{{ feature.title }}</h2>
               </div>
               <p class="home-description">{{ feature.desc }}</p>
+              <div
+                class="hover-light"
+                :style="{
+                  display: lights[index].display,
+                  left: lights[index].left,
+                  top: lights[index].top,
+                }"
+              ></div>
             </div>
           </div>
         </div>
       </div>
+      <!-- banner -->
+      <video autoplay muted loop class="bannerVideo">
+        <source src="../public/assets/img/banner.webm" type="video/mp4" />
+      </video>
     </div>
 
     <div class="star-default">
@@ -409,6 +491,14 @@ function jumpTo(url: string): void {
       height: 100%;
       z-index: 1;
     }
+    .bannerVideo {
+      position: absolute;
+      top: 100px;
+      left: 1000px;
+      width: 550px;
+      object-fit: cover;
+      z-index: 3;
+    }
   }
 
   .wrapper {
@@ -497,8 +587,9 @@ function jumpTo(url: string): void {
     margin: 0.5rem;
     padding: 0.5em 1.5rem;
     border-radius: 2rem;
-    background: #f8f8f8;
-    color: #2c3e50;
+    background-color: #ffffff0f;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
     font-size: 1.2rem;
     text-align: center;
     transition:
@@ -507,7 +598,7 @@ function jumpTo(url: string): void {
       transform 0.3s ease;
     &:hover {
       border-color: #eceef1;
-      background: #eceef1;
+      background: #ffffff24;
     }
 
     &.primary {
@@ -544,9 +635,11 @@ function jumpTo(url: string): void {
     .feature-container {
       display: flex;
       flex-direction: column;
-      background-image: linear-gradient(106deg, #ffffff0f, #ffffff0a);
+      position: relative;
+      background-image: linear-gradient(106deg, #1d2033c9, #1d2033c9);
       margin: 20px 12px;
       border-radius: 0.375rem;
+      overflow: hidden;
       padding: 20px 42px;
       &.slogan-container :hover {
         transform: translateY(0);
@@ -566,6 +659,17 @@ function jumpTo(url: string): void {
       }
       .home-description {
         margin: 0;
+      }
+      .hover-light {
+        display: none;
+        position: absolute;
+        // left: 0;
+        // top: 0;
+        width: 150px;
+        height: 150px;
+        background-color: #0a59ae;
+        border-radius: 50%;
+        filter: blur(40px);
       }
     }
   }
@@ -687,29 +791,29 @@ function jumpTo(url: string): void {
     }
   }
   .star-default {
-    background-color: #4d7aff;
+    background: linear-gradient(to bottom, #030512, #010826);
   }
   .star-container {
-    background: url(/assets/img/growing-star.webp) no-repeat;
-    background-size: cover;
-    background-position: center;
+    // background: url(/assets/img/growing-star.webp) no-repeat;
+    // background-size: cover;
+    // background-position: center;
     width: 100%;
     color: #fff;
     padding: 10px 0 20px;
   }
   .star-wrapper {
-    position: relative;
-    left: 10%;
-    text-align: left;
+    text-align: center;
     cite {
       color: #8db2ff;
       font-weight: 400;
+      font-style: normal;
     }
   }
   .star-inner {
     display: flex;
     align-items: flex-end;
     padding-bottom: 15px;
+    justify-content: center;
   }
   .star-text {
     font-size: 2.5em;
@@ -737,6 +841,7 @@ function jumpTo(url: string): void {
     display: inline-block;
     margin-left: 10px;
     font-size: 58px;
+    color: #0a7bf4;
     @media (max-width: 959px) {
       font-size: 3.5em;
     }
