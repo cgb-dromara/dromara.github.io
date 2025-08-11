@@ -322,9 +322,12 @@ function jumpTo(url: string): void {
         </div>
       </div>
       <!-- banner -->
-      <video autoplay muted loop class="bannerVideo">
-        <source src="../public/assets/img/banner.webm" type="video/mp4" />
-      </video>
+      <!-- <video autoplay muted loop class="bannerVideo">
+        <source src="../public/assets/img/banner.mov" type="video/quicktime" />
+      </video> -->
+      <div class="bannerVideo">
+        <img src="../public/assets/img/Banner.gif" alt="" />
+      </div>
     </div>
 
     <div class="star-default">
@@ -349,11 +352,6 @@ function jumpTo(url: string): void {
         homeLocale.MORE_PROJECTS + "&nbsp;&nbsp;>"
       }}</RouterLink>
       <div class="project-swiper">
-        <img
-          class="project-img"
-          src="/assets/img/projects.webp"
-          alt="project"
-        />
         <swiper
           :modules="[Navigation, EffectCoverflow, Autoplay, Pagination]"
           navigation
@@ -493,11 +491,13 @@ function jumpTo(url: string): void {
     }
     .bannerVideo {
       position: absolute;
-      top: 100px;
-      left: 1000px;
-      width: 550px;
+      top: 0px;
+      left: 882px;
       object-fit: cover;
       z-index: 3;
+      img {
+        width: 545px;
+      }
     }
   }
 
@@ -683,9 +683,10 @@ function jumpTo(url: string): void {
 
   .project-container {
     padding: 20px 0;
-    background: url(/assets/img/project-bg.webp) no-repeat;
     background-size: cover;
     background-position: center;
+    // 标记一下
+    background: linear-gradient(to bottom, #010c36, #010e3e);
     text-align: center;
     h2 {
       margin-top: 0;
@@ -713,7 +714,6 @@ function jumpTo(url: string): void {
     font-size: 1.1rem;
     color: #494949;
     padding: 0 20px;
-    border: 1px solid #f1f2f5;
     text-align: left;
     img {
       aspect-ratio: 2 / 1;
@@ -745,6 +745,13 @@ function jumpTo(url: string): void {
         transition: transform 250ms ease-in-out;
       }
     }
+  }
+  :deep(.swiper-pagination-bullet) {
+    background-color: #485573;
+    opacity: 1;
+  }
+  :deep(.swiper-pagination-bullet-active) {
+    background-color: #fff;
   }
   @keyframes bottom {
     0% {
@@ -794,9 +801,6 @@ function jumpTo(url: string): void {
     background: linear-gradient(to bottom, #030512, #010826);
   }
   .star-container {
-    // background: url(/assets/img/growing-star.webp) no-repeat;
-    // background-size: cover;
-    // background-position: center;
     width: 100%;
     color: #fff;
     padding: 10px 0 20px;
@@ -856,14 +860,10 @@ function jumpTo(url: string): void {
     text-align: center;
     padding: 20px 0;
     letter-spacing: 2px;
-    background: linear-gradient(
-      180deg,
-      #dee8ff 0%,
-      rgba(243, 247, 253, 0) 100%
-    );
+    background: linear-gradient(to bottom, #010e3e, #041049);
   }
   .gvp-container {
-    padding: 0 18vw;
+    // padding: 0 18vw;
     text-align: left;
     li {
       display: inline-block;

@@ -687,7 +687,7 @@ const animData = {
     {
       widthStr: "100%",
       backgroundColorStr: "",
-      backgroundImageStr: `url('${dromaraBase64}')`,
+      backgroundImageStr: `url('/assets/img/logo-animation/logo.webp')`,
       topStr: "",
       rightStr: "",
       bottomStr: "",
