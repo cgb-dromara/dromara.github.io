@@ -7,8 +7,10 @@ body {
 }
 
 #navbar {
-  background-color: #030412;
+  // background-color: #030412;
   box-shadow: none;
+  background: #fff0;
+  backdrop-filter: blur(5px);
   border-bottom: 1px solid #2c2d3b;
 }
 
@@ -18,9 +20,6 @@ body {
   font-weight: 400;
   text-align: center;
   --dark-grey: #414960;
-  &:hover {
-
-  }
 }
 
 .theme-hope-content a:hover {

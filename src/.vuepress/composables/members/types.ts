@@ -11,10 +11,10 @@ interface MembersGroup {
 }
 
 export interface MembersOption {
-  MEMBERS: string;
+  SLOGAN: string;
   DESCRIPTION: string;
   FOUNDER: Member;
-  Funder_TITLE: string;
+  FUNDER_TITLE: string;
   COMMITTEE_TITLE: string;
   COMMITTER_TITLE: string;
   MEMBERS_ITEM: MembersGroup[];

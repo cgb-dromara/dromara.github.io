@@ -1,7 +1,7 @@
 import { type MembersOption } from "./types.js";
 
 export const enMembersOption: MembersOption = {
-  MEMBERS: "Members",
+  SLOGAN: "Dromara : Gathered for passion, advancing together for technology.",
   DESCRIPTION:
     "Dromara community members, from diverse backgrounds, include authors, experts, and developers. They work together to boost open source and invigorate the community's future.",
   FUNDER_TITLE: "Funder",

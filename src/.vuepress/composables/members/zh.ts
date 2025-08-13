@@ -1,7 +1,7 @@
 import { type MembersOption } from "./types.js";
 
 export const zhMembersOption: MembersOption = {
-  MEMBERS: "成员",
+  SLOGAN: "Dromara 开源社区: 因热爱相聚，为技术共进",
   DESCRIPTION:
     "Dromara开源社区汇集了开源项目创作者、技术专家、开发者和热心于开源与技术的伙伴们。成员们互相支持和协作，共同推动开源技术前行，为社区注入活力。",
   FUNDER_TITLE: "创始人",

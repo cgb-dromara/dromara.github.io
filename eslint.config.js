@@ -35,6 +35,7 @@ export default [
         location: "readonly",
         frontmatter: "readonly",
         cancelAnimationFrame: "readonly",
+        clearTimeout: "readonly",
       },
     },
   },

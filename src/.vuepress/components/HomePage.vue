@@ -20,7 +20,7 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import Galaxy from "../components/Galaxy.vue";
+import Galaxy from "./banner/Galaxy.vue";
 
 const { siteData } = useClientData();
 
@@ -543,9 +543,9 @@ function jumpTo(url: string): void {
 .home-page {
   min-width: 380px;
   overflow-x: hidden;
-  padding-top: var(--navbar-height);
-  background: #f9fbff;
+  background: #030513;
   .banner-container {
+    padding-top: var(--navbar-height);
     position: relative;
     width: 100%;
     min-height: 65vh;
@@ -562,10 +562,10 @@ function jumpTo(url: string): void {
     }
     .bannerVideo {
       position: absolute;
-      top: 0px;
+      top: 51px;
       left: 882px;
       object-fit: cover;
-      z-index: 3;
+      z-index: 1;
       img {
         width: 545px;
       }

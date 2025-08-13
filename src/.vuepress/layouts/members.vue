@@ -2,6 +2,7 @@
 import { useMembersLocale } from "../composables/index.js";
 import { onMounted } from "vue";
 import { Layout } from "vuepress-theme-hope/client";
+import LightRays from "../components/banner/LightRays.vue";
 const memberLocale = useMembersLocale();
 
 let webCn: boolean = false;
@@ -22,10 +23,25 @@ onMounted(() => {
     <div class="members-page">
       <div class="bg-default">
         <div class="member-container">
-          <h1 class="title">{{ memberLocale.MEMBERS }}</h1>
+          <h1 class="title">{{ memberLocale.SLOGAN }}</h1>
           <p class="description">
             {{ memberLocale.DESCRIPTION }}
           </p>
+          <div class="button">加入我们</div>
+        </div>
+        <div class="bg-container">
+          <LightRays
+            rays-origin="top-center"
+            rays-color="#ffff"
+            :rays-speed="1.5"
+            :light-spread="0.5"
+            :ray-length="1"
+            :follow-mouse="true"
+            :mouse-influence="0"
+            :noise-amount="0"
+            :distortion="0.05"
+            class-name="custom-rays"
+          />
         </div>
       </div>
       <div id="wwadsadsorg" style="max-width: 500px"></div>
@@ -75,12 +91,20 @@ onMounted(() => {
 
 <style scoped lang="scss">
 .members-page {
-  padding-top: var(--navbar-height);
   min-width: 380px;
   overflow-x: hidden;
-
+  background: linear-gradient(to bottom, #030513, #051555);
   .bg-default {
-    background-color: #e9eef8;
+    position: relative;
+    padding-top: var(--navbar-height);
+    background-color: #fff0;
+    .bg-container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      top: 0;
+    }
   }
 }
 
@@ -88,41 +112,88 @@ onMounted(() => {
   height: 422px;
   min-width: 200px;
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: center;
-  padding: 0 24px;
 
-  background: url(/assets/img/bg-projects.webp) no-repeat;
   background-size: cover;
   background-position: center;
   border-radius: 0.5rem;
 
   @media (min-width: 960px) {
-    padding-left: 5rem;
   }
 
   h1 {
     margin: 0;
-    color: #171b25;
+    color: #fff;
     font-size: 44px;
     font-weight: 900;
+    text-align: center;
+    @media (max-width: 500px) {
+      font-size: 30px;
+    }
   }
 
   .description {
     max-width: 700px;
-    padding-right: 52%;
     color: #61687c;
     font-size: 16px;
+    text-align: center;
     line-height: 28px;
+  }
+  /* From Uiverse.io by KhaledMatalkah */
+  @keyframes glowing-pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
+
+    70% {
+      box-shadow: 0 0 0 30px rgba(255, 255, 255, 0);
+    }
+
+    100% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+  }
+
+  .button {
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(to right, #71b9fe, #0632b8);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    animation: glowing-pulse 2s infinite;
+    z-index: 2;
+    margin-top: 25px;
+    cursor: pointer;
+  }
+
+  .button::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 30px;
+    box-shadow: 0 0 20px #0632b8;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .button:hover::before {
+    opacity: 1;
   }
 }
 
 .member-main {
   padding: 30px 10vw;
-
-  @media (min-width: 1440px) {
-    padding: 30px 1vw;
-  }
 
   .member-banner {
     font-weight: bold;
@@ -132,24 +203,31 @@ onMounted(() => {
       justify-content: center;
       border: unset;
       font-size: 32px;
-      color: #171b25;
+      color: #fff;
       font-weight: 600;
     }
 
     .founder {
       display: flex;
       margin-bottom: 48px;
-
+      border-radius: 10px;
+      background-image: linear-gradient(
+        106deg,
+        rgba(29, 32, 51, 0.7882352941),
+        rgba(29, 32, 51, 0.7882352941)
+      );
       .photo {
         height: 36vw;
         max-height: 240px;
-        border-radius: 4px;
+        border-radius: 10px 0 0 10px;
         background: #096dd96e;
       }
 
       .info {
         margin-left: 32px;
-
+        padding: 32px;
+        border-radius: 0 10px 10px 0;
+        box-sizing: border-box;
         .name {
           color: #2e64fe;
           font-size: 20px;
@@ -246,7 +324,7 @@ onMounted(() => {
         }
 
         &:hover {
-          background-color: #f0f3f9;
+          // background-color: #f0f3f9;
           border-radius: 4px;
           .desc {
             opacity: 1;
