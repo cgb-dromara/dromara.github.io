@@ -3,6 +3,7 @@ import { useMembersLocale } from "../composables/index.js";
 import { onMounted } from "vue";
 import { Layout } from "vuepress-theme-hope/client";
 import LightRays from "../components/banner/LightRays.vue";
+import HoverLight from "../components/hover-light/HoverLight.vue";
 const memberLocale = useMembersLocale();
 
 let webCn: boolean = false;
@@ -48,14 +49,15 @@ onMounted(() => {
       <main class="member-main">
         <div class="member-banner">
           <h2 class="top-title">{{ memberLocale.FUNDER_TITLE }}</h2>
-          <div class="founder">
+          <HoverLight class="founder">
             <img class="photo" src="/assets/img/members/xiaoyu.webp" alt="" />
             <div class="info">
               <div class="name">{{ memberLocale.FOUNDER.name }}</div>
               <div class="role">{{ memberLocale.FOUNDER.role }}</div>
               <div class="desc">{{ memberLocale.FOUNDER.desc }}</div>
             </div>
-          </div>
+          </HoverLight>
+
           <!-- 成员 -->
           <template
             v-for="item in memberLocale.MEMBERS_ITEM"
@@ -68,6 +70,7 @@ onMounted(() => {
                 v-for="member in item.members"
                 :key="member.name"
               >
+                <HoverLight class="test"></HoverLight>
                 <div class="member-avatar">
                   <img
                     class="photo"
@@ -233,7 +236,10 @@ onMounted(() => {
         max-height: 240px;
         border-radius: 10px 0 0 10px;
         background: #096dd96e;
+        z-index: 2;
         @media (max-width: 600px) {
+          position: relative;
+          z-index: 2;
           border-radius: 20px;
         }
       }
@@ -300,7 +306,12 @@ onMounted(() => {
           flex-direction: column;
           padding: 15px;
         }
-
+        .test {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+        }
         .photo {
           width: 100%;
           background: #123e78;
