@@ -23,5 +23,7 @@ export default {
       app.component("banner-Galaxy", defineAsyncComponent(() => import("E:/code/newstudy/new/dromara.github.io/src/.vuepress/components/banner/Galaxy.vue")))
     
       app.component("banner-LightRays", defineAsyncComponent(() => import("E:/code/newstudy/new/dromara.github.io/src/.vuepress/components/banner/LightRays.vue")))
+    
+      app.component("hover-light-HoverLight", defineAsyncComponent(() => import("E:/code/newstudy/new/dromara.github.io/src/.vuepress/components/hover-light/HoverLight.vue")))
   },
 }

@@ -18,4 +18,5 @@ export interface MembersOption {
   COMMITTEE_TITLE: string;
   COMMITTER_TITLE: string;
   MEMBERS_ITEM: MembersGroup[];
+  BUTTON: string;
 }

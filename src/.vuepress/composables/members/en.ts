@@ -7,6 +7,7 @@ export const enMembersOption: MembersOption = {
   FUNDER_TITLE: "Funder",
   COMMITTEE_TITLE: "Committee Members",
   COMMITTER_TITLE: "Organization Members",
+  BUTTON: "Join us",
   FOUNDER: {
     role: "Founder",
     name: "Xiao Yu",

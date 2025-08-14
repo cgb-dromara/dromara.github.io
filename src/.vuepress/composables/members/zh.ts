@@ -7,6 +7,7 @@ export const zhMembersOption: MembersOption = {
   FUNDER_TITLE: "创始人",
   COMMITTEE_TITLE: "委员会成员",
   COMMITTER_TITLE: "组织成员",
+  BUTTON: "加入我们",
   FOUNDER: {
     role: "创始人",
     name: "肖宇",

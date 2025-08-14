@@ -375,10 +375,7 @@ function jumpTo(url: string): void {
           </div>
         </div>
       </div>
-      <!-- banner -->
-      <!-- <video autoplay muted loop class="bannerVideo">
-        <source src="../public/assets/img/banner.mov" type="video/quicktime" />
-      </video> -->
+
       <div class="bannerVideo">
         <img src="../public/assets/img/Banner.gif" alt="" />
       </div>
@@ -563,7 +560,7 @@ function jumpTo(url: string): void {
     .bannerVideo {
       position: absolute;
       top: 51px;
-      left: 882px;
+      left: 941px;
       object-fit: cover;
       z-index: 1;
       img {

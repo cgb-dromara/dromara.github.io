@@ -378,7 +378,6 @@ const qrcodeOption = computed(() => [
 
   .copyright {
     padding: 12px;
-    border-top: 1px solid #4f5c6d;
 
     > p {
       margin: 12px;

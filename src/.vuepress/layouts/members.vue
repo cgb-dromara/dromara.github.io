@@ -27,7 +27,7 @@ onMounted(() => {
           <p class="description">
             {{ memberLocale.DESCRIPTION }}
           </p>
-          <div class="button">加入我们</div>
+          <div class="button">{{ memberLocale.BUTTON }}</div>
         </div>
         <div class="bg-container">
           <LightRays
@@ -47,7 +47,7 @@ onMounted(() => {
       <div id="wwadsadsorg" style="max-width: 500px"></div>
       <main class="member-main">
         <div class="member-banner">
-          <h2 class="title">{{ memberLocale.FUNDER_TITLE }}</h2>
+          <h2 class="top-title">{{ memberLocale.FUNDER_TITLE }}</h2>
           <div class="founder">
             <img class="photo" src="/assets/img/members/xiaoyu.webp" alt="" />
             <div class="info">
@@ -56,6 +56,7 @@ onMounted(() => {
               <div class="desc">{{ memberLocale.FOUNDER.desc }}</div>
             </div>
           </div>
+          <!-- 成员 -->
           <template
             v-for="item in memberLocale.MEMBERS_ITEM"
             :key="item.header"
@@ -67,13 +68,12 @@ onMounted(() => {
                 v-for="member in item.members"
                 :key="member.name"
               >
-                <div class="member-left">
+                <div class="member-avatar">
                   <img
                     class="photo"
                     :src="member.photo"
                     :alt="member.name + ' photo'"
                   />
-                  <div class="slider"></div>
                 </div>
                 <div class="info">
                   <div class="name">{{ member.name }}</div>
@@ -197,7 +197,18 @@ onMounted(() => {
 
   .member-banner {
     font-weight: bold;
-
+    .top-title {
+      display: flex;
+      justify-content: center;
+      border: unset;
+      font-size: 32px;
+      color: #fff;
+      font-weight: 600;
+      margin-bottom: 40px;
+      @media (max-width: 1000px) {
+        margin-bottom: 26.56px;
+      }
+    }
     .title {
       display: flex;
       justify-content: center;
@@ -205,22 +216,26 @@ onMounted(() => {
       font-size: 32px;
       color: #fff;
       font-weight: 600;
+      margin-bottom: 120px;
+      @media (max-width: 1000px) {
+        margin-bottom: 26.56px;
+      }
     }
 
     .founder {
       display: flex;
       margin-bottom: 48px;
       border-radius: 10px;
-      background-image: linear-gradient(
-        106deg,
-        rgba(29, 32, 51, 0.7882352941),
-        rgba(29, 32, 51, 0.7882352941)
-      );
+      background: #ffffff17;
+
       .photo {
-        height: 36vw;
+        height: 100%;
         max-height: 240px;
         border-radius: 10px 0 0 10px;
         background: #096dd96e;
+        @media (max-width: 600px) {
+          border-radius: 20px;
+        }
       }
 
       .info {
@@ -228,6 +243,7 @@ onMounted(() => {
         padding: 32px;
         border-radius: 0 10px 10px 0;
         box-sizing: border-box;
+
         .name {
           color: #2e64fe;
           font-size: 20px;
@@ -244,6 +260,15 @@ onMounted(() => {
           line-height: 24px;
           font-weight: 400;
         }
+        @media (max-width: 600px) {
+          margin-left: 0;
+        }
+      }
+      @media (max-width: 600px) {
+        padding-top: 32px;
+        display: block;
+        justify-items: center;
+        text-align: center;
       }
     }
 
@@ -251,28 +276,43 @@ onMounted(() => {
       list-style: none;
       margin-bottom: 50px;
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 100px 24px;
 
       @media (max-width: 1000px) {
+        list-style: none;
+        margin-bottom: 50px;
+        display: grid;
         grid-template-columns: 1fr;
         gap: 30px;
       }
 
       .member {
-        display: flex;
         gap: 20px;
-        padding: 0 15px 15px 0;
+        padding: 90px 15px 15px 15px;
+        border-radius: 10px;
         background-color: none;
-
-        @media (max-width: 550px) {
+        position: relative;
+        justify-items: center;
+        text-align: center;
+        background: #ffffff17;
+        @media (max-width: 1000px) {
           flex-direction: column;
+          padding: 15px;
         }
 
         .photo {
           width: 100%;
-          border-radius: 4px;
-          background: #096dd96e;
+          background: #123e78;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          position: relative;
+          z-index: 2;
+          @media (max-width: 1000px) {
+            width: 100%;
+            background: #096dd96e;
+          }
         }
 
         .info {
@@ -294,47 +334,21 @@ onMounted(() => {
 
         .desc {
           font-size: 13px;
-          opacity: 0;
-          visibility: hidden;
-          max-height: 0;
-          overflow: hidden;
-          transition:
-            opacity 0.5s ease-in-out,
-            visibility 0.5s ease-in-out,
-            max-height 0.5s ease-in-out;
-        }
+          opacity: 1;
 
-        .member-left {
+          max-height: 250px;
+          overflow: hidden;
+        }
+        .member-avatar {
           width: 160px;
           height: 160px;
-          flex-shrink: 0;
-          position: relative;
-        }
-        .slider {
           position: absolute;
-          top: -15px;
-          right: -15px;
-          width: 32px;
-          height: 32px;
-          border-radius: 5%;
-          background-color: #2e64fe;
-          transition:
-            top 0.7s ease,
-            right 0.7s ease;
-        }
-
-        &:hover {
-          // background-color: #f0f3f9;
-          border-radius: 4px;
-          .desc {
-            opacity: 1;
-            visibility: visible;
-            max-height: 250px;
-          }
-
-          .slider {
-            top: 0;
-            right: 0;
+          top: -80px;
+          @media (max-width: 1000px) {
+            width: 100px;
+            height: 100px;
+            flex-shrink: 0;
+            position: static;
           }
         }
       }
