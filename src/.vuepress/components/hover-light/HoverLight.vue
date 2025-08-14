@@ -27,15 +27,19 @@ const props = defineProps({
   },
   lightWidth: {
     type: String,
-    default: "150px",
+    default: "200px",
   },
   lightHeight: {
     type: String,
-    default: "150px",
+    default: "200px",
   },
   lightBlur: {
     type: String,
-    default: "40px",
+    default: "60px",
+  },
+  lightOpacity: {
+    type: Number,
+    default: 0.5,
   },
 });
 
@@ -85,6 +89,7 @@ const lightStyle = computed(() => ({
   width: props.lightWidth,
   height: props.lightHeight,
   filter: `blur(${props.lightBlur})`,
+  opacity: props.lightOpacity,
 }));
 
 // Optional: Clean up on unmount if necessary, though not strictly needed for this component

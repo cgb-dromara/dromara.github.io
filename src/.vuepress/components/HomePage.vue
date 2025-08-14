@@ -21,7 +21,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import Galaxy from "./banner/Galaxy.vue";
-
+import HoverLight from "./hover-light/HoverLight.vue";
 const { siteData } = useClientData();
 
 const gvpProjects = [
@@ -162,123 +162,6 @@ const updateValue = (): void => {
   }
 };
 
-// 光效
-interface LightState {
-  display: "block" | "none";
-  left: string;
-  top: string;
-}
-
-// 获取特性数量并初始化光效状态
-const lights = ref<LightState[]>([]);
-const containerRefs = ref<(HTMLElement | null)[]>([]);
-
-// 初始化光效状态
-const initLightStates = () => {
-  if (homeLocale.value.FEATURES) {
-    lights.value = homeLocale.value.FEATURES.map(() => ({
-      display: "none",
-      left: "0px",
-      top: "0px",
-    }));
-  }
-};
-
-// 设置容器引用
-const setContainerRef = (el: HTMLElement | null, index: number) => {
-  if (el) {
-    containerRefs.value[index] = el;
-  }
-};
-
-// 鼠标悬停时显示光效
-const handleMouseOver = (index: number) => {
-  if (lights.value[index]) {
-    lights.value[index].display = "block";
-  }
-};
-
-// 鼠标移动时更新光效位置
-const handleMouseMove = (index: number, e: MouseEvent) => {
-  const container = containerRefs.value[index];
-  if (!container || !lights.value[index]) return;
-
-  // 获取光效元素
-  const light = container.querySelector(".hover-light") as HTMLElement;
-  if (!light) return;
-
-  // 计算光效位置（使鼠标位于光效中心）
-  const x =
-    e.clientX - container.getBoundingClientRect().left - light.offsetWidth / 2;
-  const y =
-    e.clientY - container.getBoundingClientRect().top - light.offsetHeight / 2;
-
-  // 更新光效位置
-  lights.value[index].left = `${x}px`;
-  lights.value[index].top = `${y}px`;
-};
-
-// 鼠标离开时隐藏光效
-const handleMouseOut = (index: number) => {
-  if (lights.value[index]) {
-    lights.value[index].display = "none";
-  }
-};
-
-// 新增社区光效状态管理
-const communityLights = ref<LightState[]>([]);
-const communityContainerRefs = ref<(HTMLElement | null)[]>([]);
-
-// 初始化社区光效（在onMounted中调用，确保数据加载完成）
-const initCommunityLightStates = () => {
-  // 根据社区分类数量初始化光效
-  if (communityLink.value.length) {
-    communityLights.value = communityLink.value.map(() => ({
-      display: "none",
-      left: "0px",
-      top: "0px",
-    }));
-  }
-};
-
-// 社区容器引用设置
-const setCommunityContainerRef = (el: HTMLElement | null, index: number) => {
-  if (el) {
-    communityContainerRefs.value[index] = el;
-  }
-};
-
-// 社区光效事件处理（复用逻辑但指向社区状态）
-const handleCommunityMouseOver = (index: number) => {
-  if (communityLights.value[index]) {
-    communityLights.value[index].display = "block";
-  }
-};
-
-const handleCommunityMouseMove = (index: number, e: MouseEvent) => {
-  const container = communityContainerRefs.value[index];
-  if (!container || !communityLights.value[index]) return;
-  const light = container.querySelector(".hover-light") as HTMLElement;
-  if (!light) return;
-  // 计算位置（可调整偏移量实现不同效果）
-  const x =
-    e.clientX - container.getBoundingClientRect().left - light.offsetWidth / 2;
-  const y =
-    e.clientY - container.getBoundingClientRect().top - light.offsetHeight / 2;
-  communityLights.value[index].left = `${x}px`;
-  communityLights.value[index].top = `${y}px`;
-};
-
-const handleCommunityMouseOut = (index: number) => {
-  if (communityLights.value[index]) {
-    communityLights.value[index].display = "none";
-  }
-};
-
-// 当homeLocale加载完成后初始化光效状态
-// 实际项目中可能需要在数据加载完成后调用
-initLightStates();
-initCommunityLightStates();
 function goGvp(gvp: any) {
   window.location.href = `https://gitee.com/dromara/${gvp}`;
 }
@@ -346,14 +229,10 @@ function jumpTo(url: string): void {
         </div>
         <div class="feature-wrapper">
           <div class="feature slogan">
-            <div
-              v-for="(feature, index) in homeLocale.FEATURES"
+            <HoverLight
+              v-for="feature in homeLocale.FEATURES"
               :key="feature.name"
               class="feature-container slogan-container"
-              @mouseover="handleMouseOver(index)"
-              @mousemove="handleMouseMove(index, $event)"
-              @mouseout="handleMouseOut(index)"
-              :ref="(el) => setContainerRef(el, index)"
             >
               <div class="feature-title">
                 <img
@@ -363,15 +242,7 @@ function jumpTo(url: string): void {
                 <h2>{{ feature.title }}</h2>
               </div>
               <p class="home-description">{{ feature.desc }}</p>
-              <div
-                class="hover-light"
-                :style="{
-                  display: lights[index].display,
-                  left: lights[index].left,
-                  top: lights[index].top,
-                }"
-              ></div>
-            </div>
+            </HoverLight>
           </div>
         </div>
       </div>
@@ -479,17 +350,8 @@ function jumpTo(url: string): void {
       <h2 class="header-community">{{ homeLocale.COMMUNITY }}</h2>
       <div class="feature-wrapper">
         <div class="feature">
-          <template
-            v-for="(section, sectionIndex) in communityLink"
-            :key="section.category"
-          >
-            <div
-              class="feature-container"
-              @mouseover="handleCommunityMouseOver(sectionIndex)"
-              @mousemove="handleCommunityMouseMove(sectionIndex, $event)"
-              @mouseout="handleCommunityMouseOut(sectionIndex)"
-              :ref="(el) => setCommunityContainerRef(el, sectionIndex)"
-            >
+          <template v-for="section in communityLink" :key="section.category">
+            <HoverLight class="feature-container">
               <div class="feature-title">
                 <img :src="section.icon" :alt="section.category" />
                 <h2 style="margin-bottom: 0">{{ section.category }}</h2>
@@ -520,15 +382,7 @@ function jumpTo(url: string): void {
                   </div>
                 </div>
               </template>
-              <div
-                class="hover-light"
-                :style="{
-                  display: communityLights[sectionIndex]?.display,
-                  left: communityLights[sectionIndex]?.left,
-                  top: communityLights[sectionIndex]?.top,
-                }"
-              ></div>
-            </div>
+            </HoverLight>
           </template>
         </div>
       </div>
