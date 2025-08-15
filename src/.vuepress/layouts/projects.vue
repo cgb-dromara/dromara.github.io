@@ -124,8 +124,11 @@ onMounted(() => {
 .projects-page {
   padding-top: var(--navbar-height);
   min-width: 380px;
-
+  background: linear-gradient(to bottom, #030513, #030516);
   @media (min-width: 1440px) {
+  }
+  .bg-default {
+    background: linear-gradient(to bottom, #030513, #030516);
   }
 }
 
@@ -135,27 +138,26 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 0 24px;
-
-  background: url(/assets/img/bg-projects.webp) no-repeat;
   background-size: cover;
   background-position: center;
   border-radius: 0.5rem;
-
   @media (min-width: 960px) {
     padding-left: 5rem;
   }
 
   h1 {
     margin: 0;
-    color: #171b25;
+    color: #fff;
     font-size: 44px;
     font-weight: 900;
+    text-align: center;
+    max-width: 1400px;
   }
 
   .description {
     max-width: 700px;
-    padding-right: 52%;
     color: #61687c;
     font-size: 16px;
     line-height: 28px;
@@ -165,7 +167,7 @@ onMounted(() => {
 .project-main {
   background-color: #f9fbff;
   padding: 30px 10vw;
-
+  background: linear-gradient(to bottom, #030516, #051454);
   @media (min-width: 1440px) {
     padding: 30px 2vw;
     // padding-left: 16rem;
@@ -210,13 +212,11 @@ onMounted(() => {
     border-radius: 8px;
     background: #fff;
 
-    &:hover {
-      .hiding-detail {
-        margin-top: 0;
-        opacity: 1;
-        visibility: visible;
-        z-index: 1000;
-      }
+    .hiding-detail {
+      margin-top: 0;
+      opacity: 1;
+      visibility: visible;
+      z-index: 1000;
     }
   }
   .project-top {

@@ -1,5 +1,4 @@
 <template>
-  <!-- 将Tailwind类名替换为自定义类名 -->
   <div ref="containerRef" :class="['light-rays-container', className]" />
 </template>
 
@@ -543,7 +542,6 @@ onUnmounted((): void => {
 });
 </script>
 
-<!-- 添加原生CSS样式 -->
 <style>
 .light-rays-container {
   width: 100%;

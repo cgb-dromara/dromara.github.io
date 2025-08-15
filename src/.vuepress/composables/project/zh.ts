@@ -1,7 +1,7 @@
 import { type ProjectsOption } from "./types.js";
 
 export const zhProjectsOption: ProjectsOption = {
-  PROJECTS: "项目",
+  PROJECTS: "Dromara 开源社区：汇聚顶尖项目，共探开源乐趣",
   DESCRIPTION:
     "Dromara开源社区，汇集一流开源项目作者，提供开源产品、解决方案、咨询、支持和培训。涵盖分布式事务、工具、认证、微服务RPC、监控、日志、大数据等领域。加入我们，体验开源的乐趣。",
   PROJECT_SPONSOR: "项目sponsor",

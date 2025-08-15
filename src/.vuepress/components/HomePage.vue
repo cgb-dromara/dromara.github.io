@@ -716,9 +716,12 @@ function jumpTo(url: string): void {
     color: #2e64fe;
     padding: 5px 10px;
     cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
     &:hover {
-      background: #e8f0fe;
+      // 字体
       border-radius: 5px;
+      transform: scale(1.02);
     }
   }
   .star-default {

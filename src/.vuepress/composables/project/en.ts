@@ -1,7 +1,8 @@
 import { type ProjectsOption } from "./types.js";
 
 export const enProjectsOption: ProjectsOption = {
-  PROJECTS: "Projects",
+  PROJECTS:
+    "Dromara : Gathering top-notch projects, exploring the joys of open source together.",
   DESCRIPTION:
     "Dromara Community unites top open-source authors, offering products, solutions, and training across domains like transactions, tools, microservices, and big data. Join for the joy of open source.",
   PROJECT_SPONSOR: "Project sponsor",

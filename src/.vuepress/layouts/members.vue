@@ -104,7 +104,7 @@ onMounted(() => {
     .bg-container {
       position: absolute;
       width: 100%;
-      height: 100%;
+      height: calc(100% + 50%);
       z-index: 0;
       top: 0;
     }
