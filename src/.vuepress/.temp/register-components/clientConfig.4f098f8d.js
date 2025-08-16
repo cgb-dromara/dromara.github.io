@@ -24,6 +24,8 @@ export default {
     
       app.component("banner-LightRays", defineAsyncComponent(() => import("E:/code/newstudy/new/dromara.github.io/src/.vuepress/components/banner/LightRays.vue")))
     
+      app.component("hidden-text-TextEllipsisHover", defineAsyncComponent(() => import("E:/code/newstudy/new/dromara.github.io/src/.vuepress/components/hidden-text/TextEllipsisHover.vue")))
+    
       app.component("hover-light-HoverLight", defineAsyncComponent(() => import("E:/code/newstudy/new/dromara.github.io/src/.vuepress/components/hover-light/HoverLight.vue")))
   },
 }

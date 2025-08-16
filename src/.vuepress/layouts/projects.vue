@@ -8,7 +8,7 @@ import {
   useProjectsData,
 } from "../composables/index.js";
 import { onMounted } from "vue";
-
+import TextEllipsisHover from "../components/hidden-text/TextEllipsisHover.vue";
 const { projectLocale, projectItems } = useProjectsData();
 
 const convertToUpperCamelCase = (name: string): string =>
@@ -50,29 +50,35 @@ onMounted(() => {
         <h2 class="group-name">{{ item.groupName }}</h2>
         <div class="project-card">
           <div class="project" v-for="obj in item.projects" :key="obj.name">
-            <div class="logo-container">
-              <img
-                v-if="!noImageProject.includes(obj.name)"
-                class="project-title"
-                :src="`/assets/img/logo/${obj.name}.webp`"
-                :alt="obj.name"
-              />
-              <div v-else class="project-title text">
-                {{ convertToUpperCamelCase(obj.name) }}
-              </div>
-            </div>
-            <div class="text-container">
-              <div class="project-content">{{ obj.description }}</div>
-              <p v-if="obj.sponsor">
-                {{ projectLocale.PROJECT_SPONSOR }}：{{ obj.sponsor }}
-              </p>
-              <p v-if="obj.date">
-                {{ projectLocale.JOINING_DATE }}：{{ obj.date }}
-              </p>
-            </div>
-
             <div class="flex-container">
-              <p v-html="obj.link" class="badge-img"></p>
+              <div class="top-container">
+                <div class="logo-container">
+                  <img
+                    v-if="!noImageProject.includes(obj.name)"
+                    class="project-title"
+                    :src="`/assets/img/logo/${obj.name}.webp`"
+                    :alt="obj.name"
+                  />
+                  <div v-else class="project-title text">
+                    {{ convertToUpperCamelCase(obj.name) }}
+                  </div>
+                </div>
+                <div class="text-container">
+                  <TextEllipsisHover
+                    :text="obj.description"
+                    :max-lines="3"
+                    class="project-content"
+                  />
+                  <p v-if="obj.sponsor">
+                    {{ projectLocale.PROJECT_SPONSOR }}：{{ obj.sponsor }}
+                  </p>
+                  <p v-if="obj.date">
+                    {{ projectLocale.JOINING_DATE }}：{{ obj.date }}
+                  </p>
+                </div>
+                <p v-html="obj.link" class="badge-img"></p>
+              </div>
+
               <div class="project-buttons">
                 <a
                   class="project-button primary"
@@ -178,10 +184,14 @@ onMounted(() => {
     padding: 50px 0 30px;
   }
   .text-container {
-    margin: 15px 0;
+    margin: 30px 0;
+    transition: all 0.4s ease;
     .project-content {
       font-weight: 700;
       // margin: 8px 0;
+    }
+    p {
+      margin: 0;
     }
   }
   .group-name {
@@ -206,10 +216,6 @@ onMounted(() => {
     @media (min-width: 1220px) and (max-width: 1439px) {
       grid-template-columns: repeat(3, 1fr);
     }
-
-    p {
-      margin: 0.5em 0;
-    }
   }
   .project {
     border: 1px solid #fff3;
@@ -220,22 +226,38 @@ onMounted(() => {
     align-items: center;
     border-radius: 8px;
     background: #ffffff0f;
-    height: 510px;
+    height: 450px;
     text-align: center;
-
+    &:hover .logo-container {
+      transform: scale(1.05);
+      img {
+        transform: scale(1.1);
+      }
+    }
+    &:hover .text-container {
+      margin-top: 15px;
+    }
     .flex-container {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       height: 100%;
+      .top-container {
+        margin-top: 15px;
+        justify-items: center;
+      }
       .badge-img {
         // text-align: left;
         opacity: 0;
         pointer-events: none;
+        max-height: 0;
+        transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        margin-bottom: 0;
       }
       &:hover .badge-img {
         opacity: 1;
         pointer-events: auto;
+        max-height: 150px;
       }
     }
   }
@@ -253,6 +275,7 @@ onMounted(() => {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 0.4s ease;
   }
 
   .project-title {
