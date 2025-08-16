@@ -241,6 +241,7 @@ onMounted(() => {
           position: relative;
           z-index: 2;
           border-radius: 20px;
+          width: 200px;
         }
       }
 

@@ -50,17 +50,51 @@ onMounted(() => {
         <h2 class="group-name">{{ item.groupName }}</h2>
         <div class="project-card">
           <div class="project" v-for="obj in item.projects" :key="obj.name">
-            <div class="project-top">
-              <div class="project-header">
-                <img
-                  v-if="!noImageProject.includes(obj.name)"
-                  class="project-title"
-                  :src="`/assets/img/logo/${obj.name}.webp`"
-                  :alt="obj.name"
-                />
-                <div v-else class="project-title text">
-                  {{ convertToUpperCamelCase(obj.name) }}
-                </div>
+            <div class="logo-container">
+              <img
+                v-if="!noImageProject.includes(obj.name)"
+                class="project-title"
+                :src="`/assets/img/logo/${obj.name}.webp`"
+                :alt="obj.name"
+              />
+              <div v-else class="project-title text">
+                {{ convertToUpperCamelCase(obj.name) }}
+              </div>
+            </div>
+            <div class="text-container">
+              <div class="project-content">{{ obj.description }}</div>
+              <p v-if="obj.sponsor">
+                {{ projectLocale.PROJECT_SPONSOR }}：{{ obj.sponsor }}
+              </p>
+              <p v-if="obj.date">
+                {{ projectLocale.JOINING_DATE }}：{{ obj.date }}
+              </p>
+            </div>
+
+            <div class="flex-container">
+              <p v-html="obj.link" class="badge-img"></p>
+              <div class="project-buttons">
+                <a
+                  class="project-button primary"
+                  target="_blank"
+                  :href="obj.website"
+                >
+                  {{ projectLocale.START_UP }}
+                </a>
+                <a
+                  v-if="!noGiteeProjects.includes(obj.name)"
+                  class="project-button"
+                  target="_blank"
+                  :href="`https://gitee.com/dromara/${obj.name}`"
+                  >Gitee</a
+                >
+                <a
+                  v-if="!noGithubProjects.includes(obj.name)"
+                  class="project-button"
+                  target="_blank"
+                  :href="`https://github.com/dromara/${obj.name}`"
+                  >Github</a
+                >
                 <div class="gitstar">
                   <template v-if="lang == 'zh-CN' || lang == '/zh/'">
                     <a
@@ -79,39 +113,6 @@ onMounted(() => {
                   </template>
                 </div>
               </div>
-              <div class="project-content">{{ obj.description }}</div>
-            </div>
-            <div class="hiding-detail">
-              <p v-if="obj.sponsor">
-                {{ projectLocale.PROJECT_SPONSOR }}：{{ obj.sponsor }}
-              </p>
-              <p v-if="obj.date">
-                {{ projectLocale.JOINING_DATE }}：{{ obj.date }}
-              </p>
-              <p v-html="obj.link"></p>
-            </div>
-            <div class="project-buttons">
-              <a
-                class="project-button primary"
-                target="_blank"
-                :href="obj.website"
-              >
-                {{ projectLocale.START_UP }}
-              </a>
-              <a
-                v-if="!noGiteeProjects.includes(obj.name)"
-                class="project-button"
-                target="_blank"
-                :href="`https://gitee.com/dromara/${obj.name}`"
-                >Gitee</a
-              >
-              <a
-                v-if="!noGithubProjects.includes(obj.name)"
-                class="project-button"
-                target="_blank"
-                :href="`https://github.com/dromara/${obj.name}`"
-                >Github</a
-              >
             </div>
           </div>
         </div>
@@ -166,9 +167,9 @@ onMounted(() => {
 
 .project-main {
   background-color: #f9fbff;
-  padding: 30px 10vw;
+  padding: 30px 15vw;
   background: linear-gradient(to bottom, #030516, #051454);
-  @media (min-width: 1440px) {
+  @media (max-width: 1440px) {
     padding: 30px 2vw;
     // padding-left: 16rem;
   }
@@ -176,16 +177,24 @@ onMounted(() => {
   .project-group {
     padding: 50px 0 30px;
   }
-
+  .text-container {
+    margin: 15px 0;
+    .project-content {
+      font-weight: 700;
+      // margin: 8px 0;
+    }
+  }
   .group-name {
     font-weight: 700;
     margin: 0;
     border: none;
+    text-align: center;
+    margin-bottom: 50px;
   }
 
   .project-card {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
     align-items: center;
 
@@ -203,45 +212,61 @@ onMounted(() => {
     }
   }
   .project {
+    border: 1px solid #fff3;
     display: flex;
     min-width: 300px;
     padding: 16px;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
+    align-items: center;
     border-radius: 8px;
-    background: #fff;
+    background: #ffffff0f;
+    height: 510px;
+    text-align: center;
 
-    .hiding-detail {
-      margin-top: 0;
-      opacity: 1;
-      visibility: visible;
-      z-index: 1000;
+    .flex-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      .badge-img {
+        // text-align: left;
+        opacity: 0;
+        pointer-events: none;
+      }
+      &:hover .badge-img {
+        opacity: 1;
+        pointer-events: auto;
+      }
     }
   }
-  .project-top {
-    width: 100%;
-    background-color: #fff;
-    position: sticky;
-    z-index: 1000;
 
-    .project-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+  .logo-container {
+    overflow: hidden;
+    height: 100px;
+    width: 100px;
+    flex-shrink: 0;
+    background-image: linear-gradient(142deg, #20262e 2%, #0f141c 99%);
+    box-shadow:
+      0 2px 2px #3e495f,
+      inset 0 2px 3px #0006;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .project-title {
-    width: 120px;
-    height: 50px;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
 
     &.text {
       display: flex;
+      justify-content: center;
       align-items: center;
       font-size: 20px;
       font-weight: 500;
+      text-align: center;
       white-space: nowrap;
     }
   }
@@ -266,7 +291,7 @@ onMounted(() => {
   .project-buttons {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 14px;
     margin-top: 16px;
 
