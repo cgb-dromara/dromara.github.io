@@ -79,28 +79,7 @@ onMounted(() => {
                 <p v-html="obj.link" class="badge-img"></p>
               </div>
 
-              <div class="project-buttons">
-                <a
-                  class="project-button primary"
-                  target="_blank"
-                  :href="obj.website"
-                >
-                  {{ projectLocale.START_UP }}
-                </a>
-                <a
-                  v-if="!noGiteeProjects.includes(obj.name)"
-                  class="project-button"
-                  target="_blank"
-                  :href="`https://gitee.com/dromara/${obj.name}`"
-                  >Gitee</a
-                >
-                <a
-                  v-if="!noGithubProjects.includes(obj.name)"
-                  class="project-button"
-                  target="_blank"
-                  :href="`https://github.com/dromara/${obj.name}`"
-                  >Github</a
-                >
+              <!-- <div class="project-buttons">
                 <div class="gitstar">
                   <template v-if="lang == 'zh-CN' || lang == '/zh/'">
                     <a
@@ -118,10 +97,15 @@ onMounted(() => {
                     />
                   </template>
                 </div>
-              </div>
+              </div> -->
               <ul class="button-container">
                 <li class="icon-content">
-                  <a href="#" aria-label="Start" data-social="start">
+                  <a
+                    :href="obj.website"
+                    target="_blank"
+                    aria-label="Start"
+                    data-social="start"
+                  >
                     <div class="filled"></div>
                     <svg
                       t="1755440213823"
@@ -140,11 +124,46 @@ onMounted(() => {
                       ></path>
                     </svg>
                   </a>
-                  <div class="tooltip">开始</div>
+                  <div class="tooltip">{{ projectLocale.START_UP }}</div>
                 </li>
-                <li class="icon-content">
+
+                <li
+                  v-if="!noGiteeProjects.includes(obj.name)"
+                  class="icon-content"
+                >
                   <a
-                    href="https://www.github.com/"
+                    target="_blank"
+                    :href="`https://gitee.com/dromara/${obj.name}`"
+                    aria-label="Gitee"
+                    data-social="gitee"
+                  >
+                    <div class="filled"></div>
+                    <svg
+                      t="1755441516642"
+                      class="icon"
+                      viewBox="0 0 1024 1024"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      p-id="7574"
+                      width="200"
+                      height="200"
+                    >
+                      <path
+                        d="M512 1024q-104 0-199-40-92-39-163-110T40 711Q0 616 0 512t40-199Q79 221 150 150T313 40q95-40 199-40t199 40q92 39 163 110t110 163q40 95 40 199t-40 199q-39 92-110 163T711 984q-95 40-199 40z m259-569H480q-10 0-17.5 7.5T455 480v64q0 10 7.5 17.5T480 569h177q11 0 18.5 7.5T683 594v13q0 31-22.5 53.5T607 683H367q-11 0-18.5-7.5T341 657V417q0-31 22.5-53.5T417 341h354q11 0 18-7t7-18v-63q0-11-7-18t-18-7H417q-38 0-72.5 14T283 283q-27 27-41 61.5T228 417v354q0 11 7 18t18 7h373q46 0 85.5-22.5t62-62Q796 672 796 626V480q0-10-7-17.5t-18-7.5z"
+                        p-id="7575"
+                        fill="currentColor"
+                      ></path>
+                    </svg>
+                  </a>
+                  <div class="tooltip">Gitee</div>
+                </li>
+                <li
+                  v-if="!noGithubProjects.includes(obj.name)"
+                  class="icon-content"
+                >
+                  <a
+                    target="_blank"
+                    :href="`https://github.com/dromara/${obj.name}`"
                     aria-label="GitHub"
                     data-social="github"
                   >
@@ -166,29 +185,6 @@ onMounted(() => {
                   </a>
                   <div class="tooltip">GitHub</div>
                 </li>
-
-                <li class="icon-content">
-                  <a href="#" aria-label="Gitee" data-social="gitee">
-                    <div class="filled"></div>
-                    <svg
-                      t="1755441516642"
-                      class="icon"
-                      viewBox="0 0 1024 1024"
-                      version="1.1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      p-id="7574"
-                      width="200"
-                      height="200"
-                    >
-                      <path
-                        d="M512 1024q-104 0-199-40-92-39-163-110T40 711Q0 616 0 512t40-199Q79 221 150 150T313 40q95-40 199-40t199 40q92 39 163 110t110 163q40 95 40 199t-40 199q-39 92-110 163T711 984q-95 40-199 40z m259-569H480q-10 0-17.5 7.5T455 480v64q0 10 7.5 17.5T480 569h177q11 0 18.5 7.5T683 594v13q0 31-22.5 53.5T607 683H367q-11 0-18.5-7.5T341 657V417q0-31 22.5-53.5T417 341h354q11 0 18-7t7-18v-63q0-11-7-18t-18-7H417q-38 0-72.5 14T283 283q-27 27-41 61.5T228 417v354q0 11 7 18t18 7h373q46 0 85.5-22.5t62-62Q796 672 796 626V480q0-10-7-17.5t-18-7.5z"
-                        p-id="7575"
-                        fill="currentColor"
-                      ></path>
-                    </svg>
-                  </a>
-                  <div class="tooltip">Gitee</div>
-                </li>
                 <li class="icon-content">
                   <a href="#" aria-label="Star" data-social="star">
                     <div class="filled"></div>
@@ -209,7 +205,7 @@ onMounted(() => {
                       ></path>
                     </svg>
                   </a>
-                  <div class="tooltip">Instagram</div>
+                  <div class="tooltip">star</div>
                 </li>
               </ul>
             </div>
@@ -222,18 +218,19 @@ onMounted(() => {
 
 <style scoped lang="scss">
 .projects-page {
-  padding-top: var(--navbar-height);
   min-width: 380px;
   background: linear-gradient(to bottom, #030513, #030516);
   @media (min-width: 1440px) {
   }
   .bg-default {
+    padding-top: var(--navbar-height);
+
     background: linear-gradient(to bottom, #030513, #030516);
   }
 }
 
 .project-container {
-  height: 422px;
+  min-height: 422px;
   min-width: 200px;
   display: flex;
   flex-direction: column;
@@ -277,7 +274,7 @@ onMounted(() => {
     padding: 50px 0 30px;
   }
   .text-container {
-    margin: 30px 0;
+    margin-top: 30px;
     transition: all 0.4s ease;
     .project-content {
       font-weight: 700;
@@ -317,10 +314,27 @@ onMounted(() => {
     padding: 16px;
     flex-direction: column;
     align-items: center;
-    border-radius: 8px;
+    border-radius: 30px;
     background: #ffffff0f;
-    height: 450px;
+    height: 420px;
     text-align: center;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      bottom: -5px;
+      border-radius: 30px;
+      box-shadow: 0 0 20px #0632b8;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    &:hover::before {
+      opacity: 1;
+    }
     &:hover .logo-container {
       transform: scale(1.05);
       img {
@@ -341,6 +355,7 @@ onMounted(() => {
       }
       .badge-img {
         // text-align: left;
+        margin-top: 5px;
         opacity: 0;
         pointer-events: none;
         max-height: 0;
@@ -361,7 +376,11 @@ onMounted(() => {
       display: flex;
       justify-content: center;
       align-items: center;
-
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 15px;
+      padding-left: 0px;
       .icon-content {
         margin: 0 10px;
         position: relative;
@@ -437,7 +456,11 @@ onMounted(() => {
           &[data-social="github"] {
             .filled,
             ~ .tooltip {
-              background-color: #000;
+              background-color: #fff;
+              color: #000;
+            }
+            &:hover {
+              color: #000;
             }
           }
 
