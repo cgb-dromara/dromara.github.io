@@ -4,6 +4,7 @@ pageInfo: false
 contributors: false
 editLink: false
 lastUpdated: false
+layout: siteLayout
 ---
 
 <script setup lang="ts">

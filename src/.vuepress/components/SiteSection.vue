@@ -323,10 +323,12 @@ function goBlogDetail(url: string): void {
     grid-template-rows: auto;
     grid-template-columns: 1fr;
     gap: 16px;
+    min-width: 0;
     cursor: pointer;
   }
 
   .cover {
+    width: 100%;
     height: 190px;
     align-self: stretch;
     border-radius: 8px;
