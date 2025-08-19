@@ -54,7 +54,7 @@ export default defineUserConfig({
       docsDir: "src",
 
       breadcrumb: false,
-      // darkmode: "disable",
+      darkmode: "enable",
       editLink: false,
 
       // 修复：将 icon 改为 plugins.icon.assets

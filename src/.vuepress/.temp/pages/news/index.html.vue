@@ -22,4 +22,5 @@ const frontmatter = usePageFrontmatter<ThemeHopePageFrontmatter>();
     background: #f9fbff;
   }
 }
+
 </style>
