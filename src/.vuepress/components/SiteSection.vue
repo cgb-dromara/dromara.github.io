@@ -11,7 +11,7 @@ import {
   zhBlogOption,
   zhNewsOption,
 } from "../composables/index.js";
-
+import HoverLight from "./hover-light/HoverLight.vue";
 import { useClientData } from "vuepress/client";
 const { siteData } = useClientData();
 
@@ -35,7 +35,7 @@ onMounted(() => {
   }
 });
 
-const currentTag = ref("All");
+const selectedTags = ref<string[]>([]);
 let sectionDetail: GroupedSectionPage[] = reactive([]);
 
 const options = {
@@ -89,7 +89,6 @@ for (const key in groupedPages) {
 type LangMapping = Record<string, "英文" | "中文">;
 
 const TAGS = [
-  "All",
   "fastRequest",
   "HertzBeat",
   "Dante-Cloud",
@@ -114,14 +113,24 @@ const LANG_MAPPING: LangMapping = {
 const langMapping = computed(() => LANG_MAPPING[props.title ?? ""] ?? "中文");
 
 const filteredSectionDetail = computed(() => {
-  if (currentTag.value === "All") {
+  // 如果没有选中任何标签，显示全部内容
+  if (selectedTags.value.length === 0) {
     return sectionDetail;
   }
-
+  // 如果有选中的标签，筛选包含任一选中标签的内容
   return sectionDetail.filter((obj: GroupedSectionPage) =>
-    obj.tag?.includes(currentTag.value),
+    selectedTags.value.some((tag) => obj.tag?.includes(tag)),
   );
 });
+
+const toggleTag = (tag: string) => {
+  const index = selectedTags.value.indexOf(tag);
+  if (index > -1) {
+    selectedTags.value.splice(index, 1);
+  } else {
+    selectedTags.value.push(tag);
+  }
+};
 
 watchEffect(() => {
   if (props.title !== undefined) {
@@ -163,20 +172,30 @@ function goBlogDetail(url: string): void {
     <div id="wwadsadsorg" style="max-width: 500px"></div>
   </div>
   <main class="news-activity-blog-main">
-    <h2 class="tag">{{ langMapping === "中文" ? "标签" : "Tag" }}</h2>
-    <div class="buttons">
-      <div v-for="item in TAGS" :key="item">
-        <button
-          :class="{ selected: currentTag === item, 'tag-button': true }"
-          @click="currentTag = item"
-        >
-          {{ item }}
-        </button>
+    <div class="tag-container">
+      <h2 class="tag">{{ langMapping === "中文" ? "标签:" : "Tag:" }}</h2>
+
+      <!-- 修改后：复选框结构 -->
+      <div class="checkboxes">
+        <div v-for="item in TAGS" :key="item" class="checkbox-item">
+          <input
+            type="checkbox"
+            :id="item"
+            :value="item"
+            :checked="selectedTags.includes(item)"
+            @change="toggleTag(item)"
+            class="checkbox-input"
+          />
+          <label :for="item" class="checkbox-label">
+            {{ item }}
+          </label>
+        </div>
       </div>
     </div>
+
     <template v-if="filteredSectionDetail.length">
       <div class="cards">
-        <div
+        <HoverLight
           v-for="obj in filteredSectionDetail"
           :key="obj.title"
           class="card"
@@ -243,7 +262,7 @@ function goBlogDetail(url: string): void {
               </div>
             </div>
           </div>
-        </div>
+        </HoverLight>
       </div>
     </template>
     <div v-else class="no-data" style="">
@@ -258,7 +277,7 @@ function goBlogDetail(url: string): void {
 
 <style scoped lang="scss">
 .news-activity-blog-section {
-  padding-top: var(--navbar-height);
+  // padding-top: var(--navbar-height);
   min-width: 320px;
   background: var(--vp-c-bg);
   @media (min-width: 1440px) {
@@ -270,11 +289,12 @@ function goBlogDetail(url: string): void {
   height: 422px;
   min-width: 200px;
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: center;
   padding: 0 24px;
+  // background: linear-gradient(to bottom, #030513, #030924);
 
-  background: url(/assets/img/bg-blog.webp) no-repeat;
   background-size: cover;
   background-position: center;
   border-radius: 0.5rem;
@@ -285,14 +305,14 @@ function goBlogDetail(url: string): void {
 
   h1 {
     margin: 0;
-    color: #171b25;
+    color: #fff;
     font-size: 44px;
     font-weight: 900;
   }
 
   .description {
     max-width: 700px;
-    padding-right: 52%;
+    text-align: center;
     color: #61687c;
     font-size: 16px;
     line-height: 28px;
@@ -301,42 +321,98 @@ function goBlogDetail(url: string): void {
 
 .news-activity-blog-main {
   padding: 80px 2vw;
-  background: var(--vp-c-bg);
+  padding-top: 0;
+  padding-right: 0;
+  // background: var(--vp-c-bg);
+  // background: linear-gradient(to bottom, #040a27, #041149);
+
   @media (min-width: 1440px) {
     padding-left: 16rem;
   }
-
-  .tag {
-    font-weight: 700;
-    border: none;
-  }
-
-  .buttons {
+  .tag-container {
     display: flex;
-    padding-right: 0px;
+    border-radius: 8px;
     align-items: center;
-    gap: 16px;
-    margin-bottom: 36px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding: 15px;
     flex-wrap: wrap;
-  }
+    margin-bottom: 36px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 
-  .tag-button {
-    display: flex;
-    padding: 16px 30px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 6px;
-    border: 1px solid #e5e6eb;
-    background: #fff;
-    color: #4e5969;
-    cursor: pointer;
+    .tag {
+      font-size: 20px;
+      font-weight: 700;
+      border: none;
+      margin: 0;
+      margin-left: 8px;
+      padding: 0;
+    }
 
-    &.selected {
-      border: 1px solid #2d74ff;
-      background: #eaf1ff;
-      color: #2d74ff;
+    .checkboxes {
+      display: flex;
+      padding-right: 0px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .checkbox-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 10px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .checkbox-input {
+      appearance: none;
+      -webkit-appearance: none;
+      border: 1px solid #9ca3af; /* 默认边框颜色 */
+      border-radius: 2px;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.2s ease;
+      width: 16px;
+      height: 16px;
+      margin: 0;
+      cursor: pointer;
+      accent-color: #2d74ff;
+      &:hover {
+        border-color: #2d74ff;
+      }
+      &:checked {
+        background-color: #2d74ff;
+        border-color: #2d74ff;
+      }
+      &:checked::after {
+        content: "";
+        position: absolute;
+        left: 4px;
+        top: 1px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+    }
+
+    .checkbox-label {
+      color: #4e5969;
+      font-size: 14px;
+      cursor: pointer;
+      user-select: none;
+      margin: 0;
+      &:hover {
+        color: #2d74ff;
+      }
+    }
+    .checkbox-item:has(.checkbox-input:checked) {
+      .checkbox-label {
+        color: #2d74ff;
+        font-weight: 500;
+      }
     }
   }
 

@@ -27,4 +27,7 @@ const frontmatter = usePageFrontmatter<ThemeHomePageFrontmatter>();
   z-index: 1;
   top: -161px;
 }
+:deep(.vp-page-title) {
+  display: none;
+}
 </style>
