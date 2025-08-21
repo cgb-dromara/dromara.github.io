@@ -1,28 +1,3 @@
-<template><div><SiteSection :title="frontmatter.title"/></div></template>
+<template><div></div></template>
 
 
-<script setup lang="ts">
-import SiteSection from "@SiteSection";
-import {  usePageFrontmatter } from "vuepress/client";
-import type { ThemeHopePageFrontmatter } from "vuepress-theme-hope";
-import { ref, onBeforeMount } from "vue";
-
-const frontmatter = usePageFrontmatter<ThemeHopePageFrontmatter>();
-
-</script>
-<style scoped lang="scss">
-  .vp-page-title {
-    display: none;
-  }
-.theme-hope-content {
-  margin: 0;
-  padding: 0;
-  max-width: none;
-  position: relative;
-  z-index: 1;
-  top: -161px;
-  @media (min-width: 1440px) {
-    background: #f9fbff;
-  }
-}
-</style>

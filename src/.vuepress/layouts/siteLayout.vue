@@ -26,8 +26,5 @@ const frontmatter = usePageFrontmatter<ThemeHomePageFrontmatter>();
   position: relative;
   z-index: 1;
   top: -161px;
-  @media (min-width: 1440px) {
-    background: #f9fbff;
-  }
 }
 </style>

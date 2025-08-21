@@ -1,58 +1,3 @@
-<template>
-  <div class="news-activity-blog-section">
-    <div class="bg-default">
-      <div class="news-activity-blog-container">
-        <h1 class="title">{{ title }}</h1>
-        <p class="description">{{ option.DESC }}</p>
-      </div>
-    </div>
-    <div id="wwadsadsorg" style="max-width: 500px"></div>
-  </div>
-  <main class="news-activity-blog-main">
-    <h2 class="tag">{{ langMapping === "中文" ? "标签" : "Tag" }}</h2>
-    <div class="buttons">
-      <div v-for="item in TAGS" :key="item">
-        <button
-          :class="{ selected: currentTag === item, 'tag-button': true }"
-          @click="currentTag = item"
-        >
-          {{ item }}
-        </button>
-      </div>
-    </div>
-    <template v-if="filteredSectionDetail.length">
-      <div class="cards">
-        <div
-          v-for="obj in filteredSectionDetail"
-          :key="obj.title"
-          class="card"
-          @click="goBlogDetail(obj.url)"
-        >
-          <div class="tag-items">
-            <div v-for="tag in obj.tag" :key="tag" class="tag-item">
-              #{{ tag }}
-            </div>
-          </div>
-          <img class="cover" :src="obj.cover" :alt="obj.title" />
-
-          <a class="title">{{ obj.title }}</a>
-          <div class="author-info">
-            <div class="author-name">{{ obj.author }}</div>
-            <div class="time">{{ obj.date }}</div>
-          </div>
-        </div>
-      </div>
-    </template>
-    <div v-else class="no-data" style="">
-      {{
-        langMapping === "中文"
-          ? "这是一个待开发的领域，欢迎加入我们共同创造！"
-          : "This is a field that awaits development, welcome to join us and innovate!"
-      }}
-    </div>
-  </main>
-</template>
-
 <script setup lang="ts">
 import { ref, reactive, watchEffect, computed, onMounted } from "vue";
 import {
@@ -207,11 +152,115 @@ function goBlogDetail(url: string): void {
 }
 </script>
 
+<template>
+  <div class="news-activity-blog-section">
+    <div class="bg-default">
+      <div class="news-activity-blog-container">
+        <h1 class="title">{{ title }}</h1>
+        <p class="description">{{ option.DESC }}</p>
+      </div>
+    </div>
+    <div id="wwadsadsorg" style="max-width: 500px"></div>
+  </div>
+  <main class="news-activity-blog-main">
+    <h2 class="tag">{{ langMapping === "中文" ? "标签" : "Tag" }}</h2>
+    <div class="buttons">
+      <div v-for="item in TAGS" :key="item">
+        <button
+          :class="{ selected: currentTag === item, 'tag-button': true }"
+          @click="currentTag = item"
+        >
+          {{ item }}
+        </button>
+      </div>
+    </div>
+    <template v-if="filteredSectionDetail.length">
+      <div class="cards">
+        <div
+          v-for="obj in filteredSectionDetail"
+          :key="obj.title"
+          class="card"
+          @click="goBlogDetail(obj.url)"
+        >
+          <div class="picture-container">
+            <img class="cover" :src="obj.cover" :alt="obj.title" />
+          </div>
+          <div class="content-container">
+            <a class="title">{{ obj.title }}</a>
+            <div class="author-info">
+              <div class="author-name">
+                <svg
+                  t="1755742850209"
+                  class="icon"
+                  viewBox="0 0 1024 1024"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  p-id="9598"
+                  width="16"
+                  height="16"
+                >
+                  <path
+                    d="M588 855.4H436c-64.5 0-125.5 0-169.8-6.8-21.6-3.3-87.3-13.4-87.3-67.2v-14.9c0-139.7 115.4-253.3 257.2-253.3h152c141.8 0 257.2 113.6 257.2 253.3v14.9c0 52.6-65.7 63-87.2 66.5-44 7-103 7.5-170.1 7.5zM436 556.5c-117.9 0-213.9 94.2-213.9 210v14.9c0 13.7 27.5 20.8 50.6 24.4 41.1 6.3 100.4 6.3 163.2 6.3h152c65.2 0 122.5-0.5 163.1-7 15.3-2.4 50.7-9.6 50.7-23.7v-14.9c0-115.8-96-210-213.9-210H436z m75.4-83.9c-112.5 0-204-90.2-204-201s91.5-201 204-201 204 90.2 204 201-91.5 201-204 201z m0-358.7c-88.6 0-160.7 70.7-160.7 157.7 0 87 72.1 157.7 160.7 157.7s160.7-70.7 160.7-157.7c0-87-72.1-157.7-160.7-157.7z"
+                    p-id="9599"
+                    fill="#ffffff"
+                  ></path>
+                </svg>
+                {{ obj.author }}
+              </div>
+              <div class="time">
+                <svg
+                  t="1755743737723"
+                  class="icon"
+                  viewBox="0 0 1024 1024"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  p-id="10752"
+                  width="16"
+                  height="16"
+                >
+                  <path
+                    d="M512 929.959184c-230.4 0-417.959184-187.559184-417.959184-417.959184s187.559184-417.959184 417.959184-417.959184 417.959184 187.559184 417.959184 417.959184-187.559184 417.959184-417.959184 417.959184z m0-794.122449c-207.412245 0-376.163265 168.75102-376.163265 376.163265s168.75102 376.163265 376.163265 376.163265 376.163265-168.75102 376.163265-376.163265-168.75102-376.163265-376.163265-376.163265z"
+                    fill="#ffffff"
+                    p-id="10753"
+                  ></path>
+                  <path
+                    d="M718.367347 538.122449h-208.979592c-11.493878 0-20.897959-9.404082-20.897959-20.897959s9.404082-20.897959 20.897959-20.897959h208.979592c11.493878 0 20.897959 9.404082 20.897959 20.897959s-9.404082 20.897959-20.897959 20.897959z"
+                    fill="#ffffff"
+                    p-id="10754"
+                  ></path>
+                  <path
+                    d="M509.387755 538.122449c-11.493878 0-20.897959-9.404082-20.897959-20.897959V256c0-11.493878 9.404082-20.897959 20.897959-20.897959s20.897959 9.404082 20.897959 20.897959v261.22449c0 11.493878-9.404082 20.897959-20.897959 20.897959z"
+                    fill="#ffffff"
+                    p-id="10755"
+                  ></path>
+                </svg>
+                {{ obj.date }}
+              </div>
+              <div class="tag-items">
+                <div v-for="tag in obj.tag" :key="tag" class="tag-item">
+                  #{{ tag }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+    <div v-else class="no-data" style="">
+      {{
+        langMapping === "中文"
+          ? "这是一个待开发的领域，欢迎加入我们共同创造！"
+          : "This is a field that awaits development, welcome to join us and innovate!"
+      }}
+    </div>
+  </main>
+</template>
+
 <style scoped lang="scss">
 .news-activity-blog-section {
   padding-top: var(--navbar-height);
   min-width: 320px;
-
+  background: var(--vp-c-bg);
   @media (min-width: 1440px) {
     padding-left: 16rem;
   }
@@ -252,7 +301,7 @@ function goBlogDetail(url: string): void {
 
 .news-activity-blog-main {
   padding: 80px 2vw;
-
+  background: var(--vp-c-bg);
   @media (min-width: 1440px) {
     padding-left: 16rem;
   }
@@ -316,40 +365,65 @@ function goBlogDetail(url: string): void {
   }
 
   .card {
-    padding: 16px;
+    // padding: 16px;
+    display: flex;
+    flex-direction: column; /* 垂直方向排列 */
     border-radius: 8px;
-    background: #fff;
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr;
-    gap: 16px;
+    background: var(--vp-c-bg);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    // gap: 16px;
     min-width: 0;
     cursor: pointer;
   }
-
-  .cover {
-    width: 100%;
+  .picture-container {
     height: 190px;
-    align-self: stretch;
-    border-radius: 8px;
-    object-fit: contain;
-  }
-
-  .tag-items {
+    overflow: hidden;
     display: flex;
-    gap: 10px;
-    color: #2d74ff;
-    font-size: 17px;
-    font-weight: 600;
+    flex-direction: column; /* 垂直排列：图片在上，文字在下 */
+    align-items: center; /* 水平居中 */
+    text-align: center;
+    background: #fff;
+    border-radius: 8px 8px 0 0;
+    .cover {
+      width: 100%;
+      // align-self: stretch;
+      border-radius: 8px;
+      // object-fit: contain;
+      flex: 1;
+      // object-fit: cover;
+      object-position: center;
+    }
   }
-
-  .title {
-    color: #3e3232;
-    font-size: 18px;
-    font-weight: 700;
-
-    &:hover {
-      opacity: 0.66;
+  .content-container {
+    padding: 16px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .title {
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 8px;
+      &:hover {
+        color: #2d74ff;
+      }
+    }
+    .author-info {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      svg {
+        vertical-align: middle;
+      }
+      .tag-items {
+        display: flex;
+        gap: 10px;
+        color: #2d74ff;
+        font-size: 17px;
+        font-weight: 600;
+      }
     }
   }
 
