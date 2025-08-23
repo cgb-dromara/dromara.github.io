@@ -1,7 +1,7 @@
 import { getDirname, path } from "vuepress/utils";
 import { defineUserConfig } from "vuepress";
 import { hopeTheme } from "vuepress-theme-hope";
-// import { searchProPlugin } from "vuepress-plugin-search-pro";
+import { slimsearchPlugin } from "@vuepress/plugin-slimsearch";
 import { registerComponentsPlugin } from "@vuepress/plugin-register-components";
 import { viteBundler } from "@vuepress/bundler-vite";
 
@@ -97,9 +97,9 @@ export default defineUserConfig({
 
   plugins: [
     // Search
-    // searchProPlugin({
-    //   indexContent: true
-    // }),
+    slimsearchPlugin({
+      // 配置项
+    }),
     registerComponentsPlugin({
       // 配置项
       componentsDir: path.resolve(__dirname, "./components"),
