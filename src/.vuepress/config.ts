@@ -1,7 +1,7 @@
 import { getDirname, path } from "vuepress/utils";
 import { defineUserConfig } from "vuepress";
 import { hopeTheme } from "vuepress-theme-hope";
-import { slimsearchPlugin } from "@vuepress/plugin-slimsearch";
+
 import { registerComponentsPlugin } from "@vuepress/plugin-register-components";
 import { viteBundler } from "@vuepress/bundler-vite";
 
@@ -59,6 +59,7 @@ export default defineUserConfig({
 
       // 修复：将 icon 改为 plugins.icon.assets
       plugins: {
+        slimsearch: true,
         icon: {
           assets: "fontawesome-with-brands", // 原 icon 配置迁移到这里
         },
@@ -96,10 +97,6 @@ export default defineUserConfig({
   ),
 
   plugins: [
-    // Search
-    slimsearchPlugin({
-      // 配置项
-    }),
     registerComponentsPlugin({
       // 配置项
       componentsDir: path.resolve(__dirname, "./components"),

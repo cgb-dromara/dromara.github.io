@@ -67,10 +67,6 @@ for (const frontmatter of allPagesFrontmatter) {
   if (frontmatter?.head.length > 0) {
     const headName = frontmatter.head[frontmatter.head.length - 1][1].name; // 拿到每篇md文章frontmatter下meta的name属性
     // 如果是新闻、博客或活动，则添加到相应的数组中
-    // console.log(
-    //   "看看frontmatter.head",
-    //   frontmatter.head[frontmatter.head.length - 1][1],
-    // );
     if (groupedPosts[headName] !== undefined) {
       groupedPosts[headName].push({
         title: frontmatter.title,
@@ -89,7 +85,6 @@ for (const frontmatter of allPagesFrontmatter) {
   }
 }
 
-// 从框架提供的url中拿到跳转路径
 function extractPathFromURL(url: string): string | null {
   const match = url.match(/\/([^/]+\.html)$/);
   if (match?.[1] != null) {
@@ -106,7 +101,6 @@ function formatDate(inputDate: string): string {
   return `${year}-${month}-${day}`;
 }
 
-// 定义一个映射，将 headName 映射到对应的 icon、路径
 const mapping: Record<string, { icon: string; urlPrefix: string }> = {
   News: { icon: "/assets/img/news.png", urlPrefix: "news/" },
   Activity: { icon: "/assets/img/activity.png", urlPrefix: "activity/" },
@@ -116,10 +110,8 @@ const mapping: Record<string, { icon: string; urlPrefix: string }> = {
   博客: { icon: "/assets/img/blog.png", urlPrefix: "blog/" },
 };
 
-// 遍历 groupedPosts 中的每个分组
 for (const headName in groupedPosts) {
   const pages = groupedPosts[headName];
-  // 按照日期排序，并选择日期最新的前 5 个项目
   pages.sort((a, b) => new Date(b.time).getTime() - new Date(a.time).getTime());
   const latestPages = pages.slice(0, 5);
 
@@ -149,7 +141,6 @@ const communityLink = computed(() =>
   routeLocale.value === "/zh/" ? zhCommunityLink : enCommunityLink,
 );
 
-// 全网star数
 const currentStars = ref(0);
 const increment = totalStars / (1 * 60);
 const updateValue = (): void => {
@@ -157,7 +148,7 @@ const updateValue = (): void => {
     currentStars.value = parseFloat(
       (currentStars.value + increment).toFixed(1),
     );
-    currentStars.value = Math.min(currentStars.value, totalStars); // 确保不超过总星数
+    currentStars.value = Math.min(currentStars.value, totalStars);
     requestAnimationFrame(updateValue);
   }
 };
@@ -166,7 +157,6 @@ function goGvp(gvp: any) {
   window.location.href = `https://gitee.com/dromara/${gvp}`;
 }
 onMounted(() => {
-  // 数字元素进入可视区域后，数字开始增长
   const starNumber = document.querySelector(".star-number");
   const observer = new IntersectionObserver(
     (entries) => {
@@ -191,7 +181,6 @@ function jumpTo(url: string): void {
 <template>
   <div class="home-page">
     <div class="banner-container">
-      <!-- 背景 -->
       <div class="galaxy-background">
         <Galaxy
           :speed="0.6"
@@ -202,7 +191,6 @@ function jumpTo(url: string): void {
           :mouseRepulsion="false"
         />
       </div>
-      <!-- 核心内容 -->
       <div class="wrapper">
         <div class="banner-mask">
           <div class="banner-info">
@@ -248,7 +236,7 @@ function jumpTo(url: string): void {
       </div>
 
       <div class="bannerVideo">
-        <img src="../public/assets/img/Banner.gif" alt="" />
+        <img src="/assets/img/Banner.gif" alt="" />
       </div>
     </div>
 
@@ -448,6 +436,10 @@ function jumpTo(url: string): void {
 
   .banner-info {
     padding: 100px 24px;
+    margin-left: 80px;
+    @media (max-width: 959px) {
+      margin: 0;
+    }
     #main-title {
       margin: 0.5rem 0;
       color: #fff;
@@ -584,10 +576,7 @@ function jumpTo(url: string): void {
         margin: 0;
       }
       .hover-light {
-        // display: none;
         position: absolute;
-        // left: 0;
-        // top: 0;
         width: 150px;
         height: 150px;
         background-color: #0a59ae;
@@ -609,7 +598,6 @@ function jumpTo(url: string): void {
     padding: 20px 0;
     background-size: cover;
     background-position: center;
-    // 标记一下
     background: linear-gradient(to bottom, #010c36, #010e3e);
     text-align: center;
     h2 {
@@ -719,7 +707,6 @@ function jumpTo(url: string): void {
     transition: all 0.3s ease;
     display: inline-block;
     &:hover {
-      // 字体
       border-radius: 5px;
       transform: scale(1.02);
     }
@@ -789,14 +776,10 @@ function jumpTo(url: string): void {
     letter-spacing: 2px;
     background: linear-gradient(to bottom, #010e3e, #041049);
   }
-  // 底部button
   .gvp-container {
-    // padding: 0 18vw;
     display: grid;
-    // text-align: left;
     grid-template-columns: repeat(4, 1fr);
     gap: 40px 0;
-    // max-width: 1000px;
     justify-items: center;
     width: 80%;
     margin: 0 auto;
@@ -810,9 +793,7 @@ function jumpTo(url: string): void {
       grid-template-columns: repeat(1, 1fr);
     }
     li {
-      // display: inline-block;
       position: relative;
-      // border: 1px solid #fff;
       background-color: rgba(255, 255, 255, 0.3);
       text-align: center;
       display: flex;
@@ -820,7 +801,6 @@ function jumpTo(url: string): void {
       align-items: center;
       font-size: 14px;
       font-family: Arial, sans-serif;
-      // width: 25%;
       height: 50px;
       width: 150px;
       max-width: 150px;
@@ -840,7 +820,6 @@ function jumpTo(url: string): void {
           #efe7fa
         );
         border-radius: 90px;
-        /* border-radius: 20px; */
         animation: rotating 4s linear infinite;
       }
       &::after {
@@ -856,7 +835,6 @@ function jumpTo(url: string): void {
           #efe7fa
         );
         border-radius: 90px;
-        /* border-radius: 20px; */
         animation: rotating 4s linear infinite;
         filter: blur(10px);
         opacity: 0.75;

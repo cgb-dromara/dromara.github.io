@@ -91,7 +91,7 @@ const qrcodeOption = computed(() => [
             href="//assets/img/donate.webp"
             target="_blank"
           >
-            <img class="qrcode_img" src="../public/assets/img/donation.webp" />
+            <img class="qrcode_img" src="/assets/img/donation.webp" />
             <GlareHover
               width="60px"
               height="60px"
@@ -131,7 +131,7 @@ const qrcodeOption = computed(() => [
             href="//assets/img/qrcode_wx.webp"
             target="_blank"
           >
-            <img class="qrcode_img" src="../public/assets/img/qrcode_wx.webp" />
+            <img class="qrcode_img" src="/assets/img/qrcode_wx.webp" />
             <GlareHover
               width="60px"
               height="60px"
@@ -176,10 +176,7 @@ const qrcodeOption = computed(() => [
             href="https://wx.zsxq.com/group/51128441181284"
             target="_blank"
           >
-            <img
-              class="qrcode_img"
-              src="../public/assets/img/qrcode_zsxq.webp"
-            />
+            <img class="qrcode_img" src="/assets/img/qrcode_zsxq.webp" />
             <GlareHover
               width="60px"
               height="60px"

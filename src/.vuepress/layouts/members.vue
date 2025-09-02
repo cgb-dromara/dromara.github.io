@@ -28,7 +28,11 @@ onMounted(() => {
           <p class="description">
             {{ memberLocale.DESCRIPTION }}
           </p>
-          <div class="button">{{ memberLocale.BUTTON }}</div>
+          <div class="button">
+            <a href="https://incubator.dromara.org/">{{
+              memberLocale.BUTTON
+            }}</a>
+          </div>
         </div>
         <div class="bg-container">
           <LightRays
@@ -174,6 +178,9 @@ onMounted(() => {
     z-index: 2;
     margin-top: 25px;
     cursor: pointer;
+    a {
+      color: white;
+    }
   }
 
   .button::before {

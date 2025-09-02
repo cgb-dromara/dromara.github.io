@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import GitHubStars from "../components/GitHubStars.vue";
 import { Layout } from "vuepress-theme-hope/client";
 import {
   noGiteeProjects,
