@@ -92,7 +92,6 @@ const lightStyle = computed(() => ({
   opacity: props.lightOpacity,
 }));
 
-// Optional: Clean up on unmount if necessary, though not strictly needed for this component
 onUnmounted(() => {
   containerRef.value = null;
 });
@@ -101,12 +100,12 @@ onUnmounted(() => {
 <style scoped>
 .hover-light-container {
   position: relative;
-  overflow: hidden; /* Ensures the light stays within the container */
+  overflow: hidden;
 }
 
 .hover-light {
   position: absolute;
   border-radius: 50%;
-  pointer-events: none; /* Ensures the light doesn't interfere with mouse events on the content */
+  pointer-events: none;
 }
 </style>

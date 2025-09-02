@@ -148,7 +148,6 @@ onMounted(() => {
     text-align: center;
     line-height: 28px;
   }
-  /* From Uiverse.io by KhaledMatalkah */
   @keyframes glowing-pulse {
     0% {
       box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);

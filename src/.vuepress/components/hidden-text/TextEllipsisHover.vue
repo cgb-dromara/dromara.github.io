@@ -10,7 +10,6 @@
       {{ text }}
     </div>
 
-    <!-- 悬浮提示框 -->
     <Teleport to="body">
       <div
         v-if="showTooltip"
@@ -50,7 +49,6 @@ const isEllipsis = ref(false);
 const showTooltip = ref(false);
 const mousePosition = ref({ x: 0, y: 0 });
 
-// 检查文本是否超过指定行数
 const checkTextOverflow = async () => {
   if (!textRef.value) return;
 
@@ -60,7 +58,6 @@ const checkTextOverflow = async () => {
   const lineHeight = parseInt(getComputedStyle(element).lineHeight);
   const maxHeight = lineHeight * props.maxLines;
 
-  // 临时移除省略样式来获取真实高度
   element.classList.remove("text-ellipsis");
   const actualHeight = element.scrollHeight;
 
@@ -83,7 +80,6 @@ const handleMouseLeave = () => {
   showTooltip.value = false;
 };
 
-// 计算提示框位置
 const tooltipStyle = computed((): CSSProperties => {
   const { x, y } = mousePosition.value;
   return {
@@ -99,11 +95,9 @@ const tooltipStyle = computed((): CSSProperties => {
 onMounted(() => {
   checkTextOverflow();
 
-  // 监听窗口大小变化
   window.addEventListener("resize", checkTextOverflow);
 });
 
-// 监听文本变化
 watch(
   () => props.text,
   () => {
@@ -113,7 +107,6 @@ watch(
   },
 );
 
-// 清理事件监听器
 onUnmounted(() => {
   window.removeEventListener("resize", checkTextOverflow);
 });

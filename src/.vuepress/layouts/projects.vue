@@ -78,25 +78,6 @@ onMounted(() => {
                 <p v-html="obj.link" class="badge-img"></p>
               </div>
 
-              <!-- <div class="project-buttons">
-                <div class="gitstar">
-                  <template v-if="lang == 'zh-CN' || lang == '/zh/'">
-                    <a
-                      v-if="!noGiteeProjects.includes(obj.name)"
-                      :href="`https://gitee.com/dromara/${obj.name}/stargazers`"
-                      target="_blank"
-                      ><img
-                        :src="`https://gitee.com/dromara/${obj.name}/badge/star.svg?theme=gvp`"
-                    /></a>
-                  </template>
-                  <template v-else>
-                    <GitHubStars
-                      v-if="!noGithubProjects.includes(obj.name)"
-                      :project="obj.name"
-                    />
-                  </template>
-                </div>
-              </div> -->
               <ul class="button-container">
                 <li class="icon-content">
                   <a
@@ -266,7 +247,6 @@ onMounted(() => {
   background: linear-gradient(to bottom, #030516, #051454);
   @media (max-width: 1440px) {
     padding: 30px 2vw;
-    // padding-left: 16rem;
   }
 
   .project-group {
@@ -277,7 +257,6 @@ onMounted(() => {
     transition: all 0.4s ease;
     .project-content {
       font-weight: 700;
-      // margin: 8px 0;
     }
     p {
       margin: 0;
@@ -353,7 +332,6 @@ onMounted(() => {
         justify-items: center;
       }
       .badge-img {
-        // text-align: left;
         margin-top: 5px;
         opacity: 0;
         pointer-events: none;
