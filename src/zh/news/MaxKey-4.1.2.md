@@ -1,6 +1,8 @@
 ---
 title: MaxKey单点登录认证系统4.1.2,国庆版重大更新
 author: maxkey
+tag:
+  - MaxKey
 date: 2024-09-30
 cover: /assets/img/news/MaxKey-4.1.2-0.png
 head:

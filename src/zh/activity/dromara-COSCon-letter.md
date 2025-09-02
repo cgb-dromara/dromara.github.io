@@ -1,6 +1,9 @@
 ---
 title: Dromara 开源组织参与 COSCon 的一封信
 author: dromara秘书处
+tag:
+  - Dromara
+  - COSCon
 date: 2024-09-27
 cover: /assets/img/activity/dromara-COSCon-letter-0.png
 head:

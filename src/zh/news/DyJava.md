@@ -2,10 +2,10 @@
 title: 它来了! 抖音开发工具 DyJava 加入 Dromara 开源社区
 author: danmo
 date: 2024-04-29
-cover: /assets/img/blog/DyJava-0.png
+cover: /assets/img/news/DyJava-0.png
 head:
   - - meta
-    - name: 博客
+    - name: 新闻
 ---
 
 ## 作者简介：
@@ -15,7 +15,7 @@ Dromara 开源组织成员，Dromara/dy-java 作者
 Java开发工程师，工作经验7年  
 https://gitee.com/dromara/dy-java.git**
 
-**![](/assets/img/blog/DyJava-0.png)**
+**![](/assets/img/news/DyJava-0.png)**
 
 ## 缘起
 

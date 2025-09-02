@@ -2,10 +2,10 @@
 title: Here it comes! TikTok Development Tool DyJava Joins Dromara Open Source Community
 author: danmo
 date: 2024-04-29
-cover: /assets/img/blog/DyJava-0.png
+cover: /assets/img/news/DyJava-0.png
 head:
   - - meta
-    - name: Blog
+    - name: News
 ---
 
 ## Introduction to the Author：
@@ -14,7 +14,7 @@ head:
 Member of Dromara open source organization, Dromara/dy-java author
 Java development engineer with 7 years of experience
 https://gitee.com/dromara/dy-java.git**
-**![](/assets/img/blog/DyJava-0.png)**
+**![](/assets/img/news/DyJava-0.png)**
 
 ## Reason
 
