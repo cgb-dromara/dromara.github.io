@@ -1,0 +1,93 @@
+---
+title: Warm-Flow 1.8.0 重大更新
+author: Warm-Flow
+date: 2025-08-14
+cover: /assets/img/news/Warm-Flow-1.8.0-0.png
+head:
+  - - meta
+    - name: 新闻
+---
+
+#   
+
+## 🚀 Warm-Flow迎来重大突破，自研仿钉钉设计器震撼发布！
+
+亲爱的开发者朋友们，我们很高兴地宣布Warm-Flow工作流引擎迎来了1.8.0版本的重大更新！这次更新不仅带来了全新的功能特性，更在用户体验上实现了质的飞跃。
+
+## 🔥 核心亮点
+
+### 自主研发仿钉钉设计器
+
+Warm-Flow现在同时支持**经典模式**和**仿钉钉模式**双设计器！我们基于logic-flow自主研发了仿钉钉设计器，避免了维护两套代码的复杂性，实现了更好的统一性和可维护性。
+
+### 智能交互体验升级
+
+*   跳转线自动识别：当您绘制回退线条时，系统会自动识别并设置为退回跳转类型
+    
+*   节点自由拖动：经典模式下节点和连线文字支持自由拖动调整
+    
+*   智能编辑控制：设计器现在根据流程发布状态自动判断是否可编辑
+    
+
+### 功能增强与优化
+
+*   新增\[getFirstBetweenNode\](file://D:\\IdeaProjects\\min\\RuoYi-Vue-Warm-Flow\\warm-flow-test\\warm-flow-mybatis-sb-test\\src\\test\\java\\org\\dromara\\warm\\flow\\FlowTest.java#L217-L220)接口，快速获取第一个中间节点
+    
+*   流程图渲染支持顶部名称显示/隐藏控制
+    
+*   中间节点新增用户图标，界面更加友好
+    
+*   优化代码格式和注释，提升开发体验
+    
+
+## 📊 可视化展示
+
+新版流程设计器界面更加美观直观：
+
+![](/assets/img/news/Warm-Flow-1.8.0-0.png)
+
+* * *
+
+  
+
+  
+
+![](/assets/img/news/Warm-Flow-1.8.0-1.png)
+
+  
+
+## 🌟 为什么选择Warm-Flow？
+
+作为国产工作流引擎，Warm-Flow具有以下优势：
+
+1.  **简洁轻量** - 五脏俱全，灵活扩展性强
+    
+2.  **双模式支持** - 原生支持经典和仿钉钉双模式
+    
+3.  **快速集成** - 可通过jar包快速集成设计器
+    
+4.  **广泛兼容** - 支持多种ORM框架和数据库
+    
+
+## 🎯 功能全景
+
+  
+
+<div style="background-color: white; padding: 15px; text-align: center;">
+  <img src="/assets/img/news/Warm-Flow-1.8.0-2.png" alt="Warm-Flow-1.8.0-2" style="max-width: 100%; height: auto;">
+</div>
+  
+
+功能思维导图
+
+## 🚀 快速体验
+
+**演示地址**：http://www.hhzai.top**账号密码**：admin/admin123
+
+**官方网站**：https://warm-flow.dromara.org
+
+想要深入了解？观看我们的视频教程：从零精通: 全流程开发与源码解读
+
+* * *
+
+**立即升级到Warm-Flow 1.8.0，体验全新的工作流设计之旅**！

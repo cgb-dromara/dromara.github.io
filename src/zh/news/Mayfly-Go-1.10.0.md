@@ -1,0 +1,93 @@
+---
+title: Mayfly-Go 1.10.0 新版本发布，统一IT管控平台
+author: mayfly go
+date: 2025-05-30
+cover: /assets/img/news/Mayfly-Go-1.10.0-0.jpg
+head:
+  - - meta
+    - name: 新闻
+---
+
+## **简介**
+
+Web版 统一管理操作平台，集成了对Linux系统的全面操作支持（包括终端管理\[终端回放、命令过滤\]、文件管理、脚本执行、进程监控及计划任务设置），同时提供了多种数据库（如 MySQL、PostgreSQL、Oracle、SQL Server、达梦、高斯、SQLite 等）的数据操作、数据同步与数据迁移功能。此外，还支持 Redis（单机、哨兵、集群模式）以及 MongoDB、ES 的操作管理，并结合工单流程审批功能，为企业提供一站式的运维与管理解决方案。
+
+![](/assets/img/news/Mayfly-Go-1.10.0-0.jpg)
+
+## **功能介绍**
+
+*   **linux**： ssh终端(终端操作记录回放)，文件查看（可根据常见后缀名高亮显示关键词等）、修改、上传、下载、删除等，脚本管理执行，计划任务、进程操作，运行状态查看等（可当做堡垒机使用）。
+    
+*   **dbms(目前支持****mysql postgres oracle sqlserver sqlite 高斯 达梦 kingbase vastbase**。**)**： 可视化数据增删改查，sql语句提示，表信息、索引信息、建表语句查看，建表等（类似mini版navicat）。
+    
+*   **dbms-数据同步**： 支持异构数据库之间数据同步
+    
+*   **dbms-数据库迁移**： 支持异构数据库迁移（迁移至异构数据库文件等）
+    
+*   **redis(单机、哨兵、集群)**： 增删改查redis数据，redis基本信息查看，如版本，内存，cpu等使用情况、集群信息节点查看。
+    
+*   **mongo**： 增删改查mongo文档数据，数据库、集合状态查看，新建删除集合等。
+    
+*   **es**： 增删改查elasticsearch 数据，状态查看，索引操作等。
+    
+*   **支持ssh tunnel访问**： linux机器、数据库、redis、mongo、es都支持ssh隧道访问操作。
+    
+*   **支持工单流程审批**： Dbms、Redis等写入类相关危险操作支持工单流程审批执行。
+    
+*   **系统管理**： 同时拥有完善的账号、角色、资源权限控制、系统配置（oauth2、ldap登录、登录验证码、双因素校验、水印等），也可基于该项目进行二次开发作为后台管理系统。
+    
+
+## **项目信息**
+
+项目文档: https://www.yuque.com/may-fly/mayfly-go
+
+gitee: https://gitee.com/dromara/mayfly-go
+
+github: https://github.com/dromara/mayfly-go
+
+## **开发语言&主要框架**
+
+*   前端：typescript、 vue3、 element-plus
+    
+*   后端：golang、 gin、 gorm
+    
+
+## **特点**
+
+*   对前后端进行了大部分通用功能的封装，使用起来更加简洁，功能逻辑清晰，能快速上手学习开发，并进行二次开发或者用于后台管理系统。
+    
+*   项目使用的Go语言开发，使用更小的内存及资源运行更高效的应用，二进制文件部署，方便快捷。
+    
+
+## **升级**
+
+*   🌟 新增支持ES相关操作
+    
+*   🌟 工单流程优化，支持或签/会签、流程图设计等
+    
+*   🌟 前后端依赖组件升级、部分代码重构优化
+    
+*   🐞 若干问题修复
+    
+
+## ES相关操作
+
+  
+
+![](/assets/img/news/Mayfly-Go-1.10.0-1.png)
+
+  
+
+  
+
+![](/assets/img/news/Mayfly-Go-1.10.0-2.png)
+
+  
+
+## 工单流程优化
+
+  
+
+![](/assets/img/news/Mayfly-Go-1.10.0-3.png)
+
+![](/assets/img/news/Mayfly-Go-1.10.0-4.png)
