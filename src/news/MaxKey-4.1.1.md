@@ -2,23 +2,23 @@
 title: MaxKey single sign-on authentication system 4.1.1,APP scan code login
 author: maxkey
 date: 2024-08-22
-cover: /assets/img/news/MaxKey-4.1.1-0.png
+cover: /assets/img/news/MaxKey-4.1.1-0.webp
 head:
   - - meta
     - name: News
 ---
 
-![](/assets/img/news/MaxKey-4.1.1-0.png)
+![](/assets/img/news/MaxKey-4.1.1-0.webp)
 
 **Industry-leading IAM-IDaas identity management and authentication products**
 
 # Overview
 
-**MaxKey** single sign-on authentication system, homophonic Marx's key implies the largest key, is * * the industry's leading IAM-IDaas identity management and authentication product * *, supports OAuth 2.x/ OpenID Connect, SAML 2.0, JWT, CAS, SCIM and other standard protocols, provides **secure, standard, and open** user identity management (IDM), identity authentication (AM), single sign-on (SSO), RBAC permission management, and resource management.
+**MaxKey** single sign-on authentication system, homophonic Marx's key implies the largest key, is **the industry's leading IAM-IDaas identity management and authentication product**, supports OAuth 2.x/ OpenID Connect, SAML 2.0, JWT, CAS, SCIM and other standard protocols, provides **secure, standard, and open** user identity management (IDM), identity authentication (AM), single sign-on (SSO), RBAC permission management, and resource management.
 
-Official website: **http:// www.maxkey.top * *
+Official website: **http:// www.maxkey.top**
 
-Official QQ:**1054466084 * *
+Official QQ: **1054466084**
 
 Email: support@maxsso.net
 
@@ -105,11 +105,11 @@ MaxKey v 4.1.1 GA 2024/08/20
 
 # Roadmap
 
-**Enhanced Identity Management * *
+**Enhanced Identity Management**
 
-**Data synchronization optimization * *
+**Data synchronization optimization**
 
-**Permission Management Optimization * *
+**Permission Management Optimization**
 
 About Dromara
 
@@ -119,6 +119,6 @@ Dromara is an open source community composed of top open source project authors 
 
 Dromara open source community currently has 10 GVP projects, with a total number of star exceeding 100,000. It has built an open source community of tens of thousands of people, and thousands of individuals and teams are using the open source projects of Dromara community.
 
-**Welcome to the knowledge planet and I interact * *
+**Welcome to the knowledge planet and I interact**
 
 ![](/assets/img/qrcode_zsxq.webp)
