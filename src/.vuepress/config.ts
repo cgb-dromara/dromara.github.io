@@ -67,7 +67,7 @@ export default defineUserConfig({
         // mdEnhance: {
         //   // 保留其他可能的 mdEnhance 配置（如果有）
         // },
-        photoSwipe: false,
+        // photoSwipe: false,
       },
 
       // 新增：将 figure 配置迁移到顶层 markdown
@@ -85,11 +85,11 @@ export default defineUserConfig({
       locales: {
         "/": {
           navbar: enNavbar,
-          sidebar: false,
+          // sidebar: false,
         },
         "/zh/": {
           navbar: zhNavbar,
-          sidebar: false,
+          // sidebar: false,
         },
       },
     },
