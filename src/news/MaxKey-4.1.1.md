@@ -2,13 +2,13 @@
 title: MaxKey single sign-on authentication system 4.1.1,APP scan code login
 author: maxkey
 date: 2024-08-22
-cover: /assets/img/news/MaxKey-4.1.1-0.webp
+cover: /assets/img/news/MaxKey-4.1.1-0.png
 head:
   - - meta
     - name: News
 ---
 
-![](/assets/img/news/MaxKey-4.1.1-0.webp)
+![](/assets/img/news/MaxKey-4.1.1-0.png)
 
 **Industry-leading IAM-IDaas identity management and authentication products**
 

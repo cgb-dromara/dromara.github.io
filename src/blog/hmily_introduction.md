@@ -379,7 +379,6 @@ Due to package naming issues, the framework package hasn't been uploaded to the 
 - Include in your API project:
 
 ```xml
-
   <dependency>
           <groupId>com.hmily.tcc</groupId>
           <artifactId>hmily-tcc-annotation</artifactId>

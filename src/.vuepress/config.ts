@@ -2,7 +2,7 @@ import { getDirname, path } from "vuepress/utils";
 import { defineUserConfig } from "vuepress";
 import { hopeTheme } from "vuepress-theme-hope";
 
-import { registerComponentsPlugin } from "@vuepress/plugin-register-components";
+// import { registerComponentsPlugin } from "@vuepress/plugin-register-components";
 import { viteBundler } from "@vuepress/bundler-vite";
 
 import { enNavbar, zhNavbar } from "./navbar/index.js";
@@ -96,13 +96,7 @@ export default defineUserConfig({
     { custom: true },
   ),
 
-  plugins: [
-    registerComponentsPlugin({
-      // 配置项
-      componentsDir: path.resolve(__dirname, "./components"),
-    }),
-    getAllFrontmatter,
-  ],
+  plugins: [getAllFrontmatter],
 
   alias: {
     // 新版本存储地址修改 多了一个/home

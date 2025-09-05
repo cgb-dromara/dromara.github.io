@@ -36,6 +36,7 @@ export default [
         frontmatter: "readonly",
         cancelAnimationFrame: "readonly",
         clearTimeout: "readonly",
+        getComputedStyle: "readonly",
       },
     },
   },

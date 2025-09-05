@@ -33,12 +33,13 @@ Github：https://github.com/bryan31/Akali
 ## 使用
 
 引入依赖：
-
+```xml
 <dependency>  
   <groupId>com.yomahub</groupId>  
   <artifactId>akali</artifactId>  
   <version>1.0.1</version>  
 </dependency>
+```
 
 ## 对任意方法进行热点处理
 
@@ -93,10 +94,11 @@ Akali 只针对于 Springboot，Spring 环境，并且所有标注了`@AkaliHot`
 
 Akali 在 springboot 中会自动扫描所有标注的类，您无需做任何配置，在 spring 中，你需要配置：
 
+```xml
 <bean class="com.yomahub.akali.strategy.FallbackStrategy"/>  
 <bean class="com.yomahub.akali.strategy.MethodHotspotStrategy"/>  
 <bean class="com.yomahub.akali.spring.AkaliScanner"/>
-
+```
 ## 最后
 
 如果大家感兴趣的话，请在 Gitee 上为 Akali 点上小星星哦。

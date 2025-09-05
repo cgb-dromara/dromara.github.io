@@ -86,7 +86,7 @@ Additionally, since the old documentation was scattered across various modules a
 **Client**:
 
 ```xml
-<dependency>
+
   <groupId>org.dromara.mica-mqtt</groupId>
   <artifactId>mica-mqtt-client-solon-plugin</artifactId>
   <version>${mica-mqtt.version}</version>

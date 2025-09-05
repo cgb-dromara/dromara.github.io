@@ -101,9 +101,11 @@ const rgbColor = computed<[number, number, number]>(() =>
   hexToRgb(props.raysColor),
 );
 const pulsatingValue = computed<number>(() => (props.pulsating ? 1.0 : 0.0));
-const devicePixelRatio = computed<number>(() =>
-  Math.min(window.devicePixelRatio || 1, 2),
-);
+const devicePixelRatio = computed<number>(() => {
+  // 确保只在浏览器环境执行
+  if (typeof window === "undefined") return 1;
+  return Math.min(window.devicePixelRatio || 1, 2);
+});
 
 const hexToRgb = (hex: string): [number, number, number] => {
   const m = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
@@ -371,6 +373,11 @@ const initializeWebGL = async (): Promise<void> => {
       debouncedUpdatePlacement(updatePlacement);
     };
 
+    // 给 addEventListener 加判断
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", handleResize, { passive: true });
+    }
+
     window.addEventListener("resize", handleResize, { passive: true });
     updatePlacement();
     animationIdRef.value = requestAnimationFrame(loop);
@@ -509,6 +516,7 @@ watch(
 watch(
   () => props.followMouse,
   (newFollowMouse: boolean): void => {
+    if (typeof window === "undefined") return; // 加环境判断
     if (newFollowMouse) {
       window.addEventListener("mousemove", handleMouseMove, { passive: true });
     } else {
@@ -519,7 +527,6 @@ watch(
       }
     }
   },
-  { immediate: true },
 );
 
 onUnmounted((): void => {

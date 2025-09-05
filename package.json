@@ -5,10 +5,10 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "docs:build": "eslint . --ext .js,.ts,.vue && vuepress-vite build src",
+    "docs:build": "vuepress-vite build src",
     "docs:clean-dev": "vuepress-vite dev src --clean-cache",
     "docs:dev": "vuepress-vite dev src",
-    "start": "vuepress-vite dev src",
+    "dev": "vuepress-vite dev src",
     "docs:update-package": "pnpm dlx vp-update",
     "lint": "eslint . --ext .js,.ts,.vue",
     "lint:fix": "eslint . --ext .js,.ts,.vue --fix"
@@ -41,6 +41,7 @@
   },
   "dependencies": {
     "@vuepress/helper": "2.0.0-rc.112",
+    "dromara.github.io": "link:",
     "ogl": "^1.0.11",
     "swiper": "^11.2.10"
   }
