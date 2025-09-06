@@ -39,7 +39,7 @@ export const zhHomeOption: HomeOption = {
       url: "https://hutool.cn/",
     },
     {
-      name: "sa-token",
+      name: "sa-token-home",
       description: "史上功能最全的 Java 权限认证框架",
       url: "http://sa-token.dev33.cn/",
     },
@@ -49,14 +49,14 @@ export const zhHomeOption: HomeOption = {
       url: "https://jpom.io/",
     },
     {
-      name: "TLog",
+      name: "TLog-home",
       description: "轻量级的分布式日志标记追踪神器",
-      url: "https://yomahub.com/tlog/",
+      url: "https://tlog.yomahub.com/",
     },
     {
-      name: "cubic",
+      name: "cubic-home",
       description: "无侵入分布式监控，致力于应用级监控的工具",
-      url: "https://cubic.jiagoujishu.com/",
+      url: "https://www.jiagoujishu.cn/blogs/cubic/guide.html",
     },
     {
       name: "koalas-rpc",

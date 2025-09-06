@@ -28,11 +28,10 @@ onMounted(() => {
           <p class="description">
             {{ memberLocale.DESCRIPTION }}
           </p>
-          <div class="button">
-            <a href="https://incubator.dromara.org/">{{
-              memberLocale.BUTTON
-            }}</a>
-          </div>
+          <!-- 这里放置孵化器的链接 -->
+          <a class="button" href="https://incubator.dromara.org/">
+            {{ memberLocale.BUTTON }}
+          </a>
         </div>
         <div class="bg-container">
           <LightRays

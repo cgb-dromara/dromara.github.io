@@ -39,7 +39,7 @@ export const enHomeOption: HomeOption = {
       url: "https://hutool.cn/",
     },
     {
-      name: "sa-token",
+      name: "sa-token-home",
       description: "The most comprehensive Java permission framework.",
       url: "http://sa-token.dev33.cn/",
     },
@@ -49,14 +49,14 @@ export const enHomeOption: HomeOption = {
       url: "https://jpom.io/",
     },
     {
-      name: "TLog",
+      name: "TLog-home",
       description: "Lightweight distributed log label tracking framework.",
-      url: "https://yomahub.com/tlog/",
+      url: "https://tlog.yomahub.com/",
     },
     {
-      name: "cubic",
+      name: "cubic-home",
       description: "Distributed monitoring system.",
-      url: "https://cubic.jiagoujishu.com/",
+      url: "https://www.jiagoujishu.cn/blogs/cubic/guide.html",
     },
     {
       name: "koalas-rpc",
