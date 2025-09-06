@@ -2,8 +2,6 @@
 title: RuoYi-Vue-Plus Releases 5.2.0-BETA Public Test Version Workflow!
 author: RuoYi
 date: 2024-05-22
-tag:
-  - 
 cover: /assets/img/blog/RuoYi-Vue-Plus-5.2.0-0.png
 head:
   - - meta

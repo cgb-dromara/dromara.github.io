@@ -6,7 +6,7 @@ import { zhMembersOption } from "./zh.js";
 export const useMembersLocale = () =>
   useLocaleConfig({
     "/": enMembersOption,
-    "/zh/": zhMembersOption
+    "/zh/": zhMembersOption,
   });
 
 export * from "./types.js";

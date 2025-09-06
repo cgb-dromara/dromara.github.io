@@ -1,42 +1,48 @@
 {
-  "name": "dromara",
+  "name": "dromara.github.io",
+  "description": "A official website for dromara",
   "version": "2.0.0",
-  "description": "dromara official website from vuepress-theme-hope",
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "docs:build": "vuepress build src",
-    "docs:clean-dev": "vuepress dev src --clean-cache",
-    "docs:dev": "vuepress dev src",
+    "docs:build": "cross-env NODE_OPTIONS=--max-old-space-size=4096 vuepress-vite build src",
+    "docs:clean-dev": "vuepress-vite dev src --clean-cache",
+    "docs:dev": "vuepress-vite dev src",
+    "start": "vuepress-vite dev src",
     "docs:update-package": "pnpm dlx vp-update",
-    "start": "eslint --fix --ext .vue src/.vuepress/ && vuepress dev src",
-    "lint": "eslint --ext .ts,.vue src/.vuepress/ --fix"
+    "lint": "eslint . --ext .js,.ts,.vue",
+    "lint:fix": "eslint . --ext .js,.ts,.vue --fix"
   },
-  "packageManager": "pnpm@8.10.2",
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.21.0",
-    "@typescript-eslint/parser": "^8.18.0",
-    "@vuepress/bundler-vite": "2.0.0-rc.19",
-    "eslint": "^8.57.1",
-    "eslint-config-standard-with-typescript": "^39.1.1",
-    "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-n": "^16.6.2",
-    "eslint-plugin-promise": "^6.6.0",
-    "eslint-plugin-vue": "^9.32.0",
-    "sass-embedded": "^1.83.0",
-    "sass-loader": "^13.3.3",
-    "style-loader": "^3.3.4",
-    "swiper": "^11.1.15",
-    "typescript": "^5.7.2",
-    "vue": "^3.5.13",
-    "vuepress": "2.0.0-rc.19",
-    "vuepress-plugin-search-pro": "2.0.0-rc.59",
-    "vuepress-shared": "2.0.0-rc.59",
-    "vuepress-theme-hope": "2.0.0-rc.64"
+    "@eslint/js": "^9.32.0",
+    "@typescript-eslint/eslint-plugin": "^8.39.0",
+    "@typescript-eslint/parser": "^8.39.0",
+    "@vuepress/bundler-vite": "2.0.0-rc.24",
+    "@vuepress/plugin-register-components": "2.0.0-rc.112",
+    "cross-env": "^10.0.0",
+    "eslint": "^9.32.0",
+    "eslint-plugin-prettier": "^5.5.3",
+    "eslint-plugin-vue": "^10.4.0",
+    "prettier": "^3.6.2",
+    "sass": "^1.89.2",
+    "sass-embedded": "^1.89.2",
+    "sass-loader": "^16.0.5",
+    "v-viewer": "^3.0.22",
+    "viewerjs": "^1.11.7",
+    "vue": "^3.5.17",
+    "vue-eslint-parser": "^10.2.0",
+    "vuepress": "2.0.0-rc.24",
+    "vuepress-theme-hope": "2.0.0-rc.94"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
   },
   "dependencies": {
-    "@vuepress/helper": "2.0.0-rc.66",
-    "v-viewer": "^3.0.21",
-    "viewerjs": "^1.11.7"
+    "@vuepress/helper": "2.0.0-rc.112",
+    "dromara.github.io": "link:",
+    "ogl": "^1.0.11",
+    "swiper": "^11.2.10"
   }
 }

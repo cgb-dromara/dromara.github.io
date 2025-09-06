@@ -3,7 +3,7 @@ title: Here it comes! TikTok Development Tool DyJava Joins Dromara Open Source C
 author: danmo
 date: 2024-04-29
 tag:
-  - 
+  - DyJava
 cover: /assets/img/blog/DyJava-0.png
 head:
   - - meta
@@ -68,6 +68,6 @@ For businesses that want to open a store on TikTok, DyJava provides a complete b
 
 > as the 1 Java development kit specially built for tremolo, DyJava will undoubtedly become the preferred tool for tremolo back-end development with its rich functional modules, simple API design, efficient performance and perfect support system. Let's join hands with DyJava to open a new chapter in the back-end development of Douyin!
 
-**In this era full of infinite possibilities, let us use DyJava to create more wonderful Douyin applications and bring users a richer entertainment experience! * *
+\*_In this era full of infinite possibilities, let us use DyJava to create more wonderful Douyin applications and bring users a richer entertainment experience! _ \*
 
 **Warehouse address: https://gitee.com/dromara/dy-java**

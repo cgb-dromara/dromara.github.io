@@ -2,8 +2,6 @@
 title: The rule engine LiteFlow released the v2.12.1 version. How hard did it use to know
 author: Platinum East
 date: 2024-06-04
-tag:
-  - 
 cover: /assets/img/qrcode_zsxq.webp
 head:
   - - meta

@@ -5,7 +5,7 @@ import {
   EffectCoverflow,
   Navigation,
   Autoplay,
-  Pagination
+  Pagination,
 } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/vue";
 
@@ -13,13 +13,15 @@ import LogoAnimation from "./LogoAnimation.vue";
 import {
   type GroupedPosts,
   type CommunityLink,
-  useHomeLocale
+  useHomeLocale,
 } from "../composables/index.js";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+import Galaxy from "./banner/Galaxy.vue";
+import HoverLight from "./hover-light/HoverLight.vue";
 const { siteData } = useClientData();
 
 const gvpProjects = [
@@ -44,12 +46,11 @@ const gvpProjects = [
   "EasyAi",
   "MilvusPlus",
   "easy-es",
-  "carbon"
+  "carbon",
 ];
 const totalStars = 305.5; // 来源于gitee总star数与github各仓库star数之和，需手动更新
 
-const allPagesFrontmatter = siteData.value.frontmatter;
-
+const allPagesFrontmatter = (siteData as any).value.frontmatter;
 const enCommunityLink: CommunityLink[] = reactive([]);
 const zhCommunityLink: CommunityLink[] = reactive([]);
 
@@ -59,12 +60,12 @@ const groupedPosts: GroupedPosts = {
   博客: [],
   Blog: [],
   活动: [],
-  Activity: []
+  Activity: [],
 };
 
 for (const frontmatter of allPagesFrontmatter) {
   if (frontmatter?.head.length > 0) {
-    const headName = frontmatter.head[0][1].name; // 拿到每篇md文章frontmatter下meta的name属性
+    const headName = frontmatter.head[frontmatter.head.length - 1][1].name; // 拿到每篇md文章frontmatter下meta的name属性
     // 如果是新闻、博客或活动，则添加到相应的数组中
     if (groupedPosts[headName] !== undefined) {
       groupedPosts[headName].push({
@@ -74,18 +75,17 @@ for (const frontmatter of allPagesFrontmatter) {
             frontmatter.head
               .flat()
               .find(
-                (item: { property: string, content: string }) =>
-                  item.property === "og:url"
-              ).content
+                (item: { property: string; content: string }) =>
+                  item.property === "og:url",
+              ).content,
           ) ?? "", // head的一个数组对象中包含url
-        time: formatDate(frontmatter.date)
+        time: formatDate(frontmatter.date),
       });
     }
   }
 }
 
-// 从框架提供的url中拿到跳转路径
-function extractPathFromURL (url: string): string | null {
+function extractPathFromURL(url: string): string | null {
   const match = url.match(/\/([^/]+\.html)$/);
   if (match?.[1] != null) {
     return match[1];
@@ -93,7 +93,7 @@ function extractPathFromURL (url: string): string | null {
     return null;
   }
 }
-function formatDate (inputDate: string): string {
+function formatDate(inputDate: string): string {
   const date = new Date(inputDate);
   const year = date.getFullYear();
   const month = String(date.getMonth() + 1).padStart(2, "0");
@@ -101,20 +101,17 @@ function formatDate (inputDate: string): string {
   return `${year}-${month}-${day}`;
 }
 
-// 定义一个映射，将 headName 映射到对应的 icon、路径
-const mapping: Record<string, { icon: string, urlPrefix: string }> = {
+const mapping: Record<string, { icon: string; urlPrefix: string }> = {
   News: { icon: "/assets/img/news.png", urlPrefix: "news/" },
   Activity: { icon: "/assets/img/activity.png", urlPrefix: "activity/" },
   Blog: { icon: "/assets/img/blog.png", urlPrefix: "blog/" },
   新闻: { icon: "/assets/img/news.png", urlPrefix: "news/" },
   活动: { icon: "/assets/img/activity.png", urlPrefix: "activity/" },
-  博客: { icon: "/assets/img/blog.png", urlPrefix: "blog/" }
+  博客: { icon: "/assets/img/blog.png", urlPrefix: "blog/" },
 };
 
-// 遍历 groupedPosts 中的每个分组
 for (const headName in groupedPosts) {
   const pages = groupedPosts[headName];
-  // 按照日期排序，并选择日期最新的前 5 个项目
   pages.sort((a, b) => new Date(b.time).getTime() - new Date(a.time).getTime());
   const latestPages = pages.slice(0, 5);
 
@@ -126,8 +123,8 @@ for (const headName in groupedPosts) {
     details: latestPages.map((page) => ({
       title: page.title,
       time: page.time,
-      url: `${urlPrefix}${page.url}`
-    }))
+      url: `${urlPrefix}${page.url}`,
+    })),
   };
 
   if (["News", "Activity", "Blog"].includes(headName)) {
@@ -141,24 +138,25 @@ const routeLocale = useRouteLocale();
 const homeLocale = useHomeLocale();
 
 const communityLink = computed(() =>
-  routeLocale.value === "/zh/" ? zhCommunityLink : enCommunityLink
+  routeLocale.value === "/zh/" ? zhCommunityLink : enCommunityLink,
 );
 
-// 全网star数
 const currentStars = ref(0);
 const increment = totalStars / (1 * 60);
 const updateValue = (): void => {
   if (currentStars.value < totalStars) {
     currentStars.value = parseFloat(
-      (currentStars.value + increment).toFixed(1)
+      (currentStars.value + increment).toFixed(1),
     );
-    currentStars.value = Math.min(currentStars.value, totalStars); // 确保不超过总星数
+    currentStars.value = Math.min(currentStars.value, totalStars);
     requestAnimationFrame(updateValue);
   }
 };
 
+function goGvp(gvp: any) {
+  window.location.href = `https://gitee.com/dromara/${gvp}`;
+}
 onMounted(() => {
-  // 数字元素进入可视区域后，数字开始增长
   const starNumber = document.querySelector(".star-number");
   const observer = new IntersectionObserver(
     (entries) => {
@@ -167,7 +165,7 @@ onMounted(() => {
         observer.disconnect();
       }
     },
-    { threshold: 1.0 }
+    { threshold: 1.0 },
   );
 
   if (starNumber != null) {
@@ -175,15 +173,25 @@ onMounted(() => {
   }
 });
 
-function jumpTo (url: string): void {
+function jumpTo(url: string): void {
   window.location.href = url;
 }
 </script>
 
 <template>
   <div class="home-page">
-    <div class="wrapper">
-      <div class="banner-default">
+    <div class="banner-container">
+      <div class="galaxy-background">
+        <Galaxy
+          :speed="0.6"
+          :rotationSpeed="0"
+          :density="0.3"
+          :twinkleIntensity="0.1"
+          :glowIntensity="0.2"
+          :mouseRepulsion="false"
+        />
+      </div>
+      <div class="wrapper">
         <div class="banner-mask">
           <div class="banner-info">
             <h1 id="main-title">Dromara</h1>
@@ -192,39 +200,43 @@ function jumpTo (url: string): void {
               <RouterLink to="./projects/" class="banner-action primary">{{
                 homeLocale.QUICK_START
               }}</RouterLink>
-              <a href="https://incubator.dromara.org/" class="banner-action"
-              >{{ homeLocale.INCUBATOR }}</a
-              >
+              <a href="https://incubator.dromara.org/" class="banner-action">{{
+                homeLocale.INCUBATOR
+              }}</a>
               <a href="https://github.com/dromara" class="banner-action"
                 >GitHub</a
               >
               <a href="https://gitee.com/dromara" class="banner-action"
-              >Gitee</a
+                >Gitee</a
               >
               <a href="https://gitcode.com/dromara" class="banner-action"
-              >GitCode</a
+                >GitCode</a
               >
             </p>
           </div>
         </div>
-      </div>
-      <div class="feature-wrapper">
-        <div class="feature slogan">
-          <div
-            v-for="feature in homeLocale.FEATURES"
-            :key="feature.name"
-            class="feature-container slogan-container"
-          >
-            <div class="feature-title">
-              <img
-                :src="`/assets/img/${feature.name}.png`"
-                :alt="feature.name"
-              />
-              <h2>{{ feature.title }}</h2>
-            </div>
-            <p class="home-description">{{ feature.desc }}</p>
+        <div class="feature-wrapper">
+          <div class="feature slogan">
+            <HoverLight
+              v-for="feature in homeLocale.FEATURES"
+              :key="feature.name"
+              class="feature-container slogan-container"
+            >
+              <div class="feature-title">
+                <img
+                  :src="`/assets/img/${feature.name}.png`"
+                  :alt="feature.name"
+                />
+                <h2>{{ feature.title }}</h2>
+              </div>
+              <p class="home-description">{{ feature.desc }}</p>
+            </HoverLight>
           </div>
         </div>
+      </div>
+
+      <div class="bannerVideo">
+        <img src="/assets/img/Banner.gif" alt="" />
       </div>
     </div>
 
@@ -250,11 +262,6 @@ function jumpTo (url: string): void {
         homeLocale.MORE_PROJECTS + "&nbsp;&nbsp;>"
       }}</RouterLink>
       <div class="project-swiper">
-        <img
-          class="project-img"
-          src="/assets/img/projects.webp"
-          alt="project"
-        />
         <swiper
           :modules="[Navigation, EffectCoverflow, Autoplay, Pagination]"
           navigation
@@ -265,7 +272,7 @@ function jumpTo (url: string): void {
           slideToClickedSlide
           :autoplay="{
             delay: 2500,
-            disableOnInteraction: false
+            disableOnInteraction: false,
           }"
           :pagination="{ clickable: true }"
           effect="coverflow"
@@ -274,7 +281,7 @@ function jumpTo (url: string): void {
             stretch: -50,
             depth: 100,
             modifier: 3,
-            slideShadows: false
+            slideShadows: false,
           }"
         >
           <swiper-slide
@@ -321,8 +328,8 @@ function jumpTo (url: string): void {
         ：
       </h2>
       <ul class="gvp-container">
-        <li v-for="gvp in gvpProjects" :key="gvp">
-          <a :href="`https://gitee.com/dromara/${gvp}`">{{ gvp }}</a>
+        <li v-for="gvp in gvpProjects" :key="gvp" @click="goGvp(gvp)">
+          <span>{{ gvp }}</span>
         </li>
       </ul>
     </div>
@@ -332,7 +339,7 @@ function jumpTo (url: string): void {
       <div class="feature-wrapper">
         <div class="feature">
           <template v-for="section in communityLink" :key="section.category">
-            <div class="feature-container">
+            <HoverLight class="feature-container">
               <div class="feature-title">
                 <img :src="section.icon" :alt="section.category" />
                 <h2 style="margin-bottom: 0">{{ section.category }}</h2>
@@ -356,14 +363,14 @@ function jumpTo (url: string): void {
                           fill-rule="evenodd"
                           clip-rule="evenodd"
                           d="M10.1903 5.26519L6.22065 1.29552L7.28131 0.234863L13.0616 6.01519L7.28131 11.7955L6.22065 10.7349L10.1903 6.76519H0.000976562V5.26519H10.1903Z"
-                          fill="#1D1D1B"
+                          fill="#fff"
                         ></path>
                       </svg>
                     </div>
                   </div>
                 </div>
               </template>
-            </div>
+            </HoverLight>
           </template>
         </div>
       </div>
@@ -375,18 +382,47 @@ function jumpTo (url: string): void {
 .home-page {
   min-width: 380px;
   overflow-x: hidden;
-  padding-top: var(--navbar-height);
-  background: #f9fbff;
+  background: #030513;
+  .banner-container {
+    padding-top: var(--navbar-height);
+    position: relative;
+    width: 100%;
+    min-height: 65vh;
+    overflow: hidden;
+    .galaxy-background {
+      background: #030513;
+      border: 1px solid #333;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+    .bannerVideo {
+      position: absolute;
+      top: 51px;
+      left: 941px;
+      object-fit: cover;
+      z-index: 1;
+      img {
+        width: 545px;
+      }
+    }
+  }
+
   .wrapper {
     display: flex;
     flex-direction: column;
+    position: relative;
+    z-index: 2;
     min-height: calc(100vh - var(--navbar-height));
   }
   h2 {
     border-bottom: none;
   }
   .banner-mask {
-    background: url(/assets/img/bg-image.webp) no-repeat;
+    // background: url(/assets/img/bg-image.webp) no-repeat;
     background-size: cover;
     background-position: center;
     min-height: 65vh;
@@ -397,22 +433,30 @@ function jumpTo (url: string): void {
       min-height: 0;
     }
   }
-  .banner-default {
-    background-color: #e4edff;
-  }
+
   .banner-info {
     padding: 100px 24px;
+    margin-left: 80px;
+    @media (max-width: 959px) {
+      margin: 0;
+    }
     #main-title {
       margin: 0.5rem 0;
-      background: linear-gradient(120deg, #0a7bf4, #096dd9, #7509d9 100%);
+      color: #fff;
+      text-shadow:
+        0 0 5px #00f7ff,
+        0 0 10px #00f7ff,
+        0 0 20px #00f7ff,
+        0 0 40px #00f7ff;
       -webkit-background-clip: text;
       background-clip: text;
       font-weight: bold;
       font-size: 3.6rem;
-      -webkit-text-fill-color: transparent;
-      font-family: "Segoe UI", "PingFang SC", "Hiragino Sans GB",
-        "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif,
-        "Segoe UI Emoji", "Segoe UI Symbol";
+      // -webkit-text-fill-color: transparent;
+      font-family:
+        "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+        "Helvetica Neue", Helvetica, Arial, sans-serif, "Segoe UI Emoji",
+        "Segoe UI Symbol";
 
       @media (max-width: 959px) {
         font-size: 2.5rem;
@@ -457,14 +501,18 @@ function jumpTo (url: string): void {
     margin: 0.5rem;
     padding: 0.5em 1.5rem;
     border-radius: 2rem;
-    background: #f8f8f8;
-    color: #2c3e50;
+    background-color: #ffffff0f;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
     font-size: 1.2rem;
     text-align: center;
-    transition: color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    transition:
+      color 0.3s ease,
+      color 0.3s ease,
+      transform 0.3s ease;
     &:hover {
       border-color: #eceef1;
-      background: #eceef1;
+      background: #ffffff24;
     }
 
     &.primary {
@@ -485,7 +533,7 @@ function jumpTo (url: string): void {
     padding: 0 60px;
   }
   .feature {
-    margin: -80px 0 20px;
+    margin: -90px 0 20px;
     display: flex;
     justify-content: space-between;
     border-radius: 6px;
@@ -501,10 +549,13 @@ function jumpTo (url: string): void {
     .feature-container {
       display: flex;
       flex-direction: column;
-      background-color: rgba(255, 255, 255, 0.9);
+      position: relative;
+      background-image: linear-gradient(106deg, #1d2033c9, #1d2033c9);
       margin: 20px 12px;
       border-radius: 0.375rem;
+      overflow: hidden;
       padding: 20px 42px;
+      z-index: 1;
       &.slogan-container :hover {
         transform: translateY(0);
         box-shadow: 0px 4px 32px 0px rgba(64, 93, 149, 0.05);
@@ -524,6 +575,15 @@ function jumpTo (url: string): void {
       .home-description {
         margin: 0;
       }
+      .hover-light {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        background-color: #0a59ae;
+        border-radius: 50%;
+        filter: blur(40px);
+        z-index: -1;
+      }
     }
   }
 
@@ -536,9 +596,9 @@ function jumpTo (url: string): void {
 
   .project-container {
     padding: 20px 0;
-    background: url(/assets/img/project-bg.webp) no-repeat;
     background-size: cover;
     background-position: center;
+    background: linear-gradient(to bottom, #010c36, #010e3e);
     text-align: center;
     h2 {
       margin-top: 0;
@@ -566,7 +626,6 @@ function jumpTo (url: string): void {
     font-size: 1.1rem;
     color: #494949;
     padding: 0 20px;
-    border: 1px solid #f1f2f5;
     text-align: left;
     img {
       aspect-ratio: 2 / 1;
@@ -599,6 +658,13 @@ function jumpTo (url: string): void {
       }
     }
   }
+  :deep(.swiper-pagination-bullet) {
+    background-color: #485573;
+    opacity: 1;
+  }
+  :deep(.swiper-pagination-bullet-active) {
+    background-color: #fff;
+  }
   @keyframes bottom {
     0% {
       right: 0;
@@ -629,7 +695,8 @@ function jumpTo (url: string): void {
     border-radius: 15px;
   }
   .swiper-slide-active {
-    box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.06),
+    box-shadow:
+      0px 4px 32px 0px rgba(0, 0, 0, 0.06),
       0px 0px 10px 0px rgba(0, 0, 0, 0.04);
   }
 
@@ -637,35 +704,34 @@ function jumpTo (url: string): void {
     color: #2e64fe;
     padding: 5px 10px;
     cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
     &:hover {
-      background: #e8f0fe;
       border-radius: 5px;
+      transform: scale(1.02);
     }
   }
   .star-default {
-    background-color: #4d7aff;
+    background: linear-gradient(to bottom, #030512, #010826);
   }
   .star-container {
-    background: url(/assets/img/growing-star.webp) no-repeat;
-    background-size: cover;
-    background-position: center;
     width: 100%;
     color: #fff;
     padding: 10px 0 20px;
   }
   .star-wrapper {
-    position: relative;
-    left: 10%;
-    text-align: left;
+    text-align: center;
     cite {
       color: #8db2ff;
       font-weight: 400;
+      font-style: normal;
     }
   }
   .star-inner {
     display: flex;
     align-items: flex-end;
     padding-bottom: 15px;
+    justify-content: center;
   }
   .star-text {
     font-size: 2.5em;
@@ -693,6 +759,7 @@ function jumpTo (url: string): void {
     display: inline-block;
     margin-left: 10px;
     font-size: 58px;
+    color: #0a7bf4;
     @media (max-width: 959px) {
       font-size: 3.5em;
     }
@@ -707,49 +774,98 @@ function jumpTo (url: string): void {
     text-align: center;
     padding: 20px 0;
     letter-spacing: 2px;
-    background: linear-gradient(
-      180deg,
-      #dee8ff 0%,
-      rgba(243, 247, 253, 0) 100%
-    );
+    background: linear-gradient(to bottom, #010e3e, #041049);
   }
   .gvp-container {
-    padding: 0 18vw;
-    text-align: left;
-    li {
-      display: inline-block;
-      width: 25%;
-      text-align: center;
-      @media (max-width: 1390px) {
-        width: 33%;
-      }
-      @media (max-width: 1100px) {
-        width: 50%;
-        a {
-          line-height: 2.2;
-        }
-      }
-      @media (max-width: 530px) {
-        width: 100%;
-        a {
-          line-height: 2;
-        }
-      }
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px 0;
+    justify-items: center;
+    width: 80%;
+    margin: 0 auto;
+    @media (max-width: 1390px) {
+      grid-template-columns: repeat(3, 1fr);
     }
-    a {
-      line-height: 2.5;
-      font-size: 1.1em;
-      white-space: nowrap;
-      color: #61687c;
+    @media (max-width: 1100px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 530px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    li {
+      position: relative;
+      background-color: rgba(255, 255, 255, 0.3);
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      font-family: Arial, sans-serif;
+      height: 50px;
+      width: 150px;
+      max-width: 150px;
+      text-align: center;
+      cursor: pointer;
+      border-radius: 90px;
+      &::before {
+        display: none;
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: repeating-conic-gradient(
+          from var(--a),
+          #ac9ee3,
+          #4eeaf6,
+          #fa7bce,
+          #efe7fa
+        );
+        border-radius: 90px;
+        animation: rotating 4s linear infinite;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        display: none;
+        inset: 0;
+        background: repeating-conic-gradient(
+          from var(--a),
+          #ac9ee3,
+          #4eeaf6,
+          #fa7bce,
+          #efe7fa
+        );
+        border-radius: 90px;
+        animation: rotating 4s linear infinite;
+        filter: blur(10px);
+        opacity: 0.75;
+      }
+      span {
+        position: absolute;
+        inset: 2px;
+        background-color: #020f43;
+        z-index: 1;
+        transition: all 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 90px;
+        &:hover {
+          box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+      }
 
       &:hover {
-        color: #2e64fe;
-        font-weight: 900;
+        transform: scale(1.05);
+      }
+      &:hover::before,
+      &:hover::after {
+        display: block;
       }
     }
   }
 
   .community {
+    background: linear-gradient(to bottom, #041049, #061353);
     width: 100vw;
     overflow: hidden;
     padding: 20px 0;
@@ -768,7 +884,13 @@ function jumpTo (url: string): void {
       }
     }
     .feature-container {
-      border: 1px solid #f1f2f5;
+      background-image: linear-gradient(
+        106deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(237, 238, 245, 0.1)
+      );
+      position: relative;
+      z-index: 1;
       margin: 30px 0;
       padding: 10px 20px;
       min-width: 220px;
@@ -795,8 +917,14 @@ function jumpTo (url: string): void {
           width: 100%;
           left: 0;
           animation: bottom 750ms ease-in-out;
-          background-color: #b8b8b5;
-          background-color: #1d1d1b;
+          background: linear-gradient(
+            90deg,
+            #ac9ee3,
+            #4eeaf6,
+            #fa7bce,
+            #efe7fa,
+            #ac9ee3
+          );
         }
         .icon {
           transform: translateX(5px);
@@ -831,5 +959,18 @@ function jumpTo (url: string): void {
     }
   }
 }
+@property --a {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes rotating {
+  0% {
+    --a: 0deg;
+  }
+  100% {
+    --a: 360deg;
+  }
+}
 </style>
-../composables/index.js

@@ -2,8 +2,6 @@
 title: Commemoration:1541Days, Sa-Token Top 1 of Gitee Recommendation List
 author: click33
 date: 2024-04-25
-tag:
-  - 
 cover: /assets/img/blog/Sa-Token-0.png
 head:
   - - meta

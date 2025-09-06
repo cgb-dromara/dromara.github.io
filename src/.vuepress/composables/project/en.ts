@@ -1,7 +1,8 @@
 import { type ProjectsOption } from "./types.js";
 
 export const enProjectsOption: ProjectsOption = {
-  PROJECTS: "Projects",
+  PROJECTS:
+    "Dromara : Gathering top-notch projects, exploring the joys of open source together.",
   DESCRIPTION:
     "Dromara Community unites top open-source authors, offering products, solutions, and training across domains like transactions, tools, microservices, and big data. Join for the joy of open source.",
   PROJECT_SPONSOR: "Project sponsor",
@@ -124,5 +125,6 @@ export const enProjectsOption: ProjectsOption = {
   DISTRIBUTED_SCHEDULING: "Distributed Scheduling",
   HODOR_DESC: "Distributed scheduling framework",
   DISJOB_DESC: "A distributed task scheduling framework.",
-  CARBON_DESC: "A simple, semantic and developer-friendly golang package for time."
+  CARBON_DESC:
+    "A simple, semantic and developer-friendly golang package for time.",
 };

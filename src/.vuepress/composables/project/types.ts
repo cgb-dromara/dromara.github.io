@@ -1,108 +1,108 @@
 export interface ProjectsOption {
-  PROJECTS: string
-  DESCRIPTION: string
-  PROJECT_SPONSOR: string
-  JOINING_DATE: string
-  START_UP: string
+  PROJECTS: string;
+  DESCRIPTION: string;
+  PROJECT_SPONSOR: string;
+  JOINING_DATE: string;
+  START_UP: string;
 
-  DISTRIBUTED_TRANSACTION: string
-  HMILY_DESC: string
-  RAINCAT_DESC: string
-  MYTH_DESC: string
+  DISTRIBUTED_TRANSACTION: string;
+  HMILY_DESC: string;
+  RAINCAT_DESC: string;
+  MYTH_DESC: string;
 
-  POPULAR_TOOLS: string
-  HUTOOL_DESC: string
-  FOREST_DESC: string
-  LITEFLOW_DESC: string
-  DYNAMIC_TP_DESC: string
-  EASY_ES_DESC: string
-  GO_VIEW_DESC: string
-  IMAGE_COMBINER_DESC: string
-  JINX_DESC: string
-  WEMQ_DESC: string
-  ELECTRON_EGG_DESC: string
-  NORTHSTAR_DESC: string
-  EASY_TRANS_DESC: string
-  FAST_REQUEST_DESC: string
-  REDISFRONT_DESC: string
-  X_EASYPDF_DESC: string
-  GOBRS_ASYNC_DESC: string
-  OPEN_GITEYE_API_DESC: string
-  DYJAVA: string
-  ORION_VISOR: string
-  WARM_FLOW: string
-  DBSWITCH: string
-  SKYEYE_OA: string
-  EASYAI: string
-  MYBATIS_PLUS_EXT: string
-  EASY_QUERY: string
-  TIANAI_CAPTCHA: string
-  DAX_PAY: string
-  MYFLY_GO: string
-  MILVUSPLUS: string
-  NEWCAR: string
-  UJCMS: string
-  SAYORDER: string
-  AKALI: string
-  BINLOG4J_DESC: string
-  SMS4J_DESC: string
-  STREAM_QUERY_DESC: string
-  PAYMENT_SPRING_BOOT_DESC: string
-  EASYTRANS_DESC: string
-  NEUTRINO_PROXY_DESC: string
-  TESTHUB_DESC: string
-  DOMAIN_ADMIN_DESC: string
-  YFT_DESIGN_DESC: string
-  ZYPLAYER_DOC_DESC: string
-  X_FILE_STORAGE_DESC: string
+  POPULAR_TOOLS: string;
+  HUTOOL_DESC: string;
+  FOREST_DESC: string;
+  LITEFLOW_DESC: string;
+  DYNAMIC_TP_DESC: string;
+  EASY_ES_DESC: string;
+  GO_VIEW_DESC: string;
+  IMAGE_COMBINER_DESC: string;
+  JINX_DESC: string;
+  WEMQ_DESC: string;
+  ELECTRON_EGG_DESC: string;
+  NORTHSTAR_DESC: string;
+  EASY_TRANS_DESC: string;
+  FAST_REQUEST_DESC: string;
+  REDISFRONT_DESC: string;
+  X_EASYPDF_DESC: string;
+  GOBRS_ASYNC_DESC: string;
+  OPEN_GITEYE_API_DESC: string;
+  DYJAVA: string;
+  ORION_VISOR: string;
+  WARM_FLOW: string;
+  DBSWITCH: string;
+  SKYEYE_OA: string;
+  EASYAI: string;
+  MYBATIS_PLUS_EXT: string;
+  EASY_QUERY: string;
+  TIANAI_CAPTCHA: string;
+  DAX_PAY: string;
+  MYFLY_GO: string;
+  MILVUSPLUS: string;
+  NEWCAR: string;
+  UJCMS: string;
+  SAYORDER: string;
+  AKALI: string;
+  BINLOG4J_DESC: string;
+  SMS4J_DESC: string;
+  STREAM_QUERY_DESC: string;
+  PAYMENT_SPRING_BOOT_DESC: string;
+  EASYTRANS_DESC: string;
+  NEUTRINO_PROXY_DESC: string;
+  TESTHUB_DESC: string;
+  DOMAIN_ADMIN_DESC: string;
+  YFT_DESIGN_DESC: string;
+  ZYPLAYER_DOC_DESC: string;
+  X_FILE_STORAGE_DESC: string;
 
-  ENTERPRISE_CERTIFICATION: string
-  SA_TOKEN_DESC: string
-  MAXKEY_DESC: string
-  SURENESS_DESC: string
+  ENTERPRISE_CERTIFICATION: string;
+  SA_TOKEN_DESC: string;
+  MAXKEY_DESC: string;
+  SURENESS_DESC: string;
 
-  OPERATIONS_AND_MAINTENANCE_CONTROL: string
-  JPOM_DESC: string
-  CUBIC_DESC: string
-  ATHENA_DESC: string
+  OPERATIONS_AND_MAINTENANCE_CONTROL: string;
+  JPOM_DESC: string;
+  CUBIC_DESC: string;
+  ATHENA_DESC: string;
 
-  DISTRIBUTED_LOG: string
-  TLOG_DESC: string
+  DISTRIBUTED_LOG: string;
+  TLOG_DESC: string;
 
-  BIG_DATA: string
-  CLOUDEON_DESC: string
-  DATA_COMPARE_DESC: string
+  BIG_DATA: string;
+  CLOUDEON_DESC: string;
+  DATA_COMPARE_DESC: string;
 
-  MICROSERVICE: string
-  KOALAS_RPC_DESC: string
-  MENDMIX_DESC: string
-  LAMP_CLOUD_DESC: string
-  DANTE_CLOUD_DESC: string
-  OPEN_CAPACITY_PLATFORM_DESC: string
-  RUOYI_VUE_PLUS_DESC: string
-  J2EEFAST_DESC: string
+  MICROSERVICE: string;
+  KOALAS_RPC_DESC: string;
+  MENDMIX_DESC: string;
+  LAMP_CLOUD_DESC: string;
+  DANTE_CLOUD_DESC: string;
+  OPEN_CAPACITY_PLATFORM_DESC: string;
+  RUOYI_VUE_PLUS_DESC: string;
+  J2EEFAST_DESC: string;
 
-  DISTRIBUTED_SCHEDULING: string
-  HODOR_DESC: string
-  DISJOB_DESC: string
-  CARBON_DESC: string
+  DISTRIBUTED_SCHEDULING: string;
+  HODOR_DESC: string;
+  DISJOB_DESC: string;
+  CARBON_DESC: string;
 }
 
 export interface ProjectItem {
-  name: string
-  website: string
-  description: string
-  sponsor: string
-  date: string
-  link: string
+  name: string;
+  website: string;
+  description: string;
+  sponsor: string;
+  date: string;
+  link: string;
 }
 
 export interface GroupDetail {
-  groupName: string
-  projects: ProjectItem[]
+  groupName: string;
+  projects: ProjectItem[];
 }
 
 export interface GroupOrder {
-  groupName: string
-  projects: string[]
+  groupName: string;
+  projects: string[];
 }

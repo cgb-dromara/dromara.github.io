@@ -7,7 +7,7 @@ import { zhFooterOption } from "./zh.js";
 export const useFooterLocale = () =>
   useLocaleConfig({
     "/": enFooterOption,
-    "/zh/": zhFooterOption
+    "/zh/": zhFooterOption,
   });
 
 export * from "./types.js";
