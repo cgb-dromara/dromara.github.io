@@ -4,6 +4,9 @@
   "version": "2.0.0",
   "license": "MIT",
   "type": "module",
+  "engines": {
+    "node": ">=20.19.3"
+  },
   "scripts": {
     "docs:build": "cross-env NODE_OPTIONS=--max-old-space-size=4096 vuepress-vite build src",
     "docs:clean-dev": "vuepress-vite dev src --clean-cache",
@@ -19,6 +22,7 @@
     "@typescript-eslint/parser": "^8.39.0",
     "@vuepress/bundler-vite": "2.0.0-rc.24",
     "@vuepress/plugin-register-components": "2.0.0-rc.112",
+    "@vuepress/plugin-slimsearch": "2.0.0-rc.112",
     "cross-env": "^10.0.0",
     "eslint": "^9.32.0",
     "eslint-plugin-prettier": "^5.5.3",
