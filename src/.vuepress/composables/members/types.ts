@@ -1,21 +1,22 @@
 export interface Member {
-  role: string
-  photo: string
-  name: string
-  desc: string
+  role: string;
+  photo: string;
+  name: string;
+  desc: string;
 }
 
 interface MembersGroup {
-  header: string
-  members: Member[]
+  header: string;
+  members: Member[];
 }
 
 export interface MembersOption {
-  MEMBERS: string
-  DESCRIPTION: string
-  FOUNDER: Member
-  Funder_TITLE: string
-  COMMITTEE_TITLE: string
-  COMMITTER_TITLE: string
-  MEMBERS_ITEM: MembersGroup[]
+  SLOGAN: string;
+  DESCRIPTION: string;
+  FOUNDER: Member;
+  FUNDER_TITLE: string;
+  COMMITTEE_TITLE: string;
+  COMMITTER_TITLE: string;
+  MEMBERS_ITEM: MembersGroup[];
+  BUTTON: string;
 }

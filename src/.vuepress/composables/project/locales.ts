@@ -6,5 +6,5 @@ import { zhProjectsOption } from "./zh.js";
 export const useProjectLocale = () =>
   useLocaleConfig({
     "/": enProjectsOption,
-    "/zh/": zhProjectsOption
+    "/zh/": zhProjectsOption,
   });

@@ -9,5 +9,5 @@ export const zhFooterOption: FooterOption = {
   WECHAT: "微信公众号",
   KNOWLEDGE_PLANET: "知识星球",
   DONATE: "支持社区",
-  Email: "意见反馈"
+  Email: "意见反馈",
 };

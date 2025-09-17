@@ -1,14 +1,12 @@
-body {
-  background-color: #f9fbff;
-}
-
-.bg-default {
-  background-color: #e9eef8;
-}
+// body {
+//   background: linear-gradient(to bottom, #030513, #051455);
+// }
 
 #navbar {
-  background-color: #e4eeff;
   box-shadow: none;
+  background: #fff0;
+  backdrop-filter: blur(5px);
+  border-bottom: 1px solid #2c2d3b;
 }
 
 .nav-item {
@@ -36,4 +34,8 @@ body {
   .nav-screen-links {
     display: block;
   }
+}
+
+.page-cover img {
+  display: none;
 }

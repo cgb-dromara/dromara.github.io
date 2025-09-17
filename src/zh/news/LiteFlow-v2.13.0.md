@@ -1,0 +1,258 @@
+---
+title: LiteFlow v2.13.0 震撼发布！领航开源规则引擎新纪元
+author: 2025年02月25日 10:11
+date: 2025-02-25
+cover: /assets/img/news/LiteFlow-v2.13.0-0.png
+head:
+  - - meta
+    - name: 新闻
+---
+
+##   
+前言  
+
+这一次的新版本距离上一个版本时间有点久。
+
+一方面确实这次更新的东西确实比较多，另一方面LF使用的公司和开发者越来越多，我需要很多的时间来收集社区反馈。有些特性我也需要细细思索去考虑合理性，底层代码也会经常审阅是否健壮。
+
+再者我又比较佛系，做LF从来不给自己设时间期限，因为我觉得那样才是一种放松的状态，但凡一件事情有了时间紧迫感或KPI，我觉得都无法保证这个东西是发自内心的喜爱去驱动的。
+
+在做LF的时候，对所有我自己写的代码，包括贡献者提交的代码，都需要审阅到变量的命名是否合理，测试用例是否缺少或不合理这个程度，并且文档是否合理，也在每次的发版审阅当中。所以LF从开源到现在，已经拥有了2200多个测试用例和相对比较规范的代码和文档。
+
+LF也许不是发版最勤快的，但是LF一定是一个长期迭代且用心的开源项目，并且它已经坚持了4年多了。
+
+废话说完，言归正传。
+
+此次2.13.0总共更新了22个issue。其中包括7个特性，8个增强，7个修复。
+
+此版本不是一个完全向下兼容的版本，但是能保证你在很短的时间内就可以升级完成。具体应该改哪里指南请参照官网的升级指南。
+
+下面挑一些重要的更新点介绍下。
+
+##   
+Javax-pro插件  
+
+原先有java插件，后来又出了javax插件。啥？现在又有javax-pro插件了？是不是以后还会有javax-pro-max呢？🤣
+
+用过java脚本的同学应该知道，LF有基于Janino的`liteflow-script-java`插件和基于Liquor的`liteflow-script-javax`插件，前者只支持jdk6的语法，后者支持了所有jdk的语法。
+
+而这次javax-pro插件应该就是最终形态了。它相比于`liteflow-script-javax`最大的不同就是：javax-pro支持的脚本完全同静态类的组件写法完全一致了。这意味着，在脚本中你可以覆盖超类中的方法了。
+
+同时，我们退休了`liteflow-script-java`插件，这个插件在2.13.0中不会提供，所以在新版本中，java提供了2个插件：
+
+*   liteflow-script-javax
+    
+*   liteflow-script-javax-pro
+    
+
+不过建议大家还是之后往javax-pro这个插件上迁移，因为`liteflow-script-javax`也只是为了兼容才留下来的。以后不排除会退休。
+
+这里特别感谢Liquor的作者noear，在一次聊天中我和他吐槽了Janino，聊到了我在java脚本方面的困惑，他二话没说就为LF量身打造了java编译执行器，才使得LF在java脚本领域有了长足的进步。并且他把这个框架也开源了，大家可以关注下：
+
+https://gitee.com/noear/liquor
+
+##   
+bind关键字  
+
+LF以前支持对规则上的组件设置参数。涉及的关键字为`tag`和`data`。
+
+这次新版本推出了bind关键字，这个关键字允许你在一个对象上去绑定一个key和value：
+
+```
+THEN(a.bind("k1","v1"), b)
+```
+
+它不仅可以作用于组件上，还可以作用于表达式上，子变量上，chain上。几乎是任何东西，都可以使用bind。
+
+  
+
+之所以有了`tag`和`data`这两个关键字，还要推出`bind`的原因是，`bind`还提供了动态绑定的特性，你可以使用占位符：
+
+```
+THEN(a, b).bind("k1", "${user.name}")
+```
+
+以上这个表达式LF会根据这个占位符表达式从你多个上下文中去匹配，然后把值同时赋给a和b。
+
+bind关键字的用法丰富了组件参数的形态，bind关键字的用法有很多细节的地方，具体用法请参照官方文档。
+
+##   
+线程池重塑  
+
+LF的以往版本在异步场景线程池这块，一直有点混乱。使用者并不知道在多样化的场景下，怎么去设置线程池。
+
+所以这次我们重塑了线程池的设计。分为了3个维度：
+
+*   全局线程池
+    
+*   Chain层面的线程池
+    
+*   表达式层面的线程池
+    
+
+其中全局线程池的参数名和以前有所不同，且在Chain层面推出了新的线程池设置方式：
+
+```
+<chain name="chain1" thread-pool-executor-class="xxx.xxx.CustomChainThreadExecutor">
+    WHEN(a,b);
+</chain>
+```
+
+  
+
+可能这一次的线程池重塑，会不兼容以往的版本的参数配置。但是我一直觉得，比起兼容，合理和设计优雅才是更值得追求的。
+
+况且，为了讲清楚LF中的线程池的结构，这次新文档专门开辟了一个大章节专门介绍线程池。并且在升级指南上专门会讲述如何在线程池这块升级到2.13.X。这一切不会耗费开发者太多时间。
+
+具体相关用法和设置请参考文档。
+
+##   
+脚本也可以延迟加载  
+
+LF在2.12.0的时候提供了一个全新的参数用来控制是否懒加载：
+
+```
+liteflow.parse-mode=PARSE_ONE_ON_FIRST_EXEC
+```
+
+但这个只对规则生效，而不对脚本生效。
+
+经过社区里的反馈，有很多人也有脚本懒加载的需求。所以这次这个参数同时能控制规则和脚本了。
+
+##   
+SQL插件支持多数据源指定  
+
+一直以来LF的SQL插件在多数据源的场景会出问题。总是无法自动检测出合适的数据源。
+
+这一次，LF支持了市面上用的最多的两个数据源，分别为
+
+*   Baomidou社区的`dynamic-datasource`框架。
+    
+*   Shardingsphere社区的`shardingsphere-jdbc`框架。
+    
+
+并且大幅优化了取连接对象时的逻辑。
+
+SQL插件作为官方首推的存储插件，其支持度也是最广的，新版本大家可以试试看。
+
+##   
+Step步骤中支持加入自定义过程数据  
+
+现在你通过`this.setStepData(xx)`来进行添加自定义的步骤数据，来实现对上下文中一个数据变化过程的观测了。
+
+这个功能其实很早就有人提PR了，但是我一直觉得没必要。
+
+但是后来通过社区的反馈，我才意识到其实这个功能很有必要，所以社区的反馈有时也会纠正我的一些并不正确的想法。
+
+##   
+Node实例Id的持久化  
+
+在新版本中，我们在Node对象中添加了一个叫instanceId的东西，这个id代表了唯一的编排id，只要你的规则不变，这个id恒久不变。哪怕是重启应用。
+
+这个特性在本地规则文件以及SQL存储插件中都有实现。
+
+但是你会发现这个特性并没有体现在文档中，但它却是2.13.0中非常重要的特性。因为这个特性更多的面对是二开开发者，纯粹是使用者可能并不需要知道这个特性。
+
+可能这个特性会出现将要出现的**开发文档**中。
+
+是的，LF以后不光有使用文档，还会考虑制作开发文档，以帮助想二开LF的开发者。
+
+##   
+全部更新列表  
+
+```
+特性 #IBI6A3 新的基于原生态形式的javax-pro插件
+
+https://gitee.com/dromara/liteFlow/issues/IBI6A3
+
+特性 #IBL9CK 增加bind关键字，能够在任何地方bind key和value
+
+https://gitee.com/dromara/liteFlow/issues/IBL9CK
+
+特性 #IB2BKP 使PARSE_ONE_ON_FIRST_EXEC这个对脚本也生效
+
+https://gitee.com/dromara/liteFlow/issues/IB2BKP
+
+特性 #IBLJ4A step中能够加入自定义的数据
+
+https://gitee.com/dromara/liteFlow/issues/IBLJ4A
+
+特性 #IAPI07 按照chain维度来做线程池隔离
+
+https://gitee.com/dromara/liteFlow/issues/IAPI07
+
+特性 #IAUS2R sql插件希望支持指定数据源
+
+https://gitee.com/dromara/liteFlow/issues/IAUS2R
+
+特性 #IB0SJ1 Node 实例id持久性
+
+https://gitee.com/dromara/liteFlow/issues/IB0SJ1
+
+增强 #IBNPZN LiteFlow的线程池体系重塑
+
+https://gitee.com/dromara/liteFlow/issues/IBNPZN
+
+增强 #IBJO4X 建立统一元数据操作类，所有元数据的操作的入口
+
+https://gitee.com/dromara/liteFlow/issues/IBJO4X
+
+增强 #IBCLUJ Step信息展示改造 && 线程信息的记录
+
+https://gitee.com/dromara/liteFlow/issues/IBCLUJ
+
+增强 #IBA89R 期望java脚本引擎支持继承特性
+
+https://gitee.com/dromara/liteFlow/issues/IBA89R
+
+增强 #IB1YLX 简化规则中的注释，化繁为简
+
+https://gitee.com/dromara/liteFlow/issues/IB1YLX
+
+增强 #IAWJG1 ELBus中构建el表达式中对node包装类型格局的重新设计
+
+https://gitee.com/dromara/liteFlow/issues/IAWJG1
+
+增强 #IAVYME Node实例希望新增一个实例Id，在步骤里体现
+
+https://gitee.com/dromara/liteFlow/issues/IAVYME
+
+增强 #IAUS4H sql插件数据库连接获取优化
+
+https://gitee.com/dromara/liteFlow/issues/IAUS4H
+
+修复 #IBLWJG 布尔节点设置isAccess为false，报错
+
+https://gitee.com/dromara/liteFlow/issues/IBLWJG
+
+修复 #IBL9HC 解决EL表达式中在node后面紧跟操作符会多次clone的问题
+
+https://gitee.com/dromara/liteFlow/issues/IBL9HC
+
+修复 #IBGBLN java异常：Comparison method violates its general contract
+
+https://gitee.com/dromara/liteFlow/issues/IBGBLN
+
+修复 #IBAI9U FlowBus的getNodesByChainId返回空值
+
+https://gitee.com/dromara/liteFlow/issues/IBAI9U
+
+修复 #IB7EQJ SWITCH后的target如果加了maxWaitMilliseconds导致选不到节点的问题
+
+https://gitee.com/dromara/liteFlow/issues/IB7EQJ
+
+修复 #IB0X4Q 修复2.12.4的异步循环产生的bug
+
+https://gitee.com/dromara/liteFlow/issues/IB0X4Q
+
+修复 #IB0K9Y 允许FlowExecutor传入为null的上下文
+
+https://gitee.com/dromara/liteFlow/issues/IB0K9Y
+```
+
+##   
+知识星球  
+
+现在加入星球\[LF CLUB\]，以极低的价格享受一年的高质量答疑。并且有星球独占的LF系列解析文章。感兴趣的小伙伴请扫码直达。
+
+![](/assets/img/news/LiteFlow-v2.13.0-0.png)

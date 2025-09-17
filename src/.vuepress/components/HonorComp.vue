@@ -61,6 +61,7 @@ const honorLocale = useHonorLocale();
   border-radius: 12px;
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
   background-color: #fff;
+  color: #000;
   padding: 0 10px;
   margin: 5px 0;
   p {

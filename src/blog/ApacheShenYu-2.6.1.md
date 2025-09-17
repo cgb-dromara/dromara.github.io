@@ -2,8 +2,6 @@
 title: Apache ShenYu 2.6.1 Released
 author: Ho Fung Eun
 date: 2024-01-24
-tag:
-  - 
 cover: /assets/img/blog/ApacheShenYu-2.6.1-0.png
 head:
   - - meta

@@ -9,5 +9,5 @@ export const enFooterOption: FooterOption = {
   WECHAT: "Media Platform",
   KNOWLEDGE_PLANET: "Knowledge Planet",
   DONATE: "Donate dromara",
-  Email: "Email Feedback"
+  Email: "Email Feedback",
 };

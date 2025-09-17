@@ -2,8 +2,6 @@
 title: Sa-Token v1.38.0 Release, heavily refactor SSO modules
 author: click33
 date: 2024-05-13
-tag:
-  - 
 cover: /assets/img/blog/Sa-Token-v1.38.0-0.png
 head:
   - - meta

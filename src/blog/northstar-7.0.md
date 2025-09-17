@@ -2,8 +2,6 @@
 title: Quantitative software industry spoiler, northstar 7.0 official version of the strong debut
 author: northstar
 date: 2024-02-01
-tag:
-  - 
 cover: /assets/img/blog/northstar-7.0-0.png
 head:
   - - meta

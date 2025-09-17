@@ -1,7 +1,7 @@
 ---
 title: OpenAPI 与 Solon 框架支持，Fast Request 2024.1.9 发布
 author: 王胜
-date: 2024-12-31
+date: 2024-12-12
 cover: https://api-buddy.cn/img/rfr.svg
 tag:
   - fastRequest

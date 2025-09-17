@@ -31,7 +31,7 @@
 import { ref, onBeforeMount } from "vue";
 
 const props = defineProps({
-  project: String
+  project: String,
 });
 
 const stars = ref();
@@ -43,19 +43,19 @@ onBeforeMount(() => {
         accept: "*/*",
         "accept-language": "zh-CN,zh;q=0.9",
         "sec-ch-ua":
-          "\"Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"115\", \"Chromium\";v=\"115\"",
+          '"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"',
         "sec-ch-ua-mobile": "?0",
-        "sec-ch-ua-platform": "\"macOS\"",
+        "sec-ch-ua-platform": '"macOS"',
         "sec-fetch-dest": "empty",
         "sec-fetch-mode": "cors",
-        "sec-fetch-site": "cross-site"
+        "sec-fetch-site": "cross-site",
       },
       referrer: "https://dromara.org/",
       referrerPolicy: "strict-origin-when-cross-origin",
       body: null,
       method: "GET",
       mode: "cors",
-      credentials: "omit"
+      credentials: "omit",
     })
       .then(async (response) => {
         if (!response.ok) {
@@ -73,7 +73,7 @@ onBeforeMount(() => {
 });
 
 const thousandsSeparator = function (value: {
-  toString: () => string
+  toString: () => string;
 }): string {
   if (typeof value === "undefined") return "";
   const parts = value.toString().split(".");

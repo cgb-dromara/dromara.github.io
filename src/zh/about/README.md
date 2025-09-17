@@ -3,6 +3,7 @@ title: 关于
 pageInfo: false
 contributors: false
 editLink: false
+sidebar: false
 lastUpdated: false
 ---
 

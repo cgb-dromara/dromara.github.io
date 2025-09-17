@@ -8,7 +8,7 @@ export const noGithubProjects = [
   "zyplayer-doc",
   "easy-trans",
   "x-easypdf",
-  "image-combiner"
+  "image-combiner",
 ];
 export const noImageProject = [
   "jinx",
@@ -24,7 +24,7 @@ export const noImageProject = [
   "mayfly-go",
   "skyeye-oa",
   "carbon",
-  "warm-flow"
+  "warm-flow",
 ];
 
 export const useProjectsData = () => {
@@ -34,7 +34,7 @@ export const useProjectsData = () => {
   const projectOrder = computed(() => [
     {
       groupName: projectLocale.value.ENTERPRISE_CERTIFICATION,
-      projects: ["sa-token", "MaxKey", "sureness"]
+      projects: ["sa-token", "MaxKey", "sureness"],
     },
     {
       groupName: projectLocale.value.POPULAR_TOOLS,
@@ -81,8 +81,8 @@ export const useProjectsData = () => {
         "open-giteye-api",
         "newcar",
         "jinx",
-        "carbon"
-      ]
+        "carbon",
+      ],
     },
     {
       groupName: projectLocale.value.MICROSERVICE,
@@ -93,30 +93,30 @@ export const useProjectsData = () => {
         "mendmix",
         "koalas-rpc",
         "dante-cloud",
-        "J2EEFAST"
-      ]
+        "J2EEFAST",
+      ],
     },
     {
       groupName: projectLocale.value.OPERATIONS_AND_MAINTENANCE_CONTROL,
-      projects: ["Jpom", "cubic", "TestHub", "athena", "domain-admin"]
+      projects: ["Jpom", "cubic", "TestHub", "athena", "domain-admin"],
     },
     {
       groupName: projectLocale.value.DISTRIBUTED_LOG,
-      projects: ["TLog"]
+      projects: ["TLog"],
     },
     {
       groupName: projectLocale.value.DISTRIBUTED_TRANSACTION,
-      projects: ["hmily", "myth", "Raincat"]
+      projects: ["hmily", "myth", "Raincat"],
     },
     {
       groupName: projectLocale.value.BIG_DATA,
-      projects: ["data-compare", "CloudEon"]
+      projects: ["data-compare", "CloudEon"],
     },
 
     {
       groupName: projectLocale.value.DISTRIBUTED_SCHEDULING,
-      projects: ["Disjob", "hodor"]
-    }
+      projects: ["Disjob", "hodor"],
+    },
   ]);
 
   const projectItemsOrigin = computed(() => [
@@ -152,7 +152,7 @@ export const useProjectsData = () => {
     </a>
    <a href="https://github.com/Dromara/hmily">
         <img src="https://tokei.rs/b1/github/Dromara/hmily?category=lines"/>
-   </a>`
+   </a>`,
         },
         {
           name: "Raincat",
@@ -164,7 +164,7 @@ export const useProjectsData = () => {
         <a href="https%3A%2F%2Fgithub.com%2Fyu199195%2Fraincat"><img src="https://tokei.rs/b1/github/yu199195/raincat?category=lines" alt="Total lines"></a>
 <a href="https%3A%2F%2Fgithub.com%2Fyu199195%2FRaincat%2Fblob%2Fmaster%2FLICENSE"><img src="https://img.shields.io/cran/l/devtools.svg" alt="License"></a>
 <a href="http%3A%2F%2Fsearch.maven.org%2F%23search%257Cga%257C1%257Cg%253A%2522org.dromara%2522%2520AND%2520raincat"><img src="https://img.shields.io/maven-central/v/org.dromara/raincat.svg?label=maven%20central" alt="Maven Central"></a>
-<a href="https%3A%2F%2Fshang.qq.com%2Fwpa%2Fqunwpa%3Fidkey%3D2e9e353fa10924812bc58c10ab46de0ca6bef80e34168bccde275f7ca0cafd85"><img src="https://img.shields.io/badge/chat-on%20QQ-ff69b4.svg?style=flat-square" alt="QQ群"></a>`
+<a href="https%3A%2F%2Fshang.qq.com%2Fwpa%2Fqunwpa%3Fidkey%3D2e9e353fa10924812bc58c10ab46de0ca6bef80e34168bccde275f7ca0cafd85"><img src="https://img.shields.io/badge/chat-on%20QQ-ff69b4.svg?style=flat-square" alt="QQ群"></a>`,
         },
         {
           name: "myth",
@@ -175,9 +175,9 @@ export const useProjectsData = () => {
           link: `<a href="https%3A%2F%2Fgithub.com%2Fyu199195%2Fmyth"><img src="https://tokei.rs/b1/github/yu199195/myth?category=lines" alt="Total lines"></a>
 <a href="https%3A%2F%2Fgithub.com%2Fyu199195%2Fmyth%2Fblob%2Fmaster%2FLICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg?label=license" alt="License"></a>
 <a href="http%3A%2F%2Fsearch.maven.org%2F%23search%257Cga%257C1%257Cg%253A%2522org.dromara%2522%2520AND%2520myth"><img src="https://img.shields.io/maven-central/v/org.dromara/myth.svg?label=maven%20central" alt="Maven Central"></a>
-<a href="https%3A%2F%2Fshang.qq.com%2Fwpa%2Fqunwpa%3Fidkey%3D2e9e353fa10924812bc58c10ab46de0ca6bef80e34168bccde275f7ca0cafd85"><img src="https://img.shields.io/badge/chat-on%20QQ-ff69b4.svg?style=flat-square" alt="QQ群"></a></p>`
-        }
-      ]
+<a href="https%3A%2F%2Fshang.qq.com%2Fwpa%2Fqunwpa%3Fidkey%3D2e9e353fa10924812bc58c10ab46de0ca6bef80e34168bccde275f7ca0cafd85"><img src="https://img.shields.io/badge/chat-on%20QQ-ff69b4.svg?style=flat-square" alt="QQ群"></a></p>`,
+        },
+      ],
     },
     {
       groupName: projectLocale.value.POPULAR_TOOLS,
@@ -211,7 +211,7 @@ export const useProjectsData = () => {
   <img src="https://badges.gitter.im/hutool/Lobby.svg">
 </a>
 <a href="https%3A%2F%2Fqm.qq.com%2Fcgi-bin%2Fqm%2Fqr%3Fk%3DQtsqXLkHpLjE99tkre19j6pjPMhSay1a%26jump_from%3Dwebapi">
-<img src="https://img.shields.io/badge/QQ%E7%BE%A4%E2%91%A6-715292493-orange"></a>`
+<img src="https://img.shields.io/badge/QQ%E7%BE%A4%E2%91%A6-715292493-orange"></a>`,
         },
         {
           name: "forest",
@@ -233,7 +233,7 @@ export const useProjectsData = () => {
   </a>
   <a href="https://gitee.com/dromara/forest#%E8%81%94%E7%B3%BB%E4%BD%9C%E8%80%85">
       <img src="https://img.shields.io/badge/author-%E5%85%AC%E5%AD%90%E9%AA%8F-7af" alt="Author">
-  </a>`
+  </a>`,
         },
         {
           name: "liteFlow",
@@ -247,7 +247,7 @@ export const useProjectsData = () => {
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Fliteflow"><img src="https://img.shields.io/github/stars/dromara/liteflow?style=flat-square&amp;logo=github"></a>
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Fliteflow%2Fnetwork%2Fmembers"><img src="https://img.shields.io/github/forks/dromara/liteflow?style=flat-square&amp;logo=GitHub"></a>
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Fliteflow%2Fblob%2Fmaster%2FLICENSE"><img src="https://img.shields.io/github/license/dromara/liteflow.svg?style=flat-square"></a>
-  `
+  `,
         },
         {
           name: "fast-request",
@@ -264,7 +264,7 @@ export const useProjectsData = () => {
   <img src="https://img.shields.io/jetbrains/plugin/v/16988?logo=IntelliJ%20IDEA" alt="Version">
   <img src="https://img.shields.io/jetbrains/plugin/d/16988?color=FE2857" alt="Downloads">
   <a href="https%3A%2F%2Ffastrequest.slack.com"><img src="https://img.shields.io/badge/Slack-%23Fast--Request-DD1265?logo=Slack" alt="Slack"></a>
-  <a href="https%3A%2F%2Fwww.oscs1024.com%2Fproject%2Fdromara%2Ffast-request%3Fref%3Dbadge_small"><img src="https://www.oscs1024.com/platform/badge/dromara/fast-request.svg?size=small" alt="OSCS Status"></a>`
+  <a href="https%3A%2F%2Fwww.oscs1024.com%2Fproject%2Fdromara%2Ffast-request%3Fref%3Dbadge_small"><img src="https://www.oscs1024.com/platform/badge/dromara/fast-request.svg?size=small" alt="OSCS Status"></a>`,
         },
         {
           name: "dynamic-tp",
@@ -279,7 +279,7 @@ export const useProjectsData = () => {
     <a href="https://github.com/dromara/dynamic-tp/network/members"><img src="https://camo.githubusercontent.com/8eb939fb984f8593c4f0f5be532cee4aac9680b785875d2699f3e88f55bbd9b6/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f666f726b732f64726f6d6172612f64796e616d69632d74703f7374796c653d666c61742d737175617265266c6f676f3d476974487562" data-canonical-src="https://img.shields.io/github/forks/dromara/dynamic-tp?style=flat-square&amp;logo=GitHub" style="max-width: 100%;"></a>
     <a href="https://github.com/dromara/dynamic-tp/blob/master/LICENSE"><img src="https://camo.githubusercontent.com/2d583aa722731ddad7707bf6d492e88843aba60b1f6a8278396e1c181421d147/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f64726f6d6172612f64796e616d69632d74702e7376673f7374796c653d666c61742d737175617265" data-canonical-src="https://img.shields.io/github/license/dromara/dynamic-tp.svg?style=flat-square" style="max-width: 100%;"></a>
     <a href="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/530709dc29604630b6d1537d7c160ea5~tplv-k3u1fbpfcp-watermark.image" rel="nofollow"><img src="https://camo.githubusercontent.com/be34b66fd0e6b194d1aecea1341b6aeab14fb7b28fdab0649b0f61a25ae3e463/68747470733a2f2f70332d6a75656a696e2e62797465696d672e636f6d2f746f732d636e2d692d6b3375316662706663702f64646661656432636365326134373630386662306330633337356131306630387e74706c762d6b3375316662706663702d7a6f6f6d2d312e696d616765" alt="备注加群" data-canonical-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ddfaed2cce2a47608fb0c0c375a10f08~tplv-k3u1fbpfcp-zoom-1.image" style="max-width: 100%;"></a>
-  `
+  `,
         },
         {
           name: "easy-es",
@@ -295,7 +295,7 @@ export const useProjectsData = () => {
     <a href="https%3A%2F%2Fwww.apache.org%2Flicenses%2FLICENSE-2.0">
       <img alt="code style" src="https://img.shields.io/badge/license-Apache%202-4EB1BA.svg?style=flat-square">
     </a>
-   `
+   `,
         },
         {
           name: "go-view",
@@ -309,7 +309,7 @@ export const useProjectsData = () => {
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Fgo-view"><img src="https://img.shields.io/github/stars/dromara/go-view?style=flat-square&amp;logo=github"></a>
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Fgo-view%2Fnetwork%2Fmembers"><img src="https://img.shields.io/github/forks/dromara/go-view?style=flat-square&amp;logo=GitHub"></a>
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Fgo-view%2Fblob%2Fmaster%2FLICENSE"><img src="https://img.shields.io/github/license/dromara/go-view.svg?style=flat-square"></a>
-          `
+          `,
         },
         {
           name: "image-combiner",
@@ -320,7 +320,7 @@ export const useProjectsData = () => {
           link: `
   <a href="https://gitee.com/dromara/image-combiner"><img src="https://gitee.com/dromara/image-combiner/badge/star.svg"></a>
   <a href="https://gitee.com/dromara/image-combiner/members"><img src="https://gitee.com/dromara/image-combiner/badge/fork.svg"></a>
-  `
+  `,
         },
         {
           name: "jinx",
@@ -332,7 +332,7 @@ export const useProjectsData = () => {
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Fjinx"><img src="https://img.shields.io/github/stars/dromara/jinx?style=flat-square&amp;logo=github"></a>
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Fjinx%2Fnetwork%2Fmembers"><img src="https://img.shields.io/github/forks/dromara/jinx?style=flat-square&amp;logo=GitHub"></a>
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Fjinx%2Fblob%2Fmaster%2FLICENSE"><img src="https://img.shields.io/github/license/dromara/jinx.svg?style=flat-square"></a>
-          `
+          `,
         },
         {
           name: "WeMQ",
@@ -346,7 +346,7 @@ export const useProjectsData = () => {
   <a href="https://github.com/dromara/WeMQ"><img src="https://img.shields.io/github/stars/dromara/WeMQ?style=flat-square&amp;logo=github"></a>
   <a href="https://github.com/dromara/WeMQ/network/members"><img src="https://img.shields.io/github/forks/dromara/WeMQ?style=flat-square&amp;logo=GitHub"></a>
   <a href="https://github.com/dromara/WeMQ/blob/master/LICENSE"><img src="https://img.shields.io/github/license/dromara/WeMQ.svg?style=flat-square"></a>
-          `
+          `,
         },
         {
           name: "X-File-Storage",
@@ -373,7 +373,7 @@ export const useProjectsData = () => {
     <a href="https://jq.qq.com/?_wv=1027&amp;k=eGfeNqka">
         <img src="https://img.shields.io/badge/QQ%E7%BE%A4-515706495-orange" alt="">
     </a>
-`
+`,
         },
         {
           name: "electron-egg",
@@ -387,7 +387,7 @@ export const useProjectsData = () => {
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Felectron-egg"><img src="https://img.shields.io/github/stars/dromara/electron-egg?style=flat-square&amp;logo=github"></a>
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Felectron-egg%2Fnetwork%2Fmembers"><img src="https://img.shields.io/github/forks/dromara/electron-egg?style=flat-square&amp;logo=GitHub"></a>
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Felectron-egg%2Fblob%2Fmaster%2FLICENSE"><img src="https://img.shields.io/github/license/dromara/electron-egg.svg?style=flat-square"></a>
-          `
+          `,
         },
         {
           name: "northstar",
@@ -401,7 +401,7 @@ export const useProjectsData = () => {
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Fnorthstar"><img src="https://img.shields.io/github/stars/dromara/northstar?style=flat-square&amp;logo=github"></a>
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Fnorthstar%2Fnetwork%2Fmembers"><img src="https://img.shields.io/github/forks/dromara/northstar?style=flat-square&amp;logo=GitHub"></a>
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Fnorthstar%2Fblob%2Fmaster%2FLICENSE"><img src="https://img.shields.io/github/license/dromara/northstar.svg?style=flat-square"></a>
-          `
+          `,
         },
         {
           name: "easy_trans",
@@ -415,7 +415,7 @@ export const useProjectsData = () => {
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Feasy-es"><img src="https://img.shields.io/github/stars/dromara/easy-es?style=flat-square&amp;logo=github"></a>
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Feasy-es%2Fnetwork%2Fmembers"><img src="https://img.shields.io/github/forks/dromara/easy-es?style=flat-square&amp;logo=GitHub"></a>
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Feasy-es%2Fblob%2Fmaster%2FLICENSE"><img src="https://img.shields.io/github/license/dromara/easy-es.svg?style=flat-square"></a>
-  `
+  `,
         },
         {
           name: "redisfront",
@@ -425,7 +425,7 @@ export const useProjectsData = () => {
           date: "2022.12",
           link: `<img src="https://img.shields.io/badge/JDK-17-blue.svg" alt="JDK">
   <img src="https://img.shields.io/badge/Apache-2.0-4green.svg" alt="Apache 2.0">
-  <img src="https://img.shields.io/badge/Release-1.0.7-green.svg" alt="Release">`
+  <img src="https://img.shields.io/badge/Release-1.0.7-green.svg" alt="Release">`,
         },
         {
           name: "x-easypdf",
@@ -436,7 +436,7 @@ export const useProjectsData = () => {
           link: `
           <a href="https://gitee.com/dromara/x-easypdf"><img src="https://gitee.com/dromara/x-easypdf/badge/star.svg"></a>
   <a href="https://gitee.com/dromara/x-easypdf/members"><img src="https://gitee.com/dromara/x-easypdf/badge/fork.svg"></a>
-          `
+          `,
         },
         {
           name: "gobrs-async",
@@ -450,7 +450,7 @@ export const useProjectsData = () => {
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Fgobrs-async"><img src="https://img.shields.io/github/stars/dromara/gobrs-async?style=flat-square&amp;logo=github"></a>
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Fgobrs-async%2Fnetwork%2Fmembers"><img src="https://img.shields.io/github/forks/dromara/gobrs-async?style=flat-square&amp;logo=GitHub"></a>
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Fgobrs-async%2Fblob%2Fmaster%2FLICENSE"><img src="https://img.shields.io/github/license/dromara/gobrs-async.svg?style=flat-square"></a>
-          `
+          `,
         },
         {
           name: "open-giteye-api",
@@ -464,7 +464,7 @@ export const useProjectsData = () => {
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Fopen-giteye-api"><img src="https://img.shields.io/github/stars/dromara/open-giteye-api?style=flat-square&amp;logo=github"></a>
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Fopen-giteye-api%2Fnetwork%2Fmembers"><img src="https://img.shields.io/github/forks/dromara/open-giteye-api?style=flat-square&amp;logo=GitHub"></a>
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Fopen-giteye-api%2Fblob%2Fmaster%2FLICENSE"><img src="https://img.shields.io/github/license/dromara/open-giteye-api.svg?style=flat-square"></a>
-          `
+          `,
         },
         {
           name: "Binlog4j",
@@ -488,7 +488,7 @@ export const useProjectsData = () => {
       <a>
           <img src="https://img.shields.io/badge/springBoot-3.0+-green.svg">
       </a>
-  `
+  `,
         },
         {
           name: "sms4j",
@@ -500,7 +500,7 @@ export const useProjectsData = () => {
   <a href="https://gitee.com/dromara/sms4j/stargazers"><img src="https://gitee.com/dromara/sms4j/badge/star.svg?theme=gvp"></a>
   <a href="https://gitee.com/dromara/sms4j/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-green"></a>
   <a href="https://gitee.com/dromara/sms4j"><img src="https://img.shields.io/badge/version-v2.2.0-blue"></a>
-  `
+  `,
         },
         {
           name: "stream-query",
@@ -521,7 +521,7 @@ export const useProjectsData = () => {
       <a target="_blank" href="https%3A%2F%2Fgithub.com%2Fdromara%2Fstream-query">
           <img src="https://img.shields.io/github/stars/dromara/stream-query.svg?style=social" alt="github star">
       </a>
-  `
+  `,
         },
         {
           name: "payment-spring-boot",
@@ -551,7 +551,7 @@ export const useProjectsData = () => {
   <a target="_blank" href="https%3A%2F%2Fjq.qq.com%2F%3F_wv%3D1027%26k%3DcCiv8Vlv">
   <img alt="点击加入QQ交流②群" src="https://img.shields.io/badge/QQ%E4%BA%A4%E6%B5%81%E7%BE%A4-549174561-ff69b4">
 </a>
-  `
+  `,
         },
         {
           name: "Neutrino-Proxy",
@@ -568,7 +568,7 @@ export const useProjectsData = () => {
   <a href="/dromara/neutrino-proxy/blob/master/LICENSE">
       <img src="https://img.shields.io/badge/license-MIT-red" alt="license MIT">
   </a>
-  `
+  `,
         },
         {
           name: "TestHub",
@@ -580,7 +580,7 @@ export const useProjectsData = () => {
   <a href="https://gitee.com/failedgoddess/test-hub/stargazers"><img src="https://gitee.com/failedgoddess/test-hub/badge/star.svg?theme=gvp"></a>
   <a href="https://gitee.com/failedgoddess/test-hub/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-green"></a>
   <a href="https://gitee.com/failedgoddess/test-hub"><img src="https://img.shields.io/badge/version-v1.0.0-blue"></a>
-  `
+  `,
         },
         {
           name: "yft-design",
@@ -594,7 +594,7 @@ export const useProjectsData = () => {
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Fyft-design"><img src="https://img.shields.io/github/stars/dromara/yft-design?style=flat-square&amp;logo=github"></a>
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Fyft-design%2Fnetwork%2Fmembers"><img src="https://img.shields.io/github/forks/dromara/yft-design?style=flat-square&amp;logo=GitHub"></a>
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Fyft-design%2Fblob%2Fmaster%2FLICENSE"><img src="https://img.shields.io/github/license/dromara/yft-design.svg?style=flat-square"></a>
-  `
+  `,
         },
         {
           name: "zyplayer-doc",
@@ -605,7 +605,7 @@ export const useProjectsData = () => {
           link: `
           <a href="https://gitee.com/dromara/zyplayer-doc"><img src="https://gitee.com/dromara/zyplayer-doc/badge/star.svg"></a>
   <a href="https://gitee.com/dromara/zyplayer-doc/members"><img src="https://gitee.com/dromara/zyplayer-doc/badge/fork.svg"></a>
-          `
+          `,
         },
         {
           name: "orion-visor",
@@ -640,7 +640,7 @@ export const useProjectsData = () => {
     <a 
        href="https://github.com/dromara/orion-visor">
       <img src="https://img.shields.io/github/forks/lijiahangmax/orion-visor" alt="star" />
-    </a>`
+    </a>`,
         },
         {
           name: "DyJava",
@@ -650,7 +650,7 @@ export const useProjectsData = () => {
           date: "2024.04",
           link: `<a href="https://gitee.com/dromara/dy-java">
       <img src="https://gitee.com/dromara/dy-java/badge/star.svg" alt="Gitee Stars">
-  </a>`
+  </a>`,
         },
         {
           name: "warm-flow",
@@ -660,7 +660,7 @@ export const useProjectsData = () => {
           date: "2023.12",
           link: `<a href="https://gitee.com/dromara/warm-flow">
       <img src="https://gitee.com/dromara/warm-flow/badge/star.svg" alt="Gitee Stars">
-  </a>`
+  </a>`,
         },
         {
           name: "dbswitch",
@@ -670,7 +670,7 @@ export const useProjectsData = () => {
           date: "2020.12",
           link: `<a href="https://gitee.com/dromara/dbswitch">
       <img src="https://gitee.com/dromara/dbswitch/badge/star.svg" alt="Gitee Stars">
-  </a>`
+  </a>`,
         },
         {
           name: "skyeye-oa",
@@ -680,7 +680,7 @@ export const useProjectsData = () => {
           date: "2022.08",
           link: `<a href="https://gitee.com/dromara/skyeye">
       <img src="https://gitee.com/dromara/skyeye/badge/star.svg" alt="Gitee Stars">
-  </a>`
+  </a>`,
         },
         {
           name: "easyAi",
@@ -690,7 +690,7 @@ export const useProjectsData = () => {
           date: "2024.05",
           link: `<a href="https://gitee.com/dromara/easyAi">
       <img src="https://gitee.com/dromara/easyAi/badge/star.svg" alt="Gitee Stars">
-  </a>`
+  </a>`,
         },
         {
           name: "mybatis-plus-ext",
@@ -700,7 +700,7 @@ export const useProjectsData = () => {
           date: "2021.08",
           link: `<a href="https://gitee.com/dromara/mybatis-plus-ext">
       <img src="https://gitee.com/dromara/mybatis-plus-ext/badge/star.svg" alt="Gitee Stars">
-      </a>`
+      </a>`,
         },
         {
           name: "easy-query",
@@ -717,7 +717,7 @@ export const useProjectsData = () => {
     <a target="_blank" href="https://www.apache.org/licenses/LICENSE-2.0.txt"><img src="https://img.shields.io/:license-Apache2-blue.svg" alt="Apache 2" /></a>
     <a target="_blank" href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html"><img src="https://img.shields.io/badge/JDK-8-green.svg" alt="jdk-8" /></a>
     <a target="_blank" href="https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html"><img src="https://img.shields.io/badge/JDK-11-green.svg" alt="jdk-11" /></a>
-    <a target="_blank" href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html"><img src="https://img.shields.io/badge/JDK-17-green.svg" alt="jdk-17" /></a>`
+    <a target="_blank" href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html"><img src="https://img.shields.io/badge/JDK-17-green.svg" alt="jdk-17" /></a>`,
         },
         {
           name: "tianai-captcha",
@@ -728,7 +728,7 @@ export const useProjectsData = () => {
           link: `<a href="https://gitee.com/dromara/tianai-captcha">
       <img src="https://gitee.com/dromara/tianai-captcha/badge/star.svg" alt="Gitee Stars">
       </a>
-      `
+      `,
         },
         {
           name: "dax-pay",
@@ -743,7 +743,7 @@ export const useProjectsData = () => {
  <img src="https://img.shields.io/badge/Author-Daxpay-orange.svg" alt="Build Status"/>
  <img src="https://img.shields.io/badge/Spring%20Boot-2.7.18-blue.svg" alt="Downloads"/>
  <img src="https://img.shields.io/badge/license-Apache%20License%202.0-green.svg"/>
-      `
+      `,
         },
         {
           name: "mayfly-go",
@@ -768,7 +768,7 @@ export const useProjectsData = () => {
   <a href="https://cn.vuejs.org" target="_blank">
     <img src="https://img.shields.io/badge/Vue-3.x-green.svg" alt="vue">
   </a>
-      `
+      `,
         },
         {
           name: "MilvusPlus",
@@ -779,7 +779,7 @@ export const useProjectsData = () => {
           link: `<a href="https://gitee.com/dromara/MilvusPlus">
       <img src="https://gitee.com/dromara/MilvusPlus/badge/star.svg" alt="Gitee Stars">
       </a>
-      `
+      `,
         },
         {
           name: "newcar",
@@ -794,7 +794,7 @@ export const useProjectsData = () => {
   <a href="https://discord.gg/ANqgRc3C4b"><img src="https://shields.io/badge/discord-newcarjs-blue?logo=discord&style=flat-square" /></a>
   <a href="https://www.npmjs.com/package/newcar"><img src="https://img.shields.io/npm/dw/newcar.svg"/></a>
   <a href="https://www.npmjs.com/package/newcar"><img src="https://img.shields.io/npm/v/newcar.svg"/></a>
-      `
+      `,
         },
         {
           name: "ujcms",
@@ -805,7 +805,7 @@ export const useProjectsData = () => {
           link: `<a href="https://gitee.com/dromara/ujcms">
       <img src="https://gitee.com/dromara/ujcms/badge/star.svg" alt="Gitee Stars">
       </a>
-      `
+      `,
         },
         {
           name: "sayOrder",
@@ -816,7 +816,7 @@ export const useProjectsData = () => {
           link: `<a href="https://gitee.com/dromara/sayOrder">
       <img src="https://gitee.com/dromara/sayOrder/badge/star.svg" alt="Gitee Stars">
       </a>
-      `
+      `,
         },
         {
           name: "Akali",
@@ -827,7 +827,7 @@ export const useProjectsData = () => {
           link: `<a href="https://gitee.com/dromara/Akali">
       <img src="https://gitee.com/dromara/Akali/badge/star.svg" alt="Gitee Stars">
       </a>
-      `
+      `,
         },
         {
           name: "carbon",
@@ -844,9 +844,9 @@ export const useProjectsData = () => {
 </a>
 <a target="_blank" href="https://github.com/dromara/carbon/blob/master/LICENSE">
   <img src="https://img.shields.io/github/license/dromara/carbon">
-</a>`
-        }
-      ]
+</a>`,
+        },
+      ],
     },
     {
       groupName: projectLocale.value.ENTERPRISE_CERTIFICATION,
@@ -865,7 +865,7 @@ export const useProjectsData = () => {
 <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Fsa-token%2Fwatchers"><img src="https://img.shields.io/github/watchers/dromara/sa-token?style=flat-square&amp;logo=GitHub"></a>
 <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Fsa-token%2Fissues"><img src="https://img.shields.io/github/issues/dromara/sa-token.svg?style=flat-square&amp;logo=GitHub"></a>
 <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Fsa-token%2Fblob%2Fmaster%2FLICENSE"><img src="https://img.shields.io/github/license/dromara/sa-token.svg?style=flat-square"></a>
-`
+`,
         },
         {
           name: "MaxKey",
@@ -886,7 +886,7 @@ export const useProjectsData = () => {
       <a target="_blank" href="http%3A%2F%2Fwww.maxkey.top%2Fzh%2Fabout%2Flicenses.html">
           <img src="https://img.shields.io/github/license/dromara/MaxKey">
       </a>
-  `
+  `,
         },
         {
           name: "sureness",
@@ -900,9 +900,9 @@ export const useProjectsData = () => {
   <a href="https%3A%2F%2Fgitter.im%2Fusthe%2Fsureness"><img src="https://img.shields.io/gitter/room/usthe/sureness?label=sureness&amp;color=orange&amp;logo=gitter&amp;logoColor=red" alt="Gitter"></a>
   <img src="https://img.shields.io/github/release-date/dromara/sureness?color=blue&amp;logo=figshare&amp;logoColor=red" alt="GitHub Release Date">
   <a href="https://gitee.com/dromara/sureness/stargazers"><img src="https://gitee.com/dromara/sureness/badge/star.svg?theme=gray" alt="star"></a>
-  <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Fsureness"><img src="https://img.shields.io/github/stars/dromara/sureness?style=social" alt="star"></a>`
-        }
-      ]
+  <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Fsureness"><img src="https://img.shields.io/github/stars/dromara/sureness?style=social" alt="star"></a>`,
+        },
+      ],
     },
     {
       groupName: projectLocale.value.OPERATIONS_AND_MAINTENANCE_CONTROL,
@@ -938,7 +938,7 @@ export const useProjectsData = () => {
   <a target="_blank" href="https%3A%2F%2Fhub.docker.com%2Frepository%2Fdocker%2Fjpomdocker%2Fjpom">
   <img src="https://img.shields.io/docker/pulls/jpomdocker/jpom.svg" alt="docker pull">
   </a>
-          `
+          `,
         },
         {
           name: "cubic",
@@ -951,7 +951,7 @@ export const useProjectsData = () => {
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Fcubic"><img src="https://img.shields.io/github/stars/dromara/cubic?style=flat-square&amp;logo=github"></a>
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Fcubic%2Fnetwork%2Fmembers"><img src="https://img.shields.io/github/forks/dromara/cubic?style=flat-square&amp;logo=GitHub"></a>
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Fcubic%2Fblob%2Fmaster%2FLICENSE"><img src="https://img.shields.io/github/license/dromara/cubic.svg?style=flat-square"></a>
-  `
+  `,
         },
         {
           name: "athena",
@@ -963,7 +963,7 @@ export const useProjectsData = () => {
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Fathena"><img src="https://img.shields.io/github/stars/dromara/athena?style=flat-square&amp;logo=github"></a>
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Fathena%2Fnetwork%2Fmembers"><img src="https://img.shields.io/github/forks/dromara/athena?style=flat-square&amp;logo=GitHub"></a>
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Fathena%2Fblob%2Fmaster%2FLICENSE"><img src="https://img.shields.io/github/license/dromara/athena.svg?style=flat-square"></a>
-          `
+          `,
         },
         {
           name: "TestHub",
@@ -975,7 +975,7 @@ export const useProjectsData = () => {
   <a href="https://gitee.com/failedgoddess/test-hub/stargazers"><img src="https://gitee.com/failedgoddess/test-hub/badge/star.svg?theme=gvp"></a>
   <a href="https://gitee.com/failedgoddess/test-hub/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-green"></a>
   <a href="https://gitee.com/failedgoddess/test-hub"><img src="https://img.shields.io/badge/version-v1.0.0-blue"></a>
-  `
+  `,
         },
         {
           name: "domain-admin",
@@ -985,9 +985,9 @@ export const useProjectsData = () => {
           date: "2024.08",
           link: `
   <img src="https://img.shields.io/github/stars/dromara/domain-admin.svg?logo=GitHub" alt="">
-  `
-        }
-      ]
+  `,
+        },
+      ],
     },
     {
       groupName: projectLocale.value.DISTRIBUTED_LOG,
@@ -1004,9 +1004,9 @@ export const useProjectsData = () => {
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2FTLog"><img src="https://img.shields.io/github/stars/dromara/TLog?style=flat-square&amp;logo=github"></a>
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2FTLog%2Fnetwork%2Fmembers"><img src="https://img.shields.io/github/forks/dromara/TLog?style=flat-square&amp;logo=GitHub"></a>
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2FTLog%2Fblob%2Fmaster%2FLICENSE"><img src="https://img.shields.io/github/license/dromara/TLog.svg?style=flat-square"></a>
-          `
-        }
-      ]
+          `,
+        },
+      ],
     },
     {
       groupName: projectLocale.value.BIG_DATA,
@@ -1021,7 +1021,7 @@ export const useProjectsData = () => {
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2FCloudEon%2Fcommits%2Fmain"><img src="https://img.shields.io/github/commit-activity/m/dromara/CloudEon?color=ffff00" alt="Commits"></a>
   <a href="https%3A%2F%2Fgithub.com%2Fpre-commit%2Fpre-commit"><img src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit" alt="pre-commit"></a>
   <a href="#contributors-"><img src="https://img.shields.io/github/all-contributors/dromara/CloudEon" alt="All Contributors"></a>
-  <a href="https%3A%2F%2Fgithub.com%2Fdromara%2FCloudEon%2FLICENSE"><img src="https://img.shields.io/github/license/dromara/CloudEon" alt="GitHub license"></a>`
+  <a href="https%3A%2F%2Fgithub.com%2Fdromara%2FCloudEon%2FLICENSE"><img src="https://img.shields.io/github/license/dromara/CloudEon" alt="GitHub license"></a>`,
         },
         {
           name: "data-compare",
@@ -1037,9 +1037,9 @@ export const useProjectsData = () => {
   <img src="https://img.shields.io/github/forks/zhugezifang/dataCompare.svg?logo=GitHub" alt="">
   <img src="https://img.shields.io/github/watchers/zhugezifang/dataCompare.svg?logo=GitHub" alt="">
   <img src="https://img.shields.io/github/license/zhugezifang/dataCompare.svg" alt="">
-  <img src="https://img.shields.io/github/v/release/zhugezifang/dataCompare?label=latest&amp;style=flat-square" alt="">`
-        }
-      ]
+  <img src="https://img.shields.io/github/v/release/zhugezifang/dataCompare?label=latest&amp;style=flat-square" alt="">`,
+        },
+      ],
     },
     {
       groupName: projectLocale.value.MICROSERVICE,
@@ -1057,7 +1057,7 @@ export const useProjectsData = () => {
     <a href="https%3A%2F%2Fgithub.com%2F996icu%2F996.ICU%2Fblob%2Fmaster%2FLICENSE" align="center">
       <img alt="996icu" src="https://img.shields.io/badge/license-NPL%20(The%20996%20Prohibited%20License)-blue.svg">
     </a>
-  `
+  `,
         },
         {
           name: "mendmix",
@@ -1071,7 +1071,7 @@ export const useProjectsData = () => {
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Fmendmix"><img src="https://img.shields.io/github/stars/dromara/mendmix?style=flat-square&amp;logo=github"></a>
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Fmendmix%2Fnetwork%2Fmembers"><img src="https://img.shields.io/github/forks/dromara/mendmix?style=flat-square&amp;logo=GitHub"></a>
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Fmendmix%2Fblob%2Fmaster%2FLICENSE"><img src="https://img.shields.io/github/license/dromara/mendmix.svg?style=flat-square"></a>
-          `
+          `,
         },
         {
           name: "lamp-cloud",
@@ -1088,7 +1088,7 @@ export const useProjectsData = () => {
   <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Flamp-cloud%2Fnetwork%2Fmembers"><img src="https://img.shields.io/github/forks/dromara/lamp-cloud?color=42b883&amp;logo=github&amp;style=flat-square" alt="Fork"></a>
   <a href="https://gitee.com/dromara/lamp-cloud/stargazers"><img src="https://gitee.com/dromara/lamp-cloud/badge/star.svg?theme=gray" alt="Star"></a>
   <a href="https://gitee.com/dromara/lamp-cloud/members"><img src="https://gitee.com/dromara/lamp-cloud/badge/fork.svg?theme=gray" alt="Fork"></a>
-  `
+  `,
         },
         {
           name: "dante-cloud",
@@ -1107,7 +1107,7 @@ export const useProjectsData = () => {
       <a href="https://gitee.com/dromara/dante-cloud"><img src="https://img.shields.io/github/forks/herodotus-cloud/dante-cloud?style=flat&amp;logo=github" alt="Github fork"></a>
       <a href="https://gitee.com/dromara/dante-cloud"><img src="https://gitee.com/dromara/dante-cloud/badge/star.svg?theme=dark" alt="Gitee star"></a>
       <a href="https://gitee.com/dromara/dante-cloud"><img src="https://gitee.com/dromara/dante-cloud/badge/fork.svg?theme=dark" alt="Gitee fork"></a>
-  `
+  `,
         },
         {
           name: "open-capacity-platform",
@@ -1125,7 +1125,7 @@ export const useProjectsData = () => {
    <a href="https://gitee.com/owenwangwen/open-capacity-platform/stargazers"><img src="https://gitee.com/owenwangwen/open-capacity-platform/badge/star.svg?theme=white" alt="star"></a>
   <a href="https://gitee.com/owenwangwen/open-capacity-platform"><img src="https://gitee.com/owenwangwen/open-capacity-platform/widgets/widget_6.svg" alt="Fork me on Gitee"></a>
   <a href="https://gitee.com/owenwangwen/open-capacity-platform/members"><img src="https://gitee.com/owenwangwen/open-capacity-platform/badge/fork.svg?theme=white" alt="fork"></a>
-  `
+  `,
         },
         {
           name: "RuoYi-Vue-Plus",
@@ -1142,7 +1142,7 @@ export const useProjectsData = () => {
   <a href="https://gitee.com/dromara/RuoYi-Vue-Plus"><img src="https://img.shields.io/badge/RuoYi_Vue_Plus-4.8.0-success.svg" alt="RuoYi-Vue-Plus"></a>
   <a href=""><img src="https://img.shields.io/badge/Spring%20Boot-2.7-blue.svg" alt="Spring Boot"></a>
   <a href=""><img src="https://img.shields.io/badge/JDK-8-green.svg" alt="JDK-8+"></a>
-  <a href=""><img src="https://img.shields.io/badge/JDK-11-green.svg" alt="JDK-11"></a>`
+  <a href=""><img src="https://img.shields.io/badge/JDK-11-green.svg" alt="JDK-11"></a>`,
         },
         {
           name: "J2EEFAST",
@@ -1154,9 +1154,9 @@ export const useProjectsData = () => {
   <img src="https://img.shields.io/badge/%E9%AB%98%E6%95%88-%E5%BF%AB%E9%80%9F-brightgreen">
   <img src="https://img.shields.io/badge/%E5%AE%89%E5%85%A8-%E6%BA%90%E7%A0%81%E5%8F%AF%E6%8E%A7-blueviolet">
   <a href="https%3A%2F%2Fjq.qq.com%2F%3F_wv%3D1027%26k%3D5xTlnN6" target="_blank"><img src="https://img.shields.io/badge/QQ%E6%8A%80%E6%9C%AF%E7%BE%A4-805468934-orange"></a>
-  `
-        }
-      ]
+  `,
+        },
+      ],
     },
     {
       groupName: projectLocale.value.DISTRIBUTED_SCHEDULING,
@@ -1173,7 +1173,7 @@ export const useProjectsData = () => {
 <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Fhodor"><img src="https://img.shields.io/github/stars/dromara/hodor?style=flat-square&amp;logo=github"></a>
 <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Fhodor%2Fnetwork%2Fmembers"><img src="https://img.shields.io/github/forks/dromara/hodor?style=flat-square&amp;logo=GitHub"></a>
 <a href="https%3A%2F%2Fgithub.com%2Fdromara%2Fhodor%2Fblob%2Fmaster%2FLICENSE"><img src="https://img.shields.io/github/license/dromara/hodor.svg?style=flat-square"></a>
-        `
+        `,
         },
         {
           name: "Disjob",
@@ -1188,14 +1188,14 @@ export const useProjectsData = () => {
 <a href="https%3A%2F%2Fgithub.com%2Fdromara%2FDisjob"><img src="https://img.shields.io/github/stars/dromara/Disjob?style=flat-square&amp;logo=github"></a>
 <a href="https%3A%2F%2Fgithub.com%2Fdromara%2FDisjob%2Fnetwork%2Fmembers"><img src="https://img.shields.io/github/forks/dromara/Disjob?style=flat-square&amp;logo=GitHub"></a>
 <a href="https%3A%2F%2Fgithub.com%2Fdromara%2FDisjob%2Fblob%2Fmaster%2FLICENSE"><img src="https://img.shields.io/github/license/dromara/Disjob.svg?style=flat-square"></a>
-`
-        }
-      ]
-    }
+`,
+        },
+      ],
+    },
   ]);
 
   const projectItems = computed(() =>
-    orderProjects(projectItemsOrigin.value, projectOrder.value)
+    orderProjects(projectItemsOrigin.value, projectOrder.value),
   );
 
   return { projectItems, projectLocale };

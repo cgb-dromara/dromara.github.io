@@ -103,7 +103,7 @@ public class HmilyTransactionEventPublisher implements DisposableBean {
     /**
      * publish disruptor event.
      *
-     * @param tccTransaction {@linkplain com.hmily.tcc.common.bean.entity.TccTransaction }
+     * @param tccTransaction {@linkplain com.hmily.tcc.common..entity.TccTransaction }
      * @param type           {@linkplain EventTypeEnum}
      */
     public void publishEvent(final TccTransaction tccTransaction, final int type) {
@@ -379,7 +379,6 @@ public final class TccTransactionCacheManager {
 - 在你的 Api 接口项目引入
 
 ```xml
-
   <dependency>
           <groupId>com.hmily.tcc</groupId>
           <artifactId>hmily-tcc-annotation</artifactId>
@@ -400,7 +399,6 @@ public final class TccTransactionCacheManager {
 - 配置启动 bean
 
 ```xml
-
 <!-- Aspect 切面配置，是否开启AOP切面-->
   <aop:aspectj-autoproxy expose-proxy="true"/>
   <!--扫描框架的包-->
