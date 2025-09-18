@@ -73,7 +73,7 @@ onMounted(() => {
                 v-for="member in item.members"
                 :key="member.name"
               >
-                <HoverLight class="test"></HoverLight>
+                <HoverLight class="hover-box"></HoverLight>
                 <div class="member-avatar">
                   <img
                     class="photo"
@@ -312,11 +312,13 @@ onMounted(() => {
           flex-direction: column;
           padding: 15px;
         }
-        .test {
+        .hover-box {
           position: absolute;
           width: 100%;
           height: 100%;
           top: 0;
+          left: 0;
+          border-radius: 10px;
         }
         .photo {
           width: 100%;
