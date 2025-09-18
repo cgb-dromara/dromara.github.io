@@ -329,7 +329,9 @@ onMounted(() => {
       height: 100%;
       .top-container {
         margin-top: 15px;
-        justify-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
       .badge-img {
         margin-top: 5px;
