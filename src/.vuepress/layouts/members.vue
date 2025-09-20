@@ -309,7 +309,9 @@ onMounted(() => {
         text-align: center;
         background: #ffffff17;
         @media (max-width: 1000px) {
+          display: flex;
           flex-direction: column;
+          align-items: center;
           padding: 15px;
         }
         .hover-box {
@@ -363,6 +365,8 @@ onMounted(() => {
           height: 160px;
           position: absolute;
           top: -80px;
+          left: 50%;
+          transform: translateX(-50%);
           @media (max-width: 1000px) {
             width: 100px;
             height: 100px;
