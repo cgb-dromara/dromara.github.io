@@ -270,6 +270,10 @@ function jumpTo(url: string): void {
           :slidesPerView="1.5"
           :loopedSlides="3"
           slideToClickedSlide
+          :autoplay="{
+            delay: 2500,
+            disableOnInteraction: false,
+          }"
           :pagination="{ clickable: true }"
           effect="coverflow"
           :coverflowEffect="{
