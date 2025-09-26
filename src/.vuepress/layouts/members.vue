@@ -372,6 +372,7 @@ onMounted(() => {
             height: 100px;
             flex-shrink: 0;
             position: static;
+            transform: none;
           }
         }
       }
