@@ -69,7 +69,7 @@ export const enHomeOption: HomeOption = {
       url: "https://api-buddy.cn",
     },
     {
-      name: "carbon",
+      name: "carbon-home",
       description:
         "A simple, semantic and developer-friendly golang package for time.",
       url: "https://github.com/dromara/carbon",

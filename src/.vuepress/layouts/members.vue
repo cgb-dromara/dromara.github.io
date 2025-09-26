@@ -73,7 +73,7 @@ onMounted(() => {
                 v-for="member in item.members"
                 :key="member.name"
               >
-                <HoverLight class="test"></HoverLight>
+                <HoverLight class="hover-box"></HoverLight>
                 <div class="member-avatar">
                   <img
                     class="photo"
@@ -309,14 +309,18 @@ onMounted(() => {
         text-align: center;
         background: #ffffff17;
         @media (max-width: 1000px) {
+          display: flex;
           flex-direction: column;
+          align-items: center;
           padding: 15px;
         }
-        .test {
+        .hover-box {
           position: absolute;
           width: 100%;
           height: 100%;
           top: 0;
+          left: 0;
+          border-radius: 10px;
         }
         .photo {
           width: 100%;
@@ -361,11 +365,14 @@ onMounted(() => {
           height: 160px;
           position: absolute;
           top: -80px;
+          left: 50%;
+          transform: translateX(-50%);
           @media (max-width: 1000px) {
             width: 100px;
             height: 100px;
             flex-shrink: 0;
             position: static;
+            transform: none;
           }
         }
       }

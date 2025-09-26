@@ -88,7 +88,7 @@ const qrcodeOption = computed(() => [
           <a
             v-if="item.title === footerLocale.DONATE"
             class="qrcode-desc"
-            href="//assets/img/donate.webp"
+            href="/assets/img/donation.webp"
             target="_blank"
           >
             <img class="qrcode_img" src="/assets/img/donation.webp" />
@@ -128,7 +128,7 @@ const qrcodeOption = computed(() => [
           <a
             v-if="item.title === footerLocale.WECHAT"
             class="qrcode-desc"
-            href="//assets/img/qrcode_wx.webp"
+            href="/assets/img/qrcode_wx.webp"
             target="_blank"
           >
             <img class="qrcode_img" src="/assets/img/qrcode_wx.webp" />
@@ -328,7 +328,9 @@ const qrcodeOption = computed(() => [
     display: none;
     transform: translate(-45px, -90px);
     color: #fff;
+    margin: 0;
   }
+
   .icon-box {
     position: relative;
     width: 60px;

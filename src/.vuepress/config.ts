@@ -108,7 +108,6 @@ export default defineUserConfig({
       __dirname,
       "./components/PageFooter.vue",
     ),
-    // "@MembersPage": path.resolve(__dirname, "./components/MembersPage.vue"),
     "@ProjectsPage": path.resolve(__dirname, "./components/ProjectsPage.vue"),
     "@HonorComp": path.resolve(__dirname, "./components/HonorComp.vue"),
     "@SiteSection": path.resolve(__dirname, "./components/SiteSection.vue"),

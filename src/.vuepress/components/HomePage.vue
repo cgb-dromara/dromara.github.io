@@ -624,7 +624,7 @@ function jumpTo(url: string): void {
     justify-content: space-evenly;
     height: 100%;
     font-size: 1.1rem;
-    color: #494949;
+    color: #000;
     padding: 0 20px;
     text-align: left;
     img {
@@ -639,6 +639,7 @@ function jumpTo(url: string): void {
     font-size: 0.8em;
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
     &:hover {
       .link {
         &::after {
@@ -691,7 +692,7 @@ function jumpTo(url: string): void {
   }
   .swiper-slide {
     height: 220px;
-    background: #fff;
+    background: #ffffffc4;
     border-radius: 15px;
   }
   .swiper-slide-active {
@@ -699,7 +700,6 @@ function jumpTo(url: string): void {
       0px 4px 32px 0px rgba(0, 0, 0, 0.06),
       0px 0px 10px 0px rgba(0, 0, 0, 0.04);
   }
-
   .more {
     color: #2e64fe;
     padding: 5px 10px;
